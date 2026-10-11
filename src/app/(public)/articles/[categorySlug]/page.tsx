@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "Article Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Armenia Articles`,
+    title: cat.metaTitle || `${cat.name} — MBBS South Korea Articles`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Articles about ${cat.name} — MBBS in Armenia.`,
+      `Articles about ${cat.name} — MBBS in South Korea.`,
     path: `/articles/${categorySlug}`,
   });
 }

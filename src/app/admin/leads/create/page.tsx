@@ -19,7 +19,7 @@ import Link from "next/link";
 
 const COUNTRY_CODES = [
   { code: "+91", label: "🇮🇳 +91 (India)" },
-  { code: "+996", label: "🇰🇬 +996 (Armenia)" },
+  { code: "+996", label: "🇰🇬 +996 (South Korea)" },
   { code: "+880", label: "🇧🇩 +880 (Bangladesh)" },
   { code: "+92", label: "🇵🇰 +92 (Pakistan)" },
   { code: "+977", label: "🇳🇵 +977 (Nepal)" },
@@ -226,7 +226,7 @@ export default function CreateLeadPage() {
               <Input
                 value={form.interestedIn}
                 onChange={(e) => set("interestedIn", e.target.value)}
-                placeholder="e.g. MBBS in Armenia, International School of Medicine"
+                placeholder="e.g. MBBS in South Korea, International School of Medicine"
               />
             </div>
             <div className="space-y-1.5">
@@ -336,7 +336,7 @@ export default function CreateLeadPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={loading}
           >
             {loading ? (

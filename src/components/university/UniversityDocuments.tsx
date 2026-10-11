@@ -52,7 +52,7 @@ export default function UniversityDocuments({ university }: Props) {
           {university.brochurePath && (
             <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
               <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <FileText className="w-6 h-6 text-[#101B4D]" />
+                <FileText className="w-6 h-6 text-[#002B5C]" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm">
@@ -73,7 +73,7 @@ export default function UniversityDocuments({ university }: Props) {
           {university.nmcGuidelinesPath && (
             <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
               <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Award className="w-6 h-6 text-[#101B4D]" />
+                <Award className="w-6 h-6 text-[#002B5C]" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm">
@@ -98,7 +98,7 @@ export default function UniversityDocuments({ university }: Props) {
           {university.embassyLetterPath && (
             <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
               <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Globe className="w-6 h-6 text-[#101B4D]" />
+                <Globe className="w-6 h-6 text-[#002B5C]" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm">
@@ -123,7 +123,7 @@ export default function UniversityDocuments({ university }: Props) {
           {university.universityLicensePath && (
             <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
               <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <Shield className="w-6 h-6 text-[#101B4D]" />
+                <Shield className="w-6 h-6 text-[#002B5C]" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm">
@@ -148,7 +148,7 @@ export default function UniversityDocuments({ university }: Props) {
           {university.aggregationLetterPath && (
             <div className="group flex items-center gap-4 bg-gray-100 hover:bg-white/15 border border-gray-200 rounded-2xl px-5 py-4 transition-all duration-300 hover:shadow-xl">
               <div className="bg-red-400 group-hover:bg-red-700 transition-colors p-3 rounded-xl shrink-0 shadow-md">
-                <CheckCircle className="w-6 h-6 text-[#101B4D]" />
+                <CheckCircle className="w-6 h-6 text-[#002B5C]" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-bold text-gray-900 text-sm">

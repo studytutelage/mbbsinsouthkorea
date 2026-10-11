@@ -31,7 +31,7 @@ interface Props {
 
 const PHONE_CODES = [
   { code: "+91", country: "India" },
-  { code: "+996", country: "Armenia" },
+  { code: "+996", country: "South Korea" },
   { code: "+1", country: "USA/Canada" },
   { code: "+44", country: "UK" },
   { code: "+92", country: "Pakistan" },
@@ -55,7 +55,7 @@ const COUNTRIES = [
   "Nigeria",
   "Kenya",
   "Ghana",
-  "Armenia",
+  "South Korea",
   "China",
   "USA",
   "Canada",
@@ -223,7 +223,7 @@ export default function InlineApplyForm({
   };
 
   const inp =
-    "w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none bg-white text-gray-900 placeholder:text-gray-500";
+    "w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent transition text-sm outline-none bg-white text-gray-900 placeholder:text-gray-500";
   const lbl = "block text-sm font-semibold text-gray-700 mb-1.5";
   const req = <span className="text-red-500">*</span>;
 
@@ -313,7 +313,7 @@ export default function InlineApplyForm({
             <select
               value={form.countryCode}
               onChange={(e) => set("countryCode", e.target.value)}
-              className="px-2 py-3 border border-gray-200 rounded-xl text-sm outline-none bg-white focus:ring-2 focus:ring-[#285BB5]/500 w-28 shrink-0"
+              className="px-2 py-3 border border-gray-200 rounded-xl text-sm outline-none bg-white focus:ring-2 focus:ring-[#0047A0]/500 w-28 shrink-0"
             >
               {PHONE_CODES.map((c) => (
                 <option key={c.code} value={c.code}>
@@ -601,7 +601,7 @@ export default function InlineApplyForm({
           type="checkbox"
           checked={form.agreed}
           onChange={(e) => set("agreed", e.target.checked)}
-          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-[#285BB5]/500"
+          className="mt-0.5 h-4 w-4 rounded border-gray-300 text-red-600 focus:ring-[#0047A0]/500"
         />
         <span className="text-sm text-gray-600">
           I agree to the{" "}
@@ -616,7 +616,7 @@ export default function InlineApplyForm({
       </label>
 
       {error && (
-        <div className="rounded-xl bg-white border border-gray-200 px-4 py-3 text-sm text-[#285BB5] mb-4">
+        <div className="rounded-xl bg-white border border-gray-200 px-4 py-3 text-sm text-[#0047A0] mb-4">
           {error}
         </div>
       )}

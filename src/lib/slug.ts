@@ -6,7 +6,7 @@
 
 /**
  * Convert a string to a URL-friendly slug.
- * Example: "Armenia State Medical Academy" -> "Armenia-state-medical-academy"
+ * Example: "South Korea State Medical Academy" -> "South Korea-state-medical-academy"
  */
 export function slugify(text: string): string {
   return text

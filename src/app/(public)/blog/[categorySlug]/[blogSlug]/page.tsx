@@ -154,17 +154,17 @@ export default async function BlogDetailPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-1.5 text-sm text-gray-500 flex-wrap">
-          <Link href="/" className="hover:text-[#285BB5] transition-colors">
+          <Link href="/" className="hover:text-[#0047A0] transition-colors">
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
-          <Link href="/blog" className="hover:text-[#285BB5] transition-colors">
+          <Link href="/blog" className="hover:text-[#0047A0] transition-colors">
             Blog
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-600" />
           <Link
             href={`/blog/${categorySlug}`}
-            className="hover:text-[#285BB5] transition-colors"
+            className="hover:text-[#0047A0] transition-colors"
           >
             {blog.category.name}
           </Link>
@@ -266,7 +266,7 @@ export default async function BlogDetailPage({ params }: Props) {
                     <div key={section.id}>
                       {section.title && (
                         <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                          <span className="w-1 h-6 bg-[#EAF1FB]0 rounded-full inline-block shrink-0" />
+                          <span className="w-1 h-6 bg-[#EAF1FB] rounded-full inline-block shrink-0" />
                           {section.title}
                         </h2>
                       )}
@@ -329,7 +329,7 @@ export default async function BlogDetailPage({ params }: Props) {
                         key={faq.id}
                         className="group bg-white border border-gray-200 rounded-xl overflow-hidden"
                       >
-                        <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 list-none select-none hover:text-[#285BB5] transition-colors">
+                        <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-gray-800 list-none select-none hover:text-[#0047A0] transition-colors">
                           {faq.question}
                           <span className="ml-4 shrink-0 text-gray-500 group-open:rotate-45 transition-transform duration-200 text-xl leading-none">
                             +
@@ -353,7 +353,7 @@ export default async function BlogDetailPage({ params }: Props) {
               <div className="mt-10 pt-6 border-t border-gray-100 flex items-center justify-between">
                 <Link
                   href="/blog"
-                  className="inline-flex items-center gap-2 text-red-600 hover:text-[#285BB5] font-medium text-sm transition-colors group"
+                  className="inline-flex items-center gap-2 text-red-600 hover:text-[#0047A0] font-medium text-sm transition-colors group"
                 >
                   <ArrowRight className="w-4 h-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
                   Back to Blog Index
@@ -396,7 +396,7 @@ export default async function BlogDetailPage({ params }: Props) {
                         />
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-medium text-gray-800 group-hover:text-[#285BB5] transition-colors line-clamp-2 leading-snug">
+                        <p className="text-sm font-medium text-gray-800 group-hover:text-[#0047A0] transition-colors line-clamp-2 leading-snug">
                           {rel.title}
                         </p>
                         <p className="text-xs text-gray-500 mt-1">
@@ -411,7 +411,7 @@ export default async function BlogDetailPage({ params }: Props) {
                 </div>
                 <Link
                   href={`/blog/${categorySlug}`}
-                  className="flex items-center gap-1 text-red-600 text-sm font-medium mt-5 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-1 text-red-600 text-sm font-medium mt-5 hover:text-[#0047A0] transition-colors"
                 >
                   See all in {blog.category.name}{" "}
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -422,7 +422,7 @@ export default async function BlogDetailPage({ params }: Props) {
             {/* CTA */}
             <div className="bg-red-600 text-white rounded-2xl p-6 shadow-md">
               <h3 className="font-bold text-lg mb-2">
-                Interested in MBBS Armenia?
+                Interested in MBBS South Korea?
               </h3>
               <p className="text-slate-600 text-sm mb-5">
                 Get free counselling from our experts today.

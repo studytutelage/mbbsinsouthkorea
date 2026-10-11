@@ -119,7 +119,7 @@ export default function UniversityPhotosPage() {
               <Button
                 onClick={handleAdd}
                 disabled={adding || !imagePath}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 w-full"
+                className="bg-[#EAF1FB] hover:bg-[#EAF1FB] w-full"
               >
                 {adding ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -173,7 +173,7 @@ export default function UniversityPhotosPage() {
                 )}
                 <button
                   onClick={() => handleDelete(p.id)}
-                  className="absolute top-2 right-2 w-7 h-7 bg-[#EAF1FB]0 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-2 right-2 w-7 h-7 bg-[#0047A0] text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                 >
                   <Trash2 size={12} />
                 </button>

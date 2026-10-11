@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Settings, Save, Loader2 } from "lucide-react";
 
 const INPUT =
-  "w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500";
+  "w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500";
 const LABEL = "block text-sm font-medium text-gray-700 mb-1";
 
 interface Profile {
@@ -83,7 +83,7 @@ export default function SettingsPage() {
       </div>
 
       {error && (
-        <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-xl mb-4 text-sm">
+        <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-xl mb-4 text-sm">
           {error}
         </div>
       )}
@@ -214,7 +214,7 @@ export default function SettingsPage() {
                 className={INPUT}
                 value={profile.interestedUniversity || ""}
                 onChange={(e) => set("interestedUniversity", e.target.value)}
-                placeholder="e.g. Armenia State Medical Academy"
+                placeholder="e.g. South Korea State Medical Academy"
               />
             </div>
           </div>

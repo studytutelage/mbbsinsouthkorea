@@ -28,34 +28,34 @@ import { buildMetadata } from "@/lib/seo";
 import { getAboutCountryContent } from "@/lib/public-page-content";
 import { replaceCurrencySymbol } from "@/lib/currency";
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "About Armenia - Culture, Lifestyle and Education | mbbsinarmenia.com",
+  title: "About South Korea - Culture, Lifestyle and Education | mbbsinsouthkorea.com",
   description:
-    "Discover Armenia - a safe, culture-rich, and globally connected destination for MBBS aspirants with quality education and strong clinical exposure.",
+    "Discover South Korea - a safe, culture-rich, and globally connected destination for MBBS aspirants with quality education and strong clinical exposure.",
   entitySeo: {
     metaKeyword:
-      "about Armenia, Armenia culture, life in Armenia for students, mbbs Armenia environment, study MBBS in Armenia",
+      "about South Korea, South Korea culture, life in South Korea for students, mbbs South Korea environment, study MBBS in South Korea",
   },
-  path: "/about-Armenia",
-  pageKey: "about-Armenia",
+  path: "/about-south-korea",
+  pageKey: "about-south-korea",
 });
 const themeStyles = {
   red: {
     softPanel: "border-gray-200 bg-white/80",
     iconWrap: "bg-[#EAF1FB] text-red-600",
     iconHover: "group-hover:bg-red-600 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    titleHover: "group-hover:text-[#0047A0]",
     wash: " via-white/0 ",
     ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-[#EAF1FB] text-[#285BB5]",
+    pill: "bg-[#EAF1FB] text-[#0047A0]",
   },
   blue: {
     softPanel: "border-gray-200 bg-white/80",
     iconWrap: "bg-[#EAF1FB] text-red-600",
     iconHover: "group-hover:bg-red-600 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    titleHover: "group-hover:text-[#0047A0]",
     wash: " via-white/0 ",
     ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-[#EAF1FB] text-[#285BB5]",
+    pill: "bg-[#EAF1FB] text-[#0047A0]",
   },
   green: {
     softPanel: "border-green-100 bg-green-50/80",
@@ -67,10 +67,10 @@ const themeStyles = {
     pill: "bg-green-100 text-green-700",
   },
   amber: {
-    softPanel: "border-gray-200 bg-[#EAF1FB]0/10",
+    softPanel: "border-gray-200 bg-[#EAF1FB]/10",
     iconWrap: "bg-red-400 text-red-600",
     iconHover: "group-hover:bg-red-400 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    titleHover: "group-hover:text-[#0047A0]",
     wash: " via-white/0 ",
     ringHover: "hover:border-gray-200 hover:",
     pill: "bg-red-400 text-red-600",
@@ -90,19 +90,19 @@ const overviewIcons = [Sparkles, Globe, Landmark, Sun, Users, Mountain];
 const comparisonRows = [
   {
     label: "Tuition Fees / Year",
-    armenia: replaceCurrencySymbol("$3,500 – $5,500"),
+    southKorea: replaceCurrencySymbol("$3,500 – $5,500"),
     india: replaceCurrencySymbol("$15,000 – $18,000"),
     uk: replaceCurrencySymbol("$60,000 – $80,000"),
   },
   {
     label: "Hostel / Year",
-    armenia: replaceCurrencySymbol("$600 – $1,200"),
+    southKorea: replaceCurrencySymbol("$600 – $1,200"),
     india: replaceCurrencySymbol("$1,500 – $3,000"),
     uk: replaceCurrencySymbol("$8,000 – $15,000"),
   },
   {
     label: "Food / Month",
-    armenia: replaceCurrencySymbol("$150 – $250"),
+    southKorea: replaceCurrencySymbol("$150 – $250"),
     india: replaceCurrencySymbol("$150 – $300"),
     uk: replaceCurrencySymbol("$800 – $1,200"),
   },
@@ -111,136 +111,136 @@ const geographyHighlights = [
   {
     icon: Mountain,
     iconColor: "text-red-600",
-    text: "Landlocked mountainous nation in the South Caucasus region",
+    text: "Mountainous Korean Peninsula in East Asia, surrounded by Yellow Sea and Sea of Japan",
   },
   {
     icon: Globe,
     iconColor: "text-emerald-600",
-    text: "Crossroads of Europe and Asia with rich Eurasian heritage",
+    text: "Dynamic East Asian global powerhouse with rich cultural heritage and high-tech urban centers",
   },
   {
     icon: Sun,
     iconColor: "text-violet-600",
-    text: "Home to Lake Sevan, one of the world's largest high-altitude alpine lakes",
+    text: "Scenic natural landscapes, volcanic Jeju Island, and iconic peaks like Hallasan and Jirisan",
   },
   {
     icon: MapPinned,
     iconColor: "text-cyan-600",
-    text: "Bordered by Georgia, Turkey, Iran, and Azerbaijan",
+    text: "Maritime proximity to Japan and China, serving as a prominent regional medical education gateway",
   },
 ];
 const climateZones = [
   {
     icon: Sun,
     iconColor: "text-red-600",
-    text: "Highland continental climate with four distinct vibrant seasons",
+    text: "Temperate climate with four distinct, vibrant seasons",
   },
   {
     icon: Clock3,
     iconColor: "text-red-500",
-    text: "Warm, sunny summers with pleasant mountain breezes (25°C – 33°C)",
+    text: "Warm, sunny summers with pleasant coastal sea breezes (22°C – 30°C)",
   },
   {
     icon: Sparkles,
     iconColor: "text-violet-500",
-    text: "Snowy, picturesque winters ideal for mountain travel and skiing (-5°C – 5°C)",
+    text: "Crisp, snowy winters with heated modern campuses and scenic snowfalls (-6°C – 3°C)",
   },
   {
     icon: CheckCircle,
     iconColor: "text-emerald-500",
-    text: "Over 2,700 hours of clear sunshine annually across the country",
+    text: "Pleasant spring cherry blossoms and colorful autumn leaves across university campuses",
   },
 ];
-const armeniaAttractions = [
+const southKoreaAttractions = [
   {
     icon: Landmark,
-    title: "Republic Square & Cascade",
-    description: "The architectural center and cultural heart of Yerevan",
+    title: "Gyeongbokgung Palace",
+    description: "The grand Joseon royal palace and cultural heritage heart of Seoul",
   },
   {
     icon: Sun,
-    title: "Lake Sevan",
+    title: "N Seoul Tower & Namsan",
     description:
-      "Breathtaking high-altitude alpine lake known as Armenia's blue eye",
+      "Iconic panoramic tower overlooking Seoul's high-tech skyline",
   },
   {
     icon: Mountain,
-    title: "Tatev Monastery & Cable Car",
+    title: "Jeju Island (Hallasan)",
     description:
-      "Medieval monastery reached by the world's longest reversible aerial tramway",
+      "UNESCO World Heritage volcanic island featuring Korea's highest peak",
   },
   {
     icon: Globe,
-    title: "Garni Temple & Geghard",
+    title: "Bukchon Hanok Village & Insadong",
     description:
-      "Ancient Greco-Roman temple and UNESCO World Heritage rock-cut monastery",
+      "Historic traditional Korean hanok villages and vibrant cultural craft alleys",
   },
 ];
 const transportPoints = [
   {
     icon: Plane,
     iconColor: "text-red-600",
-    text: "Zvartnots International Airport (EVN) connects Yerevan directly with major international hubs",
+    text: "Incheon International Airport (ICN) connects Seoul directly with major Indian and global hubs",
   },
   {
     icon: Bus,
     iconColor: "text-orange-600",
-    text: "Yerevan Metro system, buses, and minibuses (marshrutkas) provide fast and cheap daily transport",
+    text: "Seoul Metropolitan Subway and KTX bullet trains provide ultra-fast, world-class daily transport",
   },
   {
     icon: Globe,
     iconColor: "text-violet-600",
-    text: "Ride-hailing apps like Yandex Taxi offer reliable, low-cost transport anywhere in cities",
+    text: "Ride-hailing apps like Kakao T and rechargeable T-Money cards offer seamless transit across Korea",
   },
   {
     icon: MapPinned,
     iconColor: "text-emerald-600",
-    text: "Well-paved highways and regional transport connect university towns across Armenia",
+    text: "High-speed rail and intercity express buses connect university cities in under 2-3 hours",
   },
 ];
 const visaOnboardingPoints = [
   {
     icon: CheckCircle,
     iconColor: "text-emerald-600",
-    text: "Straightforward student visa & residence permit procedure for international applicants",
+    text: "Straightforward D-2 student visa and Alien Registration Card (ARC) process for international applicants",
   },
   {
     icon: Clock3,
     iconColor: "text-orange-600",
-    text: "Quick processing times with official university invitation letters",
+    text: "Quick visa issuance backed by official university Certificate of Admission (CoA)",
   },
   {
     icon: Plane,
     iconColor: "text-red-600",
-    text: "Universities provide dedicated legal assistance for student residence registration",
+    text: "Universities provide dedicated international student offices (OIA) for visa renewals and residence registration",
   },
   {
     icon: Heart,
     iconColor: "text-red-500",
-    text: "Airport pick-up, hostel allotment, and local orientation offered for all new arrivals",
+    text: "Airport reception, modern campus dormitory allotment, and comprehensive arrival orientation",
   },
 ];
 const healthcareCards = [
   {
-    title: "Public Healthcare",
+    title: "National Health Insurance (NHIS)",
     description:
-      "Armenia's network of state medical centers and university teaching hospitals provide essential healthcare services and strong clinical rotation exposure.",
+      "International students in South Korea are enrolled in the world-class National Health Insurance System, ensuring highly subsidized medical treatment.",
     accent: "border-sky-200",
   },
   {
-    title: "Private Healthcare",
+    title: "Advanced Teaching Hospitals",
     description:
-      "Modern private clinics in Yerevan feature state-of-the-art diagnostic technology, multi-specialty departments, and English-speaking doctors.",
+      "Leading tertiary medical centers (SNU Hospital, Severance, Asan) feature cutting-edge robotic surgery, digital diagnostics, and English-speaking faculty.",
     accent: "border-emerald-200",
   },
   {
-    title: "Student Health Support",
+    title: "Student Health & Wellness",
     description:
-      "Medical universities provide international students with health insurance guidance, campus clinics, and direct referral support.",
+      "University campuses offer on-site medical clinics, multilingual counseling, and priority referrals to affiliated university hospitals.",
     accent: "border-violet-200",
   },
 ];
-export default async function AboutArmeniaPage() {
+export default async function AboutSouthKoreaPage() {
   const content = await getAboutCountryContent();
   const stats = content.summaryStats.map((item, index) => {
     const icons = [Building2, Users, Languages, DollarSign];
@@ -255,31 +255,31 @@ export default async function AboutArmeniaPage() {
     {
       title: "First Christian Nation",
       description:
-        "Armenia was the first country in the world to adopt Christianity as its official state religion in 301 AD.",
+        "South Korea was the first country in the world to adopt Christianity as its official state religion in 301 AD.",
       theme: "blue" as const,
     },
     {
       title: "Ancient Heritage",
       description:
-        "Armenia has an ancient civilization featuring a unique script created by Mesrop Mashtots in 405 AD.",
+        "South Korea has an ancient civilization featuring a unique script created by Mesrop Mashtots in 405 AD.",
       theme: "green" as const,
     },
     {
       title: "High Literacy Rate",
       description:
-        "Armenia boasts a 99.7% literacy rate with long-standing traditions in medical & scientific research.",
+        "South Korea boasts a 99.7% literacy rate with long-standing traditions in medical & scientific research.",
       theme: "amber" as const,
     },
     {
-      title: "Geography & Mountains",
+      title: "Geography & Nature",
       description:
-        "Nestled in the South Caucasus, Armenia features scenic mountainous terrain, alpine lakes, and fertile valleys.",
+        "Located in the Korean Peninsula of East Asia, South Korea features scenic mountains, volcanic Jeju Island, and picturesque coastlines.",
       theme: "purple" as const,
     },
     {
       title: "Safety & Hospitality",
       description:
-        "Ranked among the safest countries in the world for international students with warm Caucasian hospitality.",
+        "Ranked among the safest countries in the world for international students with warm Korean hospitality and 24/7 safe public transport.",
       theme: "red" as const,
     },
     {
@@ -314,7 +314,7 @@ export default async function AboutArmeniaPage() {
   const quickFacts = [
     {
       title: "Capital",
-      value: stats.find((stat) => stat.label === "Capital")?.value || "Yerevan",
+      value: stats.find((stat) => stat.label === "Capital")?.value || "Seoul",
       icon: Building2,
       style: themeStyles.blue,
     },
@@ -322,7 +322,7 @@ export default async function AboutArmeniaPage() {
       title: "Population",
       value:
         stats.find((stat) => stat.label === "Population")?.value ||
-        "3 Million+",
+        "51.7 Million+",
       icon: Users,
       style: themeStyles.green,
     },
@@ -330,7 +330,7 @@ export default async function AboutArmeniaPage() {
       title: "Languages",
       value:
         stats.find((stat) => stat.label === "Languages")?.value ||
-        "Armenian, Russian, English",
+        "Korean, English (Academic)",
       icon: Languages,
       style: themeStyles.purple,
     },
@@ -338,31 +338,31 @@ export default async function AboutArmeniaPage() {
       title: "Currency",
       value:
         stats.find((stat) => stat.label === "Currency")?.value ||
-        "AMD (Armenian Dram)",
+        "KRW (South Korean Won)",
       icon: DollarSign,
       style: themeStyles.amber,
     },
     {
       title: "Location",
-      value: content.location || "South Caucasus region, Eurasia",
+      value: content.location || "East Asia, Korean Peninsula",
       icon: MapPinned,
       style: themeStyles.red,
     },
     {
       title: "Timezone",
-      value: content.timezone || "GMT+4 (AMT)",
+      value: content.timezone || "UTC+9 (KST)",
       icon: Clock3,
       style: themeStyles.green,
     },
     {
-      title: "Independence",
-      value: content.independenceDay || "21 September 1991",
+      title: "National Day",
+      value: content.independenceDay || "August 15, 1945",
       icon: Flag,
       style: themeStyles.amber,
     },
     {
       title: "Highest Peak",
-      value: `${content.highestPeak || "Mount Aragats"} (${content.highestPeakHeight || "4,090 m"})`,
+      value: `${content.highestPeak || "Hallasan"} (${content.highestPeakHeight || "1,947 m"})`,
       icon: Mountain,
       style: themeStyles.blue,
     },
@@ -370,7 +370,7 @@ export default async function AboutArmeniaPage() {
   return (
     <div className="min-h-screen bg-white">
       {" "}
-      <section className="relative overflow-hidden bg-[#EAF1FB]0 py-20 text-gray-900">
+      <section className="relative overflow-hidden bg-[#EAF1FB] py-20 text-gray-900">
         {" "}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.16),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(153,27,27,0.18),transparent_32%)]" />{" "}
         <div className="relative mx-auto max-w-7xl px-4 text-center">
@@ -379,15 +379,15 @@ export default async function AboutArmeniaPage() {
             {" "}
             <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-red-600/80 px-6 py-2.5 text-xl font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] ">
               {" "}
-              <MapPinned className="h-5 w-5" /> About Armenia{" "}
+              <MapPinned className="h-5 w-5" /> About South Korea{" "}
             </span>{" "}
           </div>{" "}
           <h1 className="mb-6 text-4xl font-bold lg:text-6xl">
-            {content.heroTitle || "Life and Study in Armenia"}
+            {content.heroTitle || "Life and Study in South Korea"}
           </h1>{" "}
           <p className="mx-auto max-w-3xl text-xl leading-relaxed text-slate-600">
             {content.heroDescription ||
-              "Discover why Armenia is a top choice for international medical students offering WHO & NMC recognized MBBS programs, low tuition fees, and rich cultural heritage."}
+              "Discover why South Korea is a top choice for international medical students offering WHO & NMC recognized MBBS programs, low tuition fees, and rich cultural heritage."}
           </p>{" "}
         </div>{" "}
       </section>{" "}
@@ -399,7 +399,7 @@ export default async function AboutArmeniaPage() {
             Country Snapshot
           </span>{" "}
           <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
-            Quick Facts About Armenia
+            Quick Facts About South Korea
           </h2>{" "}
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
             {" "}
@@ -444,14 +444,14 @@ export default async function AboutArmeniaPage() {
         <div className="mb-12 text-center">
           {" "}
           <span className="text-sm font-semibold uppercase tracking-widest text-red-600">
-            Why Armenia?
+            Why South Korea?
           </span>{" "}
           <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
             A Top Destination for MBBS Aspirants
           </h2>{" "}
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
             {" "}
-            Armenia offers globally accredited medical education with modern
+            South Korea offers globally accredited medical education with modern
             infrastructure, 100% English-medium instruction, and high clinical
             exposure.{" "}
           </p>{" "}
@@ -503,16 +503,16 @@ export default async function AboutArmeniaPage() {
                 Did You Know?
               </span>{" "}
               <h2 className="mt-2 mb-8 text-3xl font-bold text-gray-900">
-                Armenia Education Facts
+                South Korea Education Facts
               </h2>{" "}
               <div className="space-y-4">
                 {" "}
                 {[
-                  "High Educational Standards: Adult literacy rate is 99.7% with a century-long tradition of medical education.",
-                  "Global Accreditation: Medical universities in Armenia are recognized by WHO, NMC (India), ECFMG (USA), FAIMER, and WDOMS.",
-                  "English-Medium Instruction: Complete 6-year MBBS / MD General Medicine program is taught in English for international students.",
-                  "Strong Clinical Exposure: Hands-on practical training in top government multi-specialty hospitals and clinics across Yerevan.",
-                  "Affordable Living & Fees: Tuition fees start from as low as $3,500/year with low cost of living compared to Western nations.",
+                  "World-Class Medical Innovation: South Korea ranks #1 globally in health system efficiency and advanced robotic surgery.",
+                  "Global Accreditation: Medical colleges are recognized by WHO (WDOMS), NMC (India), ECFMG (USA), and Ministry of Health and Welfare (MOHW).",
+                  "English-Medium Medical Tracks: Complete preclinical MBBS/MD curriculum and clinical training options taught in English for international students.",
+                  "Top Tier Clinical Exposure: Hands-on training in globally ranked tertiary university hospitals across Seoul, Busan, and Daegu.",
+                  "High Return on Investment: Top-quality medical training with scholarship opportunities and extensive clinical research resources.",
                 ].map((fact) => (
                   <div key={fact} className="flex items-start gap-3">
                     {" "}
@@ -543,10 +543,10 @@ export default async function AboutArmeniaPage() {
                       <div className="text-center">
                         {" "}
                         <div className="font-bold text-green-600 mb-1">
-                          {row.armenia}
+                          {row.southKorea}
                         </div>{" "}
                         <div className="text-[10px] uppercase font-medium tracking-wider text-gray-500">
-                          Armenia
+                          South Korea
                         </div>{" "}
                       </div>{" "}
                       <div className="text-center border-l border-gray-100">
@@ -588,7 +588,7 @@ export default async function AboutArmeniaPage() {
             </h2>{" "}
             <p className="mx-auto mt-4 max-w-2xl text-gray-600">
               {" "}
-              Armenia is a preferred MBBS destination with globally aligned
+              South Korea is a preferred MBBS destination with globally aligned
               curriculum, English-medium pathways, and quality clinical
               exposure.{" "}
             </p>{" "}
@@ -637,7 +637,7 @@ export default async function AboutArmeniaPage() {
                 Major University Cities
               </span>{" "}
               <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
-                Urban hubs for MBBS universities in Armenia
+                Urban hubs for MBBS universities in South Korea
               </h2>{" "}
               <p className="mx-auto mt-4 max-w-3xl text-gray-600">
                 {" "}
@@ -659,9 +659,9 @@ export default async function AboutArmeniaPage() {
                     <h3 className="text-2xl font-bold">
                       {" "}
                       {index === 0
-                        ? "Yerevan"
+                        ? "Seoul"
                         : index === 1
-                          ? "Gyumri"
+                          ? "Busan"
                           : city.city}{" "}
                     </h3>{" "}
                     {index === 0 ? (
@@ -671,48 +671,36 @@ export default async function AboutArmeniaPage() {
                           {" "}
                           <h4 className="flex items-center gap-2 text-md font-bold text-gray-900">
                             {" "}
-                            <span>🏫</span> About Yerevan State Medical
-                            University (YSMU){" "}
+                            <span>🏫</span> About Seoul & Medical Education{" "}
                           </h4>{" "}
                           <p className="mt-2">
                             {" "}
-                            Yerevan State Medical University (YSMU), founded in
-                            1920, is the leading medical institution in Armenia.
-                            Named after Mkhitar Heratsi, it has educated
-                            thousands of international doctors over its
-                            century-long history.{" "}
+                            Seoul is South Korea's vibrant capital and a global healthcare innovation hub. It is home to prestigious medical institutions including Seoul National University College of Medicine, Yonsei University College of Medicine, and Korea University College of Medicine.{" "}
                           </p>{" "}
                           <p className="mt-2">
                             {" "}
-                            Located in the heart of Yerevan, YSMU offers
-                            state-of-the-art research laboratories, digital
-                            classrooms, and clinical training across major
-                            government multi-specialty hospitals.{" "}
+                            Located in the dynamic heart of Korea, medical universities in Seoul offer state-of-the-art robotic surgery simulation labs, genomic research centers, and clinical rotations across world-renowned tertiary hospitals.{" "}
                           </p>{" "}
                         </section>{" "}
                         <section>
                           {" "}
                           <h5 className="flex items-center gap-2 font-bold text-gray-900">
                             {" "}
-                            <span>📜</span> History & Heritage{" "}
+                            <span>📜</span> Academic Excellence & Innovation{" "}
                           </h5>{" "}
                           <ul className="mt-2 list-inside list-disc space-y-1">
                             {" "}
                             <li>
-                              Established in 1920 as the flagship medical school
-                              of Armenia
+                              Top-ranked medical universities globally recognized for biomedical research
                             </li>{" "}
                             <li>
-                              Over 100 years of academic excellence in medical
-                              science
+                              World leaders in precision medicine, robotic surgery, and clinical technologies
                             </li>{" "}
                             <li>
-                              Attracts medical students from India, Europe,
-                              Asia, and the Americas
+                              Attracts international medical students, researchers, and global scholars
                             </li>{" "}
                             <li>
-                              Alumni practicing successfully across WHO & NMC
-                              member states
+                              Alumni practicing worldwide across NMC, WHO, USMLE, and PLAB jurisdictions
                             </li>{" "}
                           </ul>{" "}
                         </section>{" "}
@@ -732,13 +720,11 @@ export default async function AboutArmeniaPage() {
                               <ul className="mt-1 list-inside list-disc space-y-1">
                                 {" "}
                                 <li>
-                                  Duration: 6 years (5 years coursework + 1 year
-                                  clinical internship)
+                                  Duration: 6 years (2 years Pre-Medicine + 4 years Clinical Medicine & Internship)
                                 </li>{" "}
-                                <li>Medium of Instruction: 100% English</li>{" "}
+                                <li>Medium of Instruction: English-taught preclinical tracks with clinical Korean support</li>{" "}
                                 <li>
-                                  Curriculum aligned with NEXT (India), USMLE
-                                  (USA), PLAB (UK)
+                                  Curriculum aligned with NEXT (India), USMLE (USA), and global standards
                                 </li>{" "}
                               </ul>{" "}
                             </div>{" "}
@@ -752,15 +738,13 @@ export default async function AboutArmeniaPage() {
                           </h5>{" "}
                           <ul className="mt-2 list-inside list-disc space-y-1">
                             {" "}
-                            <li>World Health Organization (WHO)</li>{" "}
+                            <li>World Health Organization (WHO - WDOMS)</li>{" "}
                             <li>National Medical Commission (NMC), India</li>{" "}
                             <li>
-                              Educational Commission for Foreign Medical
-                              Graduates (ECFMG), USA
+                              Educational Commission for Foreign Medical Graduates (ECFMG), USA
                             </li>{" "}
                             <li>
-                              World Directory of Medical Schools (WDOMS) &
-                              FAIMER
+                              Ministry of Health and Welfare (MOHW), South Korea
                             </li>{" "}
                           </ul>{" "}
                         </section>{" "}
@@ -772,15 +756,13 @@ export default async function AboutArmeniaPage() {
                           </h5>{" "}
                           <ul className="mt-2 list-inside list-disc space-y-1">
                             {" "}
-                            <li>Heratsi Hospital Complex No. 1</li>{" "}
-                            <li>Muratsan University Hospital Complex</li>{" "}
+                            <li>Seoul National University Hospital (SNUH)</li>{" "}
+                            <li>Severance Hospital - Yonsei University Health System</li>{" "}
                             <li>
-                              Armenia Medical Center & St. Gregory the
-                              Illuminator Medical Center
+                              Asan Medical Center & Samsung Medical Center
                             </li>{" "}
                             <li>
-                              Over 3,000 hospital beds for direct patient
-                              exposure
+                              Over 10,000 tertiary hospital beds for comprehensive clinical exposure
                             </li>{" "}
                           </ul>{" "}
                         </section>{" "}
@@ -792,15 +774,11 @@ export default async function AboutArmeniaPage() {
                           {" "}
                           <h4 className="flex items-center gap-2 text-md font-bold text-gray-900">
                             {" "}
-                            <span>🏙️</span> About Gyumri{" "}
+                            <span>🏙️</span> About Busan{" "}
                           </h4>{" "}
                           <p className="mt-2">
                             {" "}
-                            Gyumri is the second largest city in Armenia and
-                            serves as the cultural capital of the country. Known
-                            for its distinct 19th-century black tufa
-                            architecture, historic urban center, and rich
-                            artistic traditions.{" "}
+                            Busan is South Korea's second largest metropolis and primary maritime center, renowned for world-class universities like Pusan National University College of Medicine, scenic beaches, and international cultural festivals.{" "}
                           </p>{" "}
                         </section>{" "}
                         <section>
@@ -812,16 +790,13 @@ export default async function AboutArmeniaPage() {
                           <ul className="mt-2 list-inside list-disc space-y-1">
                             {" "}
                             <li>
-                              Gyumri Medical Center provides modern regional
-                              healthcare services
+                              Pusan National University Hospital provides premier tertiary patient care
                             </li>{" "}
                             <li>
-                              Peaceful, student-friendly town with low cost of
-                              living
+                              Safe, modern coastal environment with a student-friendly cost of living
                             </li>{" "}
                             <li>
-                              Well-connected to Yerevan by high-speed electric
-                              trains
+                              Direct KTX bullet train connection to Seoul in approximately 2 hours
                             </li>{" "}
                           </ul>{" "}
                         </section>{" "}
@@ -877,8 +852,8 @@ export default async function AboutArmeniaPage() {
             </h2>{" "}
             <p className="mt-4 text-base leading-7 text-slate-700">
               {" "}
-              A mountainous land in the South Caucasus known for sunny weather,
-              alpine lakes, and safe urban life.{" "}
+              A vibrant peninsula in East Asia celebrated for picturesque four seasons,
+              scenic mountains and coastal landscapes, and hyper-safe urban life.{" "}
             </p>{" "}
           </div>{" "}
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -927,11 +902,11 @@ export default async function AboutArmeniaPage() {
           <div className="mt-8 rounded-[2rem] border border-gray-200/20 bg-orange-500 px-6 py-8 text-gray-900 shadow-lg lg:px-10">
             {" "}
             <h3 className="text-center text-2xl font-bold lg:text-3xl">
-              Top Attractions in Armenia
+              Top Attractions in South Korea
             </h3>{" "}
             <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {" "}
-              {armeniaAttractions.map((item) => (
+              {southKoreaAttractions.map((item) => (
                 <article
                   key={item.title}
                   className="rounded-2xl bg-gray-100 p-4 text-center ring-1 ring-white/15 "
@@ -1053,7 +1028,7 @@ export default async function AboutArmeniaPage() {
               Cuisine and Student Life
             </span>{" "}
             <h2 className="mt-2 text-3xl font-bold text-gray-900 lg:text-4xl">
-              Food, culture, and lifestyle across Armenia
+              Food, culture, and lifestyle across South Korea
             </h2>{" "}
           </div>{" "}
           <div className="grid gap-8 lg:grid-cols-2">
@@ -1185,17 +1160,17 @@ export default async function AboutArmeniaPage() {
           </div>{" "}
         </section>
       ) : null}{" "}
-      <section className="bg-[#EAF1FB]0 py-16 text-gray-900">
+      <section className="bg-[#EAF1FB] py-16 text-gray-900">
         {" "}
         <div className="mx-auto max-w-4xl px-4 text-center">
           {" "}
           <h2 className="text-3xl font-bold lg:text-4xl">
-            Ready to choose Armenia for your MBBS journey?
+            Ready to choose South Korea for your MBBS journey?
           </h2>{" "}
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
             {" "}
             Compare top universities, tuition fees, and admission guidance to
-            plan your MBBS journey in Armenia.{" "}
+            plan your MBBS journey in South Korea.{" "}
           </p>{" "}
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             {" "}

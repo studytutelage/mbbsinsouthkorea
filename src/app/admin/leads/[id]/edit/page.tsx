@@ -204,7 +204,7 @@ export default function LeadEditPage() {
                   </p>
                   <Badge
                     variant="outline"
-                    className="text-xs font-medium bg-[#EAF1FB]0 text-red-600 border-gray-200 whitespace-normal text-left h-auto py-1 px-3"
+                    className="text-xs font-medium bg-[#EAF1FB] text-red-600 border-gray-200 whitespace-normal text-left h-auto py-1 px-3"
                   >
                     {formatSource(lead.source)}
                   </Badge>
@@ -346,7 +346,7 @@ export default function LeadEditPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="flex-1 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
               >
                 {loading ? "Saving…" : "Update Lead"}
               </Button>

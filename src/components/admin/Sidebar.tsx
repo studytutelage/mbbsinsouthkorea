@@ -152,10 +152,11 @@ export function AdminSidebar() {
       {/* Logo */}
       <div className="h-16 flex items-center px-5 border-b border-gray-200">
         <Link href="/admin" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-[#EAF1FB]0 flex items-center justify-center text-gray-900 font-bold text-sm">
+          <div className="w-8 h-8 rounded-lg bg-[#EAF1FB] flex items-center justify-center text-gray-900 font-bold text-sm">
+            <GraduationCap size={18} />
           </div>
           <span className="font-semibold text-sm text-gray-900">
-            MBBS Armenia
+            MBBS South Korea
           </span>
         </Link>
       </div>
@@ -171,7 +172,7 @@ export function AdminSidebar() {
                 className={cn(
                   "flex items-center gap-3 px-3 py-2 rounded-lg text-sm mb-0.5 transition-colors",
                   isActive(item.href)
-                    ? "bg-[#EAF1FB]0 text-white"
+                    ? "bg-[#0047A0] text-white"
                     : "text-gray-500 hover:text-gray-900 hover:bg-[#EAF1FB]",
                 )}
               >
@@ -210,7 +211,7 @@ export function AdminSidebar() {
                         "block px-3 py-1.5 rounded-md text-xs transition-colors",
                         isActive(child.href) ||
                           pathname.startsWith(child.href + "/")
-                          ? "bg-[#EAF1FB]0 text-white"
+                          ? "bg-[#0047A0] text-white"
                           : "text-gray-500 hover:text-gray-900 hover:bg-[#EAF1FB]",
                       )}
                     >

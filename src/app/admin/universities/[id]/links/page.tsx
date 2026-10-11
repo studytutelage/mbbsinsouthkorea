@@ -149,7 +149,7 @@ export default function UniversityLinksPage() {
               websites, forms, videos
             </p>
           </div>
-          <Button onClick={openAdd} className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0">
+          <Button onClick={openAdd} className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white">
             <Plus size={16} className="mr-2" />
             Add Link
           </Button>
@@ -216,7 +216,7 @@ export default function UniversityLinksPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -269,7 +269,7 @@ export default function UniversityLinksPage() {
                       </span>
                     )}
                     {!item.status && (
-                      <span className="text-xs bg-[#EAF1FB]0 text-red-600 px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[#EAF1FB] text-red-600 px-2 py-0.5 rounded-full">
                         Inactive
                       </span>
                     )}
@@ -298,7 +298,7 @@ export default function UniversityLinksPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-red-600 hover:text-[#285BB5]"
+                    className="h-8 w-8 p-0 text-red-600 hover:text-[#0047A0]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

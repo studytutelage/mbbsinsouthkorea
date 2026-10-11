@@ -47,9 +47,9 @@ export default async function EducationSystem() {
                   key={stat.label}
                   className="group relative overflow-hidden rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200 transition-all duration-500 hover:-translate-y-1 hover:ring-red-200 hover:shadow-lg hover:"
                 >
-                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 transition-colors duration-300 group-hover:text-[#0047A0]">
                       {stat.label}
                     </div>
                     <div className="mt-2 text-2xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-slate-950">
@@ -77,9 +77,9 @@ export default async function EducationSystem() {
                   key={item.title}
                   className="group relative overflow-hidden rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200 transition-all duration-500 hover:-translate-y-1 hover:ring-red-200 hover:shadow-lg hover:"
                 >
-                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative">
-                    <h4 className="text-lg font-bold text-slate-900 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h4 className="text-lg font-bold text-slate-900 transition-colors duration-300 group-hover:text-[#0047A0]">
                       {item.title}
                     </h4>
                     <p className="mt-2 text-sm leading-7 text-slate-600 transition-colors duration-300 group-hover:text-slate-700">
@@ -98,7 +98,7 @@ export default async function EducationSystem() {
               key={`${item.label}-${item.title}`}
               className={`group rounded-[1.75rem] border-2 p-6 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${themeStyles[item.theme]}`}
             >
-              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 transition-colors duration-300 group-hover:text-[#285BB5]">
+              <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 transition-colors duration-300 group-hover:text-[#0047A0]">
                 {item.label}
               </div>
               <h3 className="mt-2 text-xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-slate-950">
@@ -138,9 +138,9 @@ export default async function EducationSystem() {
                   key={`${card.label}-${index}`}
                   className="group relative overflow-hidden rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200 transition-all duration-500 hover:-translate-y-1 hover:ring-red-200 hover:shadow-lg hover:"
                 >
-                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-red-600 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-red-600 transition-colors duration-300 group-hover:text-[#0047A0]">
                       {card.label}
                     </div>
                     <div className="mt-2 text-xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-slate-950">
@@ -170,9 +170,9 @@ export default async function EducationSystem() {
                   key={`${card.label}-${index}`}
                   className="group relative overflow-hidden rounded-2xl bg-slate-50 p-5 ring-1 ring-slate-200 transition-all duration-500 hover:-translate-y-1 hover:ring-red-200 hover:shadow-lg hover:"
                 >
-                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="relative">
-                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 transition-colors duration-300 group-hover:text-[#0047A0]">
                       {card.label}
                     </div>
                     <div className="mt-2 text-xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-slate-950">

@@ -63,7 +63,7 @@ export default function ProvinceCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
           >
             {loading ? "Saving…" : "Create Province"}
           </Button>

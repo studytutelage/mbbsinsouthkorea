@@ -64,7 +64,7 @@ export default function LoginPage() {
 
         {/* Error */}
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm">
+          <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
@@ -81,7 +81,7 @@ export default function LoginPage() {
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               placeholder="your@email.com"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
             />
           </div>
 
@@ -96,7 +96,7 @@ export default function LoginPage() {
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 placeholder="••••••••"
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
               />
               <button
                 type="button"
@@ -122,7 +122,7 @@ export default function LoginPage() {
             </label>
             <Link
               href="/forgot-password"
-              className="text-red-600 hover:text-[#285BB5] font-medium"
+              className="text-red-600 hover:text-[#0047A0] font-medium"
             >
               Forgot password?
             </Link>
@@ -148,7 +148,7 @@ export default function LoginPage() {
           Don&apos;t have an account?{" "}
           <Link
             href="/register"
-            className="text-red-600 hover:text-[#285BB5] font-semibold"
+            className="text-red-600 hover:text-[#0047A0] font-semibold"
           >
             Register here
           </Link>

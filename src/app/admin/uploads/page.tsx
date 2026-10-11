@@ -83,7 +83,7 @@ export default function UploadsPage() {
           <select
             value={folder}
             onChange={(e) => setFolder(e.target.value)}
-            className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+            className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
           >
             <option value="general">General</option>
             <option value="universities">Universities</option>
@@ -103,7 +103,7 @@ export default function UploadsPage() {
             Select Image
           </label>
           <div
-            className={`border-2 border-dashed rounded-xl p-6 text-center transition-colors ${file ? "border-gray-200 bg-[#EAF1FB]0" : "border-gray-200 hover:border-gray-300"}`}
+            className={`border-2 border-dashed rounded-xl p-6 text-center transition-colors ${file ? "border-gray-200 bg-[#EAF1FB]" : "border-gray-200 hover:border-gray-300"}`}
           >
             {preview ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -117,7 +117,7 @@ export default function UploadsPage() {
             )}
             <label
               htmlFor="file-upload"
-              className="cursor-pointer text-sm text-red-600 font-medium hover:text-[#285BB5]"
+              className="cursor-pointer text-sm text-red-600 font-medium hover:text-[#0047A0]"
             >
               {file ? file.name : "Click to choose file"}
               <input
@@ -137,7 +137,7 @@ export default function UploadsPage() {
         </div>
 
         {error && (
-          <p className="text-sm text-red-600 bg-[#EAF1FB]0 border border-gray-200 px-3 py-2 rounded-lg">
+          <p className="text-sm text-red-600 bg-[#EAF1FB] border border-gray-200 px-3 py-2 rounded-lg">
             {error}
           </p>
         )}
@@ -145,7 +145,7 @@ export default function UploadsPage() {
         <button
           onClick={handleUpload}
           disabled={!file || uploading}
-          className="w-full bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 text-white py-3 rounded-xl font-semibold text-sm disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-[#EAF1FB] hover:bg-[#0047A0] text-white py-3 rounded-xl font-semibold text-sm disabled:opacity-50 transition-colors flex items-center justify-center gap-2"
         >
           {uploading ? (
             <>
@@ -178,7 +178,7 @@ export default function UploadsPage() {
                 </code>
                 <button
                   onClick={() => copy(result.path)}
-                  className="text-gray-500 hover:text-[#285BB5] shrink-0"
+                  className="text-gray-500 hover:text-[#0047A0] shrink-0"
                 >
                   {copied ? (
                     <CheckCircle size={14} className="text-green-500" />
@@ -196,7 +196,7 @@ export default function UploadsPage() {
                 </code>
                 <button
                   onClick={() => copy(result.url)}
-                  className="text-gray-500 hover:text-[#285BB5] shrink-0"
+                  className="text-gray-500 hover:text-[#0047A0] shrink-0"
                 >
                   {copied ? (
                     <CheckCircle size={14} className="text-green-500" />

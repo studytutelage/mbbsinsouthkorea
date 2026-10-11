@@ -38,11 +38,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "Blog Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Armenia Blog`,
+    title: cat.metaTitle || `${cat.name} — MBBS South Korea Blog`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Read articles about ${cat.name} — MBBS in Armenia. Tips, guides, and student experiences.`,
+      `Read articles about ${cat.name} — MBBS in South Korea. Tips, guides, and student experiences.`,
     path: `/blog/${categorySlug}`,
   });
 }
@@ -102,11 +102,11 @@ export default async function BlogCategoryPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#285BB5]">
+          <Link href="/" className="hover:text-[#0047A0]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/blog" className="hover:text-[#285BB5]">
+          <Link href="/blog" className="hover:text-[#0047A0]">
             Blog
           </Link>
           <ChevronRight className="w-3 h-3" />
@@ -176,7 +176,7 @@ export default async function BlogCategoryPage({ params }: Props) {
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#0047A0] transition-colors">
                         {blog.title}
                       </h2>
                       {blog.shortnote && (

@@ -223,7 +223,7 @@ export default function AdminFmgeRatesPage() {
             <Button
               variant="outline"
               size="sm"
-              className="h-8 border-gray-200 text-gray-700 hover:text-[#285BB5] hover:border-gray-200 hover:bg-[#EAF1FB]0 text-xs font-bold shadow-xs bg-white"
+              className="h-8 border-gray-200 text-gray-700 hover:text-[#0047A0] hover:border-gray-200 hover:bg-[#EAF1FB] text-xs font-bold shadow-xs bg-white"
               asChild
             >
               <a href="/api/admin/fmge-rates/bulk-template" download>
@@ -236,7 +236,7 @@ export default function AdminFmgeRatesPage() {
               size="sm"
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="h-8 border-gray-200 text-red-600 hover:bg-[#EAF1FB]0 hover:text-gray-900 transition-all text-xs font-bold"
+              className="h-8 border-gray-200 text-red-600 hover:bg-[#EAF1FB] hover:text-gray-900 transition-all text-xs font-bold"
             >
               {isUploading ? (
                 <Loader2 size={14} className="mr-1.5 animate-spin" />
@@ -259,7 +259,7 @@ export default function AdminFmgeRatesPage() {
               setEditId(null);
               setForm(blank);
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 h-10"
+            className="bg-[#EAF1FB] hover:bg-[#EAF1FB] h-10"
           >
             <Plus size={16} className="mr-2" />
             Add Rate
@@ -386,7 +386,7 @@ export default function AdminFmgeRatesPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving && <Loader2 size={14} className="mr-2 animate-spin" />}
               {editId ? "Save Changes" : "Add Rate"}
@@ -475,7 +475,7 @@ export default function AdminFmgeRatesPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                          className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                           onClick={() => handleDelete(r.id)}
                         >
                           <Trash2 size={14} />

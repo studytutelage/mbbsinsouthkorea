@@ -134,7 +134,7 @@ export default function UniversityTestimonialsPage() {
                 status: true,
               });
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
           >
             <Plus size={16} className="mr-2" />
             Add Testimonial
@@ -222,7 +222,7 @@ export default function UniversityTestimonialsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />

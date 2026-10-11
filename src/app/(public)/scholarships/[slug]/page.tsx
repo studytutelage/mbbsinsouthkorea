@@ -52,13 +52,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!s) return { title: "Scholarship Not Found" };
   return buildMetadata({
-    title: s.metaTitle || `${s.title} — MBBS Scholarship Armenia`,
+    title: s.metaTitle || `${s.title} — MBBS Scholarship South Korea`,
     description:
       s.metaDescription ||
       s.shortnote ||
-      `Apply for ${s.title}. Scholarships for MBBS in Armenia.`,
+      `Apply for ${s.title}. Scholarships for MBBS in South Korea.`,
     entitySeo: {
-      metaKeyword: s.metaKeyword || `${s.title}, MBBS scholarship Armenia`,
+      metaKeyword: s.metaKeyword || `${s.title}, MBBS scholarship South Korea`,
     },
     path: `/scholarships/${slug}`,
   });
@@ -109,11 +109,11 @@ export default async function ScholarshipDetailPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#285BB5]">
+          <Link href="/" className="hover:text-[#0047A0]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/scholarships" className="hover:text-[#285BB5]">
+          <Link href="/scholarships" className="hover:text-[#0047A0]">
             Scholarships
           </Link>
           <ChevronRight className="w-3 h-3" />
@@ -354,7 +354,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                 </h4>
                 {scholarship.university.city && (
                   <p className="text-sm text-gray-500 mt-1">
-                    {scholarship.university.city}, Armenia
+                    {scholarship.university.city}, South Korea
                   </p>
                 )}
                 <Link

@@ -102,7 +102,7 @@ export default function TouristSpotsAdminPage() {
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="ml-auto bg-[#EAF1FB] hover:bg-[#EAF1FB]"
         >
           <Plus size={14} className="mr-1" /> Add Place
         </Button>
@@ -287,7 +287,7 @@ export default function TouristSpotsAdminPage() {
                         {item.attractionName}
                       </p>
                       {!item.isActive && (
-                        <span className="text-xs bg-[#EAF1FB]0 text-red-600 px-2 py-0.5 rounded-full">
+                        <span className="text-xs bg-[#EAF1FB] text-red-600 px-2 py-0.5 rounded-full">
                           Hidden
                         </span>
                       )}

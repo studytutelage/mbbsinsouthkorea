@@ -1,5 +1,5 @@
 {
-  "name": "mbbsinarmenia-nextjs",
+  "name": "mbbsinsouthkorea-nextjs",
   "version": "0.1.0",
   "private": true,
   "overrides": {
@@ -12,9 +12,9 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "dotenv -e .env -- npx ts-node --project tsconfig.json -e 'require(\"./prisma/seed.ts\")'",
-    "seed:armenia": "npx dotenv-cli -e .env -- npx tsx scripts/seed-armenia.ts",
-    "seed:armenia:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-armenia-comprehensive.ts",
-    "seed:armenia:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-armenia-universities.ts",
+    "seed:South Korea": "npx dotenv-cli -e .env -- npx tsx scripts/seed-South Korea.ts",
+    "seed:South Korea:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-South Korea-comprehensive.ts",
+    "seed:South Korea:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-South Korea-universities.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

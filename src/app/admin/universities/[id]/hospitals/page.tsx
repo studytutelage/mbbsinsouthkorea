@@ -141,7 +141,7 @@ export default function UniversityHospitalsPage() {
           <Button
             onClick={handleLink}
             disabled={adding || !selectedHospital}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#EAF1FB] hover:bg-[#EAF1FB] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="mr-2 animate-spin" />
@@ -191,7 +191,7 @@ export default function UniversityHospitalsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 text-red-600 hover:bg-[#EAF1FB]0 text-xs"
+                        className="h-7 text-red-600 hover:bg-[#EAF1FB] text-xs"
                         onClick={() => handleUnlink(l.hospitalId)}
                       >
                         <Trash2 size={12} className="mr-1" /> Unlink

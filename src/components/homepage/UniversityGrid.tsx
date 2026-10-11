@@ -9,11 +9,11 @@ function getTypeColor(type: string) {
     case "medical":
       return "bg-green-100 text-green-800";
     case "technical":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#EAF1FB] text-[#002B5C]";
     case "private":
       return "bg-purple-100 text-purple-800";
     case "public":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#EAF1FB] text-[#002B5C]";
     default:
       return "bg-gray-100 text-gray-800";
   }
@@ -83,12 +83,12 @@ export default async function UniversityGrid() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Top Medical Universities in Armenia
+            Top Medical Universities in South Korea
           </h2>
           <p className="text-lg text-gray-600 max-w-5xl mx-auto">
-            Practicing medicine in Armenia is a structured and transparent
-            process regulated by the Medical Council of Armenia (MCM).
-            International students who complete their MBBS in Armenia or from a
+            Practicing medicine in South Korea is a structured and transparent
+            process regulated by the Medical Council of South Korea (MCM).
+            International students who complete their MBBS in South Korea or from a
             recognized university abroad can apply for registration and begin
             their medical career in the country.
           </p>
@@ -129,7 +129,7 @@ export default async function UniversityGrid() {
                   href={`/universities/${university.slug}`}
                   className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-500 hover:-translate-y-1 hover:border-gray-200 hover:shadow-2xl hover: ${universities.length < 3 ? "w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-md" : ""}`}
                 >
-                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     {(() => {
@@ -139,7 +139,7 @@ export default async function UniversityGrid() {
                             cdn(university.thumbnailPath) ||
                             "https://images.pexels.com/photos/5212317/pexels-photo-5212317.jpeg?auto=compress&cs=tinysrgb&w=600"
                           }
-                          alt={`MBBS students campus at ${university.name}, Armenia`}
+                          alt={`MBBS students campus at ${university.name}, South Korea`}
                           fill
                           priority={index < 3}
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -170,7 +170,7 @@ export default async function UniversityGrid() {
                   {/* Content */}
                   <div className="relative flex flex-grow flex-col p-6">
                     <div className="mb-4">
-                      <h3 className="mb-2 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-[#285BB5]">
+                      <h3 className="mb-2 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-[#0047A0]">
                         {university.name}
                       </h3>
                       <div className="mb-2 flex items-center text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
@@ -178,7 +178,7 @@ export default async function UniversityGrid() {
                         <span>
                           {university.cityRelation?.name ||
                             university.city ||
-                            "Armenia"}
+                            "South Korea"}
                           {university.province?.name
                             ? `, ${university.province.name}`
                             : ""}

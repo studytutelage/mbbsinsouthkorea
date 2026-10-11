@@ -25,7 +25,7 @@ interface Props {
 
 const PHONE_CODES = [
   { code: "+91", country: "India" },
-  { code: "+996", country: "Armenia" },
+  { code: "+996", country: "South Korea" },
   { code: "+1", country: "USA/Canada" },
   { code: "+44", country: "UK" },
   { code: "+92", country: "Pakistan" },
@@ -136,7 +136,7 @@ export default function DownloadFormPopup({
   };
 
   const inputCls =
-    "w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white";
+    "w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white";
 
   return (
     <div
@@ -210,7 +210,7 @@ export default function DownloadFormPopup({
                   value={form.name}
                   onChange={(e) => set("name", e.target.value)}
                   placeholder="Your Name"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
                 />
               </div>
 
@@ -226,7 +226,7 @@ export default function DownloadFormPopup({
                   value={form.email}
                   onChange={(e) => set("email", e.target.value)}
                   placeholder="your.email@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
                 />
               </div>
 
@@ -240,7 +240,7 @@ export default function DownloadFormPopup({
                   <select
                     value={form.countryCode}
                     onChange={(e) => set("countryCode", e.target.value)}
-                    className="pl-9 pr-2 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 text-sm outline-none w-28 bg-white text-gray-900"
+                    className="pl-9 pr-2 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 text-sm outline-none w-28 bg-white text-gray-900"
                   >
                     {PHONE_CODES.map((c) => (
                       <option key={c.code} value={c.code}>
@@ -270,12 +270,12 @@ export default function DownloadFormPopup({
                   value={form.nationality}
                   onChange={(e) => set("nationality", e.target.value)}
                   placeholder="Your Nationality"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent transition text-sm outline-none text-gray-900 placeholder:text-gray-500 bg-white"
                 />
               </div>
 
               {error && (
-                <div className="rounded-xl bg-white border border-gray-200 px-4 py-3 text-sm text-[#285BB5]">
+                <div className="rounded-xl bg-white border border-gray-200 px-4 py-3 text-sm text-[#0047A0]">
                   {error}
                 </div>
               )}

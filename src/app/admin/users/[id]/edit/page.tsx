@@ -171,7 +171,7 @@ export default function UserEditPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
           >
             {loading ? "Saving…" : "Save Changes"}
           </Button>

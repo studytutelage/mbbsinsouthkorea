@@ -134,7 +134,7 @@ export default function EditFaqPage() {
             <Input
               value={form.question}
               onChange={(e) => set("question", e.target.value)}
-              placeholder="What is the eligibility for MBBS in Armenia?"
+              placeholder="What is the eligibility for MBBS in South Korea?"
             />
           </div>
           <div className="space-y-1.5">
@@ -199,7 +199,7 @@ export default function EditFaqPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={loading}
           >
             {loading ? (

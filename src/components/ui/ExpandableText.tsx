@@ -28,7 +28,7 @@ export default function ExpandableText({
       {shouldTruncate && (
         <button
           onClick={() => setExpanded((v) => !v)}
-          className="mt-3 text-red-600 hover:text-[#285BB5] font-medium text-sm transition-colors"
+          className="mt-3 text-red-600 hover:text-[#0047A0] font-medium text-sm transition-colors"
         >
           {expanded ? "Show Less ↑" : "Show More ↓"}
         </button>

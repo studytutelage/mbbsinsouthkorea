@@ -47,11 +47,11 @@ export default function UniversityHero({ university }: Props) {
               priority
             />
           </div>
-          <div className="absolute inset-0 z-0 bg-[#101B4D]/70 mix-blend-multiply" />
-          <div className="absolute inset-0 z-0 bg-[#173A7A]/30 mix-blend-multiply" />
+          <div className="absolute inset-0 z-0 bg-[#002B5C]/70 mix-blend-multiply" />
+          <div className="absolute inset-0 z-0 bg-[#0047A0]/30 mix-blend-multiply" />
         </>
       ) : (
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#101B4D] via-[#173A7A] to-[#285BB5]" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#002B5C] via-[#0047A0] to-[#0047A0]" />
       )}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +65,7 @@ export default function UniversityHero({ university }: Props) {
                 </span>
               )}
               {university.nmcApproved && (
-                <span className="bg-[#D90012] text-white text-xs font-bold px-3 py-1 rounded-full">
+                <span className="bg-[#CD2E3A] text-white text-xs font-bold px-3 py-1 rounded-full">
                   NMC Approved
                 </span>
               )}
@@ -80,13 +80,13 @@ export default function UniversityHero({ university }: Props) {
             </p>
             <div className="grid grid-cols-2 gap-5 mb-8">
               <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-[#F2A800] shrink-0" />
+                <MapPin className="h-5 w-5 text-[#CD2E3A] shrink-0" />
                 <div>
                   <p className="font-semibold text-sm">Location</p>
                   <p className="text-red-100 text-sm">
                     {university.cityRelation?.name ||
                       university.city ||
-                      "Armenia"}
+                      "South Korea"}
                     {university.province?.name
                       ? `, ${university.province.name}`
                       : ""}
@@ -95,7 +95,7 @@ export default function UniversityHero({ university }: Props) {
               </div>
               {university.students && (
                 <div className="flex items-center space-x-3">
-                  <Users className="h-5 w-5 text-[#F2A800] shrink-0" />
+                  <Users className="h-5 w-5 text-[#CD2E3A] shrink-0" />
                   <div>
                     <p className="font-semibold text-sm">Students</p>
                     <p className="text-red-100 text-sm">
@@ -105,13 +105,13 @@ export default function UniversityHero({ university }: Props) {
                 </div>
               )}
               <div className="flex items-center space-x-3">
-                <Award className="h-5 w-5 text-[#F2A800] shrink-0" />
+                <Award className="h-5 w-5 text-[#CD2E3A] shrink-0" />
                 <div>
                   <a
                     href="https://www.who.int/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-sm hover:underline hover:text-[#F2A800] transition-colors"
+                    className="font-semibold text-sm hover:underline hover:text-[#CD2E3A] transition-colors"
                   >
                     WHO Listed
                   </a>
@@ -122,7 +122,7 @@ export default function UniversityHero({ university }: Props) {
               </div>
               {university.fmgePassRate && (
                 <div className="flex items-center space-x-3">
-                  <Star className="h-5 w-5 text-[#F2A800] fill-current shrink-0" />
+                  <Star className="h-5 w-5 text-[#CD2E3A] fill-current shrink-0" />
                   <div>
                     <p className="font-semibold text-sm">FMGE Pass Rate</p>
                     <p className="text-red-100 text-sm">
@@ -137,7 +137,7 @@ export default function UniversityHero({ university }: Props) {
                 href={university.applyNowUrl || "/apply"}
                 target={university.applyNowUrl ? "_blank" : undefined}
                 rel={university.applyNowUrl ? "noopener noreferrer" : undefined}
-                className="bg-[#D90012] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#B8000F] transition-all duration-200 hover:scale-105"
+                className="bg-[#CD2E3A] text-white px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#B8000F] transition-all duration-200 hover:scale-105"
               >
                 <span>Apply Now</span>
                 <ArrowRight className="h-5 w-5" />

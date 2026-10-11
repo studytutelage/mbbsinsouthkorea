@@ -135,7 +135,7 @@ export default function StaticSeoPage() {
         </div>
         <Button
           size="sm"
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
           onClick={() => setShowAdd(true)}
         >
           <Plus size={14} className="mr-1" /> Add Page SEO
@@ -155,7 +155,7 @@ export default function StaticSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, page: e.target.value })
                 }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               >
                 <option value="">Select or type below...</option>
                 {PAGE_SUGGESTIONS.filter(
@@ -198,7 +198,7 @@ export default function StaticSeoPage() {
                 }
                 rows={2}
                 placeholder="Google snippet description (120–160 chars)"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               />
             </div>
             <div>
@@ -226,7 +226,7 @@ export default function StaticSeoPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -298,7 +298,7 @@ export default function StaticSeoPage() {
                             })
                           }
                           rows={2}
-                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
                         />
                       </div>
                       <div>
@@ -346,7 +346,7 @@ export default function StaticSeoPage() {
                   <div className="flex items-start gap-4">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-sm font-semibold text-red-600 bg-[#EAF1FB]0 px-2 py-0.5 rounded">
+                        <span className="font-mono text-sm font-semibold text-red-600 bg-[#EAF1FB] px-2 py-0.5 rounded">
                           {entry.page}
                         </span>
                         <span
@@ -396,7 +396,7 @@ export default function StaticSeoPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                         onClick={() => handleDelete(entry.id)}
                       >
                         <Trash2 size={14} />

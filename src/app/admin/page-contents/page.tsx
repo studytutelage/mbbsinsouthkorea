@@ -19,8 +19,8 @@ const pages = [
     ],
   },
   {
-    title: "About Armenia",
-    route: "/about-Armenia",
+    title: "About South Korea",
+    route: "/about-south-korea",
     icon: "🇻🇳",
     desc: "Country info, lifestyle, cuisine, tourist spots",
     managedBy: "About Country module",
@@ -83,7 +83,7 @@ export default function PageContentsPage() {
                     <Link
                       href={p.route}
                       target="_blank"
-                      className="text-gray-500 hover:text-[#285BB5] transition-colors"
+                      className="text-gray-500 hover:text-[#0047A0] transition-colors"
                     >
                       <ExternalLink size={14} />
                     </Link>
@@ -99,7 +99,7 @@ export default function PageContentsPage() {
                   <Link
                     key={l.href}
                     href={l.href}
-                    className="text-xs border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 hover:bg-gray-50 hover:text-[#285BB5] transition-colors"
+                    className="text-xs border border-gray-200 rounded-lg px-3 py-1.5 text-gray-600 hover:bg-gray-50 hover:text-[#0047A0] transition-colors"
                   >
                     {l.label} →
                   </Link>

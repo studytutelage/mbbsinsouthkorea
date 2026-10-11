@@ -125,7 +125,7 @@ export default function CreateBlogPage() {
                 set("title", e.target.value);
                 set("slug", slugify(e.target.value));
               }}
-              placeholder="e.g. MBBS in Armenia — Complete Guide 2025"
+              placeholder="e.g. MBBS in South Korea — Complete Guide 2025"
             />
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -251,7 +251,7 @@ export default function CreateBlogPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={loading}
           >
             {loading ? (

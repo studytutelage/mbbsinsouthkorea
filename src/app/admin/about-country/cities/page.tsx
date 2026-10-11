@@ -95,7 +95,7 @@ export default function CitiesAdminPage() {
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="ml-auto bg-[#EAF1FB] hover:bg-[#EAF1FB]"
         >
           <Plus size={14} className="mr-1" /> Add City
         </Button>

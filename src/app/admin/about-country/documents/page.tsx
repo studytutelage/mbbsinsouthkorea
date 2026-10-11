@@ -29,13 +29,13 @@ const DOC_CONFIGS: {
     type: "embassy_letter",
     label: "Embassy Letter",
     icon: "🏛️",
-    desc: "Issued by the Armenia embassy — applies to all universities in the country",
+    desc: "Issued by the South Korea embassy — applies to all universities in the country",
   },
   {
     type: "nmc_guidelines",
     label: "NMC Guidelines",
     icon: "📋",
-    desc: "National Medical Commission guidelines for studying MBBS in Armenia",
+    desc: "National Medical Commission guidelines for studying MBBS in South Korea",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function CountryDocumentsPage() {
             📄 Country Documents
           </h1>
           <p className="text-sm text-gray-500">
-            Armenia-wide documents shared across all universities
+            South Korea-wide documents shared across all universities
           </p>
         </div>
       </div>
@@ -185,7 +185,7 @@ export default function CountryDocumentsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="text-red-600 hover:text-[#285BB5]"
+                        className="text-red-600 hover:text-[#0047A0]"
                         onClick={() => handleDelete(type as DocType)}
                       >
                         <Trash2 size={14} />
@@ -218,7 +218,7 @@ export default function CountryDocumentsPage() {
                         <Button
                           onClick={() => handleSave(type as DocType)}
                           disabled={saving === type}
-                          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
                         >
                           {saving === type ? "Saving..." : "Save Document"}
                         </Button>

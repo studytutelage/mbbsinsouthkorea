@@ -28,9 +28,9 @@ import {
   healthcare,
   mbbsWhyStats,
   studentLifeCards,
-} from "@/data/Armenia-facts";
+} from "@/data/SouthKorea-facts";
 
-export default async function QuickFactsArmenia() {
+export default async function QuickFactsSouthKorea() {
   let cuisines: {
     id: number;
     dishName: string | null;
@@ -58,7 +58,7 @@ export default async function QuickFactsArmenia() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Quick Facts About Armenia
+              Quick Facts About South Korea
             </h2>
             <p className="text-lg text-gray-600">
               Key information every MBBS aspirant should know
@@ -145,7 +145,7 @@ export default async function QuickFactsArmenia() {
             <GraduationCap className="h-16 w-16 text-red-600 mx-auto mb-4" />
             <h2 className="text-4xl font-bold mb-4">MBBS Education Hub</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Armenia is a growing destination for medical students seeking
+              South Korea is a growing destination for medical students seeking
               affordable, high-quality, English-medium medical education in a
               safe environment.
             </p>
@@ -166,7 +166,7 @@ export default async function QuickFactsArmenia() {
 
           <div className="bg-gray-100 p-8 rounded-xl text-center">
             <h3 className="text-2xl font-bold mb-6">
-              Why Choose Armenia for MBBS?
+              Why Choose South Korea for MBBS?
             </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {mbbsWhyStats.map((s) => (
@@ -253,7 +253,7 @@ export default async function QuickFactsArmenia() {
                   Medical Education Demand
                 </h3>
                 <p className="text-gray-600">
-                  International interest in Armenia MBBS programs continues to
+                  International interest in South Korea MBBS programs continues to
                   grow each admission cycle.
                 </p>
               </div>
@@ -414,7 +414,7 @@ export default async function QuickFactsArmenia() {
             <Star className="h-16 w-16 text-red-600 mx-auto mb-4" />
             <h2 className="text-4xl font-bold mb-4">Did You Know?</h2>
             <p className="text-xl text-slate-600">
-              Interesting facts about Armenia
+              Interesting facts about South Korea
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -435,7 +435,7 @@ export default async function QuickFactsArmenia() {
       <section className="py-16 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Start Your MBBS Journey in Armenia
+            Start Your MBBS Journey in South Korea
           </h2>
           <p className="text-xl text-slate-600 mb-8">
             Discover top-tier medical education in one of the Indian
@@ -444,13 +444,13 @@ export default async function QuickFactsArmenia() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/universities"
-              className="bg-white text-[#285BB5] px-8 py-3 rounded-full font-semibold hover:bg-white transition-colors"
+              className="bg-white text-[#0047A0] px-8 py-3 rounded-full font-semibold hover:bg-white transition-colors"
             >
               Explore MBBS Programs
             </Link>
             <Link
               href="/contact-us"
-              className="border-2 border-gray-200 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#285BB5] transition-colors"
+              className="border-2 border-gray-200 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#0047A0] transition-colors"
             >
               Contact Universities
             </Link>

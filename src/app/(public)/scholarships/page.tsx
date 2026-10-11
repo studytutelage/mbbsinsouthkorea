@@ -18,11 +18,11 @@ import { buildMetadata, APP_YEAR, breadcrumbSchema } from "@/lib/seo";
 import { formatCurrencyRange, withCurrencySymbol } from "@/lib/currency";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: `MBBS Scholarships in Armenia ${APP_YEAR} — Government & Merit Based`,
+  title: `MBBS Scholarships in South Korea ${APP_YEAR} — Government & Merit Based`,
   description:
-    "Find all scholarships for MBBS in Armenia. Government, merit, and embassy scholarships for Indian students. Apply before deadlines.",
+    "Find all scholarships for MBBS in South Korea. Government, merit, and embassy scholarships for Indian students. Apply before deadlines.",
   entitySeo: {
-    metaKeyword: `MBBS scholarship Armenia, scholarship for MBBS Armenia ${APP_YEAR}, merit scholarship Armenia`,
+    metaKeyword: `MBBS scholarship South Korea, scholarship for MBBS South Korea ${APP_YEAR}, merit scholarship South Korea`,
   },
   path: "/scholarships",
   pageKey: "scholarships",
@@ -38,7 +38,7 @@ function formatAmount(min: number | null, max: number | null): string {
 function getTypeColor(type: string | null): string {
   switch ((type || "").toLowerCase()) {
     case "merit":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#EAF1FB] text-[#002B5C]";
     case "need":
       return "bg-green-100 text-green-800";
     case "government":
@@ -55,7 +55,7 @@ function getModeColor(mode: string | null): string {
     case "direct":
       return "bg-emerald-100 text-emerald-800";
     case "through_university":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#EAF1FB] text-[#002B5C]";
     case "through_ministry":
       return "bg-purple-100 text-purple-800";
     default:
@@ -129,11 +129,11 @@ export default async function ScholarshipsPage() {
             </div>
           </div>
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-            MBBS Scholarships in Armenia
+            MBBS Scholarships in South Korea
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-10">
             Discover government, merit, and university scholarships to fund your
-            MBBS education in Armenia.
+            MBBS education in South Korea.
           </p>
 
           {/* Stats row \u2014 4 items like old React */}
@@ -195,7 +195,7 @@ export default async function ScholarshipsPage() {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-gray-200 overflow-hidden flex flex-col group"
                 >
                   {/* Card Header \u2014 red gradient with university info */}
-                  <div className="bg-[#EAF1FB]0 p-6 text-white">
+                  <div className="bg-[#EAF1FB] p-6 text-gray-900">
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         {s.university && (
@@ -212,7 +212,7 @@ export default async function ScholarshipsPage() {
                         {cityName && (
                           <div className="flex items-center text-slate-600 mt-1">
                             <MapPin className="w-3.5 h-3.5 mr-1" />
-                            <span className="text-sm">{cityName}, Armenia</span>
+                            <span className="text-sm">{cityName}, South Korea</span>
                           </div>
                         )}
                       </div>

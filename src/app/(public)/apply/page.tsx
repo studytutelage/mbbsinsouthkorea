@@ -4,13 +4,13 @@ import { buildMetadata } from "@/lib/seo";
 import ApplyFormClient from "@/components/apply/ApplyFormClient";
 
 export const metadata = buildMetadata({
-  title: "Apply for MBBS in Armenia — Free Counselling",
+  title: "Apply for MBBS in South Korea — Free Counselling",
   description:
-    "Apply directly to top Armenia medical universities. No agency fees, expert guidance, response within 24 hours. Fill in the form to start your MBBS journey.",
+    "Apply directly to top South Korea medical universities. No agency fees, expert guidance, response within 24 hours. Fill in the form to start your MBBS journey.",
   path: "/apply",
   entitySeo: {
     metaKeyword:
-      "apply MBBS Armenia, Armenia medical university application, MBBS admission Armenia",
+      "apply MBBS South Korea, South Korea medical university application, MBBS admission South Korea",
   },
 });
 
@@ -75,7 +75,7 @@ export default function ApplyPage() {
               <a
                 href="/brochures/nmc-advisory.pdf"
                 download
-                className="flex items-center justify-center gap-2 bg-white text-[#285BB5] font-semibold text-sm py-2.5 rounded-xl hover:bg-white transition-colors"
+                className="flex items-center justify-center gap-2 bg-white text-[#0047A0] font-semibold text-sm py-2.5 rounded-xl hover:bg-white transition-colors"
               >
                 <FileText size={15} /> Download PDF
               </a>

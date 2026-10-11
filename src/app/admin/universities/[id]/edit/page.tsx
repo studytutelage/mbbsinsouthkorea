@@ -151,7 +151,7 @@ export default function EditUniversityPage() {
               href={`/universities/${form.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#285BB5] transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#0047A0] transition-all shadow-sm"
             >
               Live <Eye size={14} />
             </a>
@@ -170,7 +170,7 @@ export default function EditUniversityPage() {
             <Link
               key={s.href}
               href={s.href}
-              className="px-3 py-1.5 bg-gray-100 hover:bg-[#EAF1FB]0 hover:text-[#285BB5] text-xs rounded-lg text-gray-700 transition-colors"
+              className="px-3 py-1.5 bg-gray-100 hover:bg-[#EAF1FB] hover:text-[#0047A0] text-xs rounded-lg text-gray-700 transition-colors"
             >
               {s.label}
             </Link>
@@ -743,7 +743,7 @@ export default function EditUniversityPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={saving}
           >
             {saving ? (

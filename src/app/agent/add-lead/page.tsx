@@ -70,7 +70,7 @@ export default function AgentAddLeadPage() {
       </div>
 
       {/* Info box */}
-      <div className="bg-white border border-gray-200 rounded-xl p-4 text-sm text-[#101B4D]">
+      <div className="bg-white border border-gray-200 rounded-xl p-4 text-sm text-[#002B5C]">
         <strong className="block mb-1">💡 Pro Tip</strong>
         Copy the application link and share it with your student — they can fill
         out the form themselves. Or fill the details below to add them directly.
@@ -117,7 +117,7 @@ export default function AgentAddLeadPage() {
               <select
                 value={form.program}
                 onChange={(e) => set("program", e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               >
                 {PROGRAMS.map((p) => (
                   <option key={p}>{p}</option>
@@ -141,7 +141,7 @@ export default function AgentAddLeadPage() {
                 onChange={(e) => set("message", e.target.value)}
                 rows={3}
                 placeholder="Any additional context about this student…"
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               />
             </div>
           </div>

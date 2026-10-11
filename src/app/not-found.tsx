@@ -52,14 +52,14 @@ export default function NotFound() {
               { label: "Universities", href: "/universities" },
               { label: "Scholarships", href: "/scholarships" },
               { label: "Compare Universities", href: "/compare" },
-              { label: "About Armenia", href: "/about-Armenia" },
+              { label: "About South Korea", href: "/about-south-korea" },
               { label: "FMGE Pass Rates", href: "/fmge-rates" },
               { label: "Contact Us", href: "/contact-us" },
             ].map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-[#285BB5] transition-colors py-1"
+                className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-[#0047A0] transition-colors py-1"
               >
                 <ArrowLeft className="w-3 h-3 rotate-180" />
                 {l.label}

@@ -23,11 +23,11 @@ type MinistryCard = {
 };
 
 const EMBASSY_INFO = {
-  name: "Armenia High Commission in New Delhi, India",
-  address: "Armenia Street, D-133, Anand Niketan, New Delhi – 110021.",
-  phone: "+91 11 2411 2851",
-  email: "armindiaembassy@mfa.am",
-  website: "https://india.mfa.am/en/",
+  name: "Embassy of the Republic of Korea in New Delhi, India",
+  address: "9 Chandragupta Marg, Chanakyapuri Extension, New Delhi – 110021, India",
+  phone: "+91-11-4200-7000",
+  email: "india@mofa.go.kr",
+  website: "https://ind.mofa.go.kr/in-en/index.do",
   consular:
     "Consular appointments are handled through official mission channels",
   hours: "Monday to Friday: 9:00 AM - 4:00 PM",
@@ -57,16 +57,16 @@ function normalizeWebsite(url: string): string {
 const FALLBACK_MINISTRIES: MinistryCard[] = [
   {
     id: 1,
-    name: "Ministry of Health and Wellness Armenia",
-    subtitle: "National Regulator",
+    name: "Ministry of Health and Welfare (MOHW) South Korea",
+    subtitle: "National Healthcare Regulator",
     description:
-      "Primary public authority overseeing healthcare services, medical education standards, and national health policies in Armenia.",
-    website: "https://health.govmu.org",
+      "Primary South Korean government authority overseeing medical licensing, hospital accreditation, and health policies in the Republic of Korea.",
+    website: "https://www.mohw.go.kr",
     services: [
-      "Medical education oversight",
-      "Healthcare regulation",
-      "Public health policy",
-      "Quality and standards",
+      "Medical education & hospital accreditation",
+      "Healthcare licensing regulation",
+      "National Health Insurance (NHIS) oversight",
+      "Medical training quality standards",
     ],
   },
   {
@@ -190,7 +190,7 @@ export default async function MinistryLinks() {
           </p>
         </div>
 
-        <div className="bg-[#101B4D] rounded-3xl p-8 mb-8 text-white">
+        <div className="bg-[#002B5C] rounded-3xl p-8 mb-8 text-white">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-4">{EMBASSY_INFO.name}</h3>
@@ -254,7 +254,7 @@ export default async function MinistryLinks() {
                     <Building2 className="w-8 h-8" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="mb-1 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h3 className="mb-1 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-[#0047A0]">
                       {ministry.name}
                     </h3>
                     <p className="text-sm text-gray-500 mb-2">
@@ -277,7 +277,7 @@ export default async function MinistryLinks() {
                         href={ministry.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-red-600 hover:text-[#285BB5] transition-colors text-sm"
+                        className="text-red-600 hover:text-[#0047A0] transition-colors text-sm"
                       >
                         {ministry.website}
                       </a>

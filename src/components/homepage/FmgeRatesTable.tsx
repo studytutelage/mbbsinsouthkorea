@@ -109,11 +109,11 @@ export default function FmgeRatesTable({ data }: Props) {
   return (
     <div className="overflow-hidden rounded-[1.75rem] border border-gray-200 bg-white/65 shadow-[0_18px_60px_rgba(15,23,42,0.10)] backdrop-hidden">
       {/* Header — matches old React Newanup.tsx exactly */}
-      <div className="relative overflow-hidden bg-[#EAF1FB]0 px-8 py-6 text-white">
+      <div className="relative overflow-hidden bg-[#EAF1FB] px-8 py-6 text-gray-900">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.22),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_30%)]" />
         <div className="relative">
           <h3 className="text-3xl font-bold mb-2">
-            Armenia Medical Universities
+            South Korea Medical Universities
           </h3>
           <p className="text-slate-600 mb-4">
             FMGE (Foreign Medical Graduate Exam) Acceptance Rates &amp;
@@ -166,7 +166,7 @@ export default function FmgeRatesTable({ data }: Props) {
               placeholder="Search universities..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-4 shadow-sm transition-all focus:border-transparent focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-4 shadow-sm transition-all focus:border-transparent focus:ring-2 focus:ring-[#0047A0]/500"
               suppressHydrationWarning={true}
               aria-label="Search universities"
             />
@@ -181,7 +181,7 @@ export default function FmgeRatesTable({ data }: Props) {
             <select
               value={universityFilter}
               onChange={(e) => setUniversityFilter(e.target.value)}
-              className="min-w-[200px] rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-8 shadow-sm focus:border-transparent focus:ring-2 focus:ring-[#285BB5]/500"
+              className="min-w-[200px] rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-8 shadow-sm focus:border-transparent focus:ring-2 focus:ring-[#0047A0]/500"
               suppressHydrationWarning={true}
               aria-label="Filter by University"
             >
@@ -203,7 +203,7 @@ export default function FmgeRatesTable({ data }: Props) {
             <select
               value={yearFilter}
               onChange={(e) => setYearFilter(e.target.value)}
-              className="min-w-[150px] rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-8 shadow-sm focus:border-transparent focus:ring-2 focus:ring-[#285BB5]/500"
+              className="min-w-[150px] rounded-xl border border-gray-200 bg-white/70 py-3 pl-10 pr-8 shadow-sm focus:border-transparent focus:ring-2 focus:ring-[#0047A0]/500"
               suppressHydrationWarning={true}
               aria-label="Filter by Year"
             >
@@ -228,14 +228,14 @@ export default function FmgeRatesTable({ data }: Props) {
           <div className="mt-4 flex flex-wrap gap-2">
             <span className="text-sm text-gray-600">Active filters:</span>
             {universityFilter !== "all" && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#EAF1FB] text-[#101B4D]">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-[#EAF1FB] text-[#002B5C]">
                 University:{" "}
                 {universityFilter.length > 30
                   ? universityFilter.substring(0, 30) + "..."
                   : universityFilter}
                 <button
                   onClick={() => setUniversityFilter("all")}
-                  className="ml-2 text-red-600 hover:text-[#101B4D]"
+                  className="ml-2 text-red-600 hover:text-[#002B5C]"
                   suppressHydrationWarning={true}
                 >
                   ×
@@ -278,7 +278,7 @@ export default function FmgeRatesTable({ data }: Props) {
               <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
                 <button
                   onClick={() => handleSort("universityName")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#0047A0] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   University Name {renderSortIcon("universityName")}
@@ -290,7 +290,7 @@ export default function FmgeRatesTable({ data }: Props) {
               <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
                 <button
                   onClick={() => handleSort("appeared")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#0047A0] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   Total Applications {renderSortIcon("appeared")}
@@ -299,7 +299,7 @@ export default function FmgeRatesTable({ data }: Props) {
               <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
                 <button
                   onClick={() => handleSort("passed")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#0047A0] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   Accepted Students {renderSortIcon("passed")}
@@ -308,7 +308,7 @@ export default function FmgeRatesTable({ data }: Props) {
               <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">
                 <button
                   onClick={() => handleSort("passPercentage")}
-                  className="flex items-center gap-2 hover:text-[#285BB5] transition-colors"
+                  className="flex items-center gap-2 hover:text-[#0047A0] transition-colors"
                   suppressHydrationWarning={true}
                 >
                   Acceptance Rate {renderSortIcon("passPercentage")}
@@ -337,7 +337,7 @@ export default function FmgeRatesTable({ data }: Props) {
                     <td className="px-6 py-4">
                       <div className="flex items-start">
                         <div className="mr-3 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-gray-200 bg-[#EAF1FB]/85 shadow-sm">
-                          <span className="text-sm font-medium text-[#101B4D]">
+                          <span className="text-sm font-medium text-[#002B5C]">
                             {i + 1}
                           </span>
                         </div>
@@ -349,7 +349,7 @@ export default function FmgeRatesTable({ data }: Props) {
                       </div>
                     </td>
                     <td className="px-6 py-4 text-center">
-                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#EAF1FB] text-[#101B4D]">
+                      <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-[#EAF1FB] text-[#002B5C]">
                         {row.year}
                       </span>
                     </td>

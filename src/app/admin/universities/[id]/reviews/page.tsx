@@ -152,7 +152,7 @@ export default function UniversityReviewsPage() {
               written feedback
             </p>
           </div>
-          <Button onClick={openAdd} className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0">
+          <Button onClick={openAdd} className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white">
             <Plus size={16} className="mr-2" />
             Add Review
           </Button>
@@ -255,7 +255,7 @@ export default function UniversityReviewsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -367,7 +367,7 @@ export default function UniversityReviewsPage() {
                   </p>
                 )}
                 {!r.status && (
-                  <span className="text-xs bg-[#EAF1FB]0 text-red-600 px-2 py-0.5 rounded-full">
+                  <span className="text-xs bg-[#EAF1FB] text-red-600 px-2 py-0.5 rounded-full">
                     Inactive
                   </span>
                 )}

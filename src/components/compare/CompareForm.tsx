@@ -37,7 +37,7 @@ export default function CompareForm({ all, selectedIds }: Props) {
             <select
               id={`u${i}`}
               defaultValue={selectedIds[i] || ""}
-              className="w-full border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 bg-white"
+              className="w-full border border-gray-300 rounded-xl px-3 py-2.5 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 bg-white"
             >
               <option value="">— Select University —</option>
               {all.map((u) => (

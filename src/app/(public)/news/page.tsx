@@ -7,12 +7,12 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "News — MBBS Armenia Medical Education Updates",
+  title: "News — MBBS South Korea Medical Education Updates",
   description:
-    "Stay updated with the latest news about MBBS in Armenia, medical education policies, university announcements, and student success stories.",
+    "Stay updated with the latest news about MBBS in South Korea, medical education policies, university announcements, and student success stories.",
   entitySeo: {
     metaKeyword:
-      "MBBS Armenia news, medical education news, Armenia university news",
+      "MBBS South Korea news, medical education news, South Korea university news",
   },
   path: "/news",
   pageKey: "news",
@@ -52,7 +52,7 @@ export default async function NewsPage() {
             <h1 className="text-4xl lg:text-5xl font-bold">Latest News</h1>
           </div>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Stay informed with the latest updates on MBBS in Armenia, medical
+            Stay informed with the latest updates on MBBS in South Korea, medical
             education, and university announcements.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default async function NewsPage() {
                       )}
                     </div>
                     <div className="p-5">
-                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                      <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#0047A0] transition-colors">
                         {item.title}
                       </h2>
                       {item.shortnote && (
@@ -140,7 +140,7 @@ export default async function NewsPage() {
                   <li key={cat.id}>
                     <Link
                       href={`/news/${cat.slug}`}
-                      className="flex items-center justify-between text-sm text-gray-600 hover:text-[#285BB5] transition-colors py-1 border-b border-gray-50 last:border-0"
+                      className="flex items-center justify-between text-sm text-gray-600 hover:text-[#0047A0] transition-colors py-1 border-b border-gray-50 last:border-0"
                     >
                       <span>{cat.name}</span>
                       <span className="bg-white text-red-600 text-xs px-2 py-0.5 rounded-full">
@@ -158,7 +158,7 @@ export default async function NewsPage() {
               </p>
               <Link
                 href="/contact-us"
-                className="inline-flex items-center gap-2 bg-white text-[#285BB5] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-white text-[#0047A0] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
               >
                 Contact Us <ArrowRight className="w-4 h-4" />
               </Link>

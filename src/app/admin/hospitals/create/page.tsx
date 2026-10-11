@@ -99,7 +99,7 @@ export default function CreateHospitalPage() {
                   set("name", e.target.value);
                   set("slug", slugify(e.target.value));
                 }}
-                placeholder="e.g. National Hospital Curepipe"
+                placeholder="e.g. Seoul National University Hospital"
               />
             </div>
             <div className="space-y-1.5">
@@ -109,7 +109,7 @@ export default function CreateHospitalPage() {
               <Input
                 value={form.slug}
                 onChange={(e) => set("slug", e.target.value)}
-                placeholder="national-hospital-bishkek"
+                placeholder="seoul-national-university-hospital"
                 className="font-mono text-sm"
               />
             </div>
@@ -118,7 +118,7 @@ export default function CreateHospitalPage() {
               <Input
                 value={form.city}
                 onChange={(e) => set("city", e.target.value)}
-                placeholder="Curepipe"
+                placeholder="Seoul"
               />
             </div>
             <div className="space-y-1.5">
@@ -126,7 +126,7 @@ export default function CreateHospitalPage() {
               <Input
                 value={form.state}
                 onChange={(e) => set("state", e.target.value)}
-                placeholder="Chui Region"
+                placeholder="Seoul Special City"
               />
             </div>
             <div className="space-y-1.5">
@@ -174,7 +174,7 @@ export default function CreateHospitalPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={loading}
           >
             {loading ? (

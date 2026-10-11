@@ -88,7 +88,7 @@ export default async function AdminDashboardPage() {
       label: "Universities",
       value: stats.universities,
       icon: GraduationCap,
-      color: "bg-[#EAF1FB]0",
+      color: "bg-[#EAF1FB]",
       href: "/admin/universities",
     },
     {
@@ -123,7 +123,7 @@ export default async function AdminDashboardPage() {
       label: "Admin Users",
       value: stats.users,
       icon: Users,
-      color: "bg-[#EAF1FB]0",
+      color: "bg-[#EAF1FB]",
       href: "/admin/users",
     },
   ];
@@ -324,7 +324,7 @@ export default async function AdminDashboardPage() {
             <Link
               key={action.href}
               href={action.href}
-              className="px-4 py-2 bg-gray-100 hover:bg-[#EAF1FB]0 hover:text-[#285BB5] rounded-lg text-sm text-gray-700 transition-colors"
+              className="px-4 py-2 bg-gray-100 hover:bg-[#EAF1FB] hover:text-[#0047A0] rounded-lg text-sm text-gray-700 transition-colors"
             >
               {action.label}
             </Link>

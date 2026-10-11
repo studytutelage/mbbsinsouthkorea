@@ -16,7 +16,7 @@ export default async function PublicLayout({
 
   return (
     <>
-      {/* Armenian Flag Strip Removed */}
+      {/* South Korean Flag Strip Removed */}
       <Header showScholarship={showScholarship} />
       <main className="min-h-screen">{children}</main>
       <Footer />

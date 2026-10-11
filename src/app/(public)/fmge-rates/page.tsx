@@ -5,12 +5,12 @@ import { prisma } from "@/lib/prisma";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "FMGE / NExT Pass Rates — Armenia MBBS Universities 2024",
+  title: "FMGE / NExT Pass Rates — South Korea MBBS Universities 2024",
   description:
-    "Compare FMGE and NExT pass rates for Armenia MBBS graduates by university and year. Real data from NMC-approved Armenia medical universities.",
+    "Compare FMGE and NExT pass rates for South Korea MBBS graduates by university and year. Real data from NMC-approved South Korea medical universities.",
   entitySeo: {
     metaKeyword:
-      "FMGE pass rate Armenia, NExT exam Armenia MBBS, FMGE percentage Armenia, Armenia medical university pass rate",
+      "FMGE pass rate South Korea, NExT exam South Korea MBBS, FMGE percentage South Korea, South Korea medical university pass rate",
   },
   path: "/fmge-rates",
   pageKey: "fmge-rates",
@@ -88,7 +88,7 @@ export default async function FmgeRatesPage() {
             </h1>
           </div>
           <p className="text-xl text-black max-w-3xl mx-auto mt-3">
-            Compare pass rates for Armenia MBBS graduates by university and
+            Compare pass rates for South Korea MBBS graduates by university and
             year. Make an informed decision based on real performance data.
           </p>
           {/* Summary stats */}
@@ -122,7 +122,7 @@ export default async function FmgeRatesPage() {
               FMGE Data Coming Soon
             </h2>
             <p className="text-gray-500">
-              We are compiling FMGE pass rate data for Armenia universities.
+              We are compiling FMGE pass rate data for South Korea universities.
               Check back soon.
             </p>
           </div>
@@ -280,7 +280,7 @@ export default async function FmgeRatesPage() {
             <div className="mt-10 bg-green-600 rounded-2xl p-8 text-gray-900 text-center">
               <TrendingUp className="w-10 h-10 mx-auto mb-3 text-green-200" />
               <h3 className="text-2xl font-bold mb-2">
-                Ready to Study MBBS in Armenia?
+                Ready to Study MBBS in South Korea?
               </h3>
               <p className="text-green-100 mb-6 max-w-xl mx-auto">
                 Join universities with strong FMGE track records. Get free

@@ -22,7 +22,7 @@ const columns: Column<User>[] = [
     sortable: true,
     render: (row) => (
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-[#EAF1FB]0 flex items-center justify-center text-red-600 font-semibold text-xs">
+        <div className="w-8 h-8 rounded-full bg-[#EAF1FB] flex items-center justify-center text-red-600 font-semibold text-xs">
           {row.name.charAt(0).toUpperCase()}
         </div>
         <div>
@@ -39,8 +39,8 @@ const columns: Column<User>[] = [
       <Badge
         className={
           row.role === "admin"
-            ? "bg-[#EAF1FB]0 text-red-600"
-            : "bg-[#EAF1FB] text-[#285BB5]"
+            ? "bg-[#EAF1FB] text-red-600"
+            : "bg-[#EAF1FB] text-[#0047A0]"
         }
       >
         {row.role}

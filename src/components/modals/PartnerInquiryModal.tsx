@@ -107,7 +107,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 required
                 value={form.name}
                 onChange={(e) => update("name", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all"
                 placeholder="John Doe"
               />
             </div>
@@ -120,7 +120,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 required
                 value={form.email}
                 onChange={(e) => update("email", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all"
                 placeholder="john@example.com"
               />
             </div>
@@ -136,7 +136,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 type="tel"
                 value={form.phone}
                 onChange={(e) => update("phone", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all"
                 placeholder="+91 9876543210"
               />
             </div>
@@ -148,7 +148,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 type="text"
                 value={form.company}
                 onChange={(e) => update("company", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all"
                 placeholder="Acme Education Pvt Ltd"
               />
             </div>
@@ -164,7 +164,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
                 type="text"
                 value={form.city}
                 onChange={(e) => update("city", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all"
                 placeholder="New Delhi"
               />
             </div>
@@ -175,7 +175,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
               <select
                 value={form.partnerType}
                 onChange={(e) => update("partnerType", e.target.value)}
-                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all bg-white"
+                className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all bg-white"
               >
                 <option value="">Select type…</option>
                 {partnerTypes.map((t) => (
@@ -196,7 +196,7 @@ export default function PartnerInquiryModal({ isOpen, onClose }: Props) {
               rows={3}
               value={form.message}
               onChange={(e) => update("message", e.target.value)}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 focus:border-gray-200 outline-none transition-all resize-none"
+              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 focus:border-gray-200 outline-none transition-all resize-none"
               placeholder="Tell us about your interest in partnering…"
             />
           </div>

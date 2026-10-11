@@ -208,7 +208,7 @@ export default function AdminUniversitiesPage() {
       extraHeaderActions={
         <div className="flex items-center bg-white h-10 p-1 px-2 rounded-lg border border-gray-200 shadow-sm gap-3">
           <div className="flex items-center gap-2 px-2 border-r border-gray-100">
-            <div className="w-2 h-2 rounded-full bg-[#EAF1FB]0 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-[#EAF1FB] animate-pulse" />
             <span className="text-xs font-bold text-gray-700 uppercase tracking-tight">
               Bulk Actions
             </span>
@@ -217,7 +217,7 @@ export default function AdminUniversitiesPage() {
             <Button
               variant="outline"
               size="sm"
-              className="h-8 border-gray-200 text-gray-700 hover:text-[#285BB5] hover:border-gray-200 hover:bg-[#EAF1FB]0 text-xs font-bold shadow-xs bg-white"
+              className="h-8 border-gray-200 text-gray-700 hover:text-[#0047A0] hover:border-gray-200 hover:bg-[#EAF1FB] text-xs font-bold shadow-xs bg-white"
               asChild
             >
               <a href="/api/admin/universities/bulk-template" download>
@@ -230,7 +230,7 @@ export default function AdminUniversitiesPage() {
               size="sm"
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="h-8 border-gray-200 text-red-600 hover:bg-[#EAF1FB]0 hover:text-gray-900 transition-all text-xs font-bold"
+              className="h-8 border-gray-200 text-red-600 hover:bg-[#EAF1FB] hover:text-gray-900 transition-all text-xs font-bold"
             >
               {isUploading ? (
                 <Loader2 size={14} className="mr-1.5 animate-spin" />

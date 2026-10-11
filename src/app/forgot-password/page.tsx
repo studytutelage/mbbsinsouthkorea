@@ -77,7 +77,7 @@ export default function ForgotPasswordPage() {
         ) : (
           <>
             {error && (
-              <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm">
+              <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-lg mb-6 text-sm">
                 {error}
               </div>
             )}
@@ -94,7 +94,7 @@ export default function ForgotPasswordPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full border border-gray-300 rounded-xl pl-12 pr-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-xl pl-12 pr-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function ForgotPasswordPage() {
           Remember your password?{" "}
           <Link
             href="/login"
-            className="text-red-600 hover:text-[#285BB5] font-semibold"
+            className="text-red-600 hover:text-[#0047A0] font-semibold"
           >
             Sign in
           </Link>

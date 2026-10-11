@@ -24,8 +24,8 @@ export async function generateMetadata({
   const city = citySlug.charAt(0).toUpperCase() + citySlug.slice(1);
 
   return buildMetadata({
-    title: `MBBS in Armenia Counselling in ${city} | Admission Help ${APP_YEAR}`,
-    description: `Looking for MBBS in Armenia admission from ${city}? Get expert counselling, university selection, and visa assistance for Indian students in ${city}.`,
+    title: `MBBS in South Korea Counselling in ${city} | Admission Help ${APP_YEAR}`,
+    description: `Looking for MBBS in South Korea admission from ${city}? Get expert counselling, university selection, and visa assistance for Indian students in ${city}.`,
     path: `/counselling/${citySlug}`,
   });
 }
@@ -45,11 +45,11 @@ export default async function CityCounsellingPage({ params }: PageProps) {
               <MapPin className="w-4 h-4" /> Leading MBBS Consultants in {city}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              MBBS in Armenia Admission Support for Students in {city}
+              MBBS in South Korea Admission Support for Students in {city}
             </h1>
             <p className="text-xl text-slate-600 mb-10 leading-relaxed">
               Join 200+ students from {city} who have successfully secured
-              admission in top NMC-approved medical universities in Armenia. Get
+              admission in top NMC-approved medical universities in South Korea. Get
               end-to-end support from documentation to arrival.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -82,7 +82,7 @@ export default async function CityCounsellingPage({ params }: PageProps) {
                 {[
                   {
                     title: "Direct University Tie-ups",
-                    desc: "We represent Armenia's top government medical colleges directly.",
+                    desc: "We represent South Korea's top government medical colleges directly.",
                   },
                   {
                     title: "Personalized Roadmap",
@@ -129,7 +129,7 @@ export default async function CityCounsellingPage({ params }: PageProps) {
                   "The process from {city} was seamless. They handled everything
                   from my NEET check to my visa."
                 </h3>
-                <p className="text-[#285BB5] text-sm">
+                <p className="text-[#0047A0] text-sm">
                   — Current 3rd Year Student from {city}
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default async function CityCounsellingPage({ params }: PageProps) {
               <div className="w-16 h-16 bg-white shadow-lg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-red-600 border border-gray-200 italic">
                 3
               </div>
-              <h3 className="font-bold text-lg mb-2">Fly to Armenia</h3>
+              <h3 className="font-bold text-lg mb-2">Fly to South Korea</h3>
               <p className="text-gray-600 text-sm">
                 Group departures from airports near {city} with our
                 representatives.

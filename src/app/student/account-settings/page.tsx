@@ -82,7 +82,7 @@ export default function AccountSettingsPage() {
                 setEmailOn((v) => !v);
                 setSaved(false);
               }}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:ring-offset-2 ${emailOn ? "bg-red-600" : "bg-gray-300"}`}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:ring-offset-2 ${emailOn ? "bg-red-600" : "bg-gray-300"}`}
               aria-label="Toggle email notifications"
             >
               <span
@@ -107,7 +107,7 @@ export default function AccountSettingsPage() {
                 setSmsOn((v) => !v);
                 setSaved(false);
               }}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:ring-offset-2 ${smsOn ? "bg-red-600" : "bg-gray-300"}`}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:ring-offset-2 ${smsOn ? "bg-red-600" : "bg-gray-300"}`}
               aria-label="Toggle SMS notifications"
             >
               <span
@@ -146,7 +146,7 @@ export default function AccountSettingsPage() {
         </p>
 
         {deleteError && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-xl text-sm mb-4">
+          <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-xl text-sm mb-4">
             {deleteError}
           </div>
         )}
@@ -170,7 +170,7 @@ export default function AccountSettingsPage() {
           <button
             onClick={handleDeleteAccount}
             disabled={deleting}
-            className="flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#EAF1FB] text-[#285BB5] border border-gray-200 rounded-xl text-sm font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-[#EAF1FB] text-[#0047A0] border border-gray-200 rounded-xl text-sm font-semibold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {deleting ? (
               <Loader2 className="w-4 h-4 animate-spin" />

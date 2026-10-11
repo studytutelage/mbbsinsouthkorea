@@ -66,7 +66,7 @@ function getTypeColor(type: string | null): string {
     case "private":
       return "bg-purple-100 text-purple-800";
     case "public":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#EAF1FB] text-[#002B5C]";
     default:
       return "bg-gray-100 text-gray-800";
   }
@@ -144,7 +144,7 @@ export default function UniversitySearch({ universities }: Props) {
               suppressHydrationWarning
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search universities by name or city..."
-              className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
             />
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -153,7 +153,7 @@ export default function UniversitySearch({ universities }: Props) {
               value={typeFilter}
               suppressHydrationWarning
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 bg-white"
+              className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 bg-white"
             >
               <option value="all">All Types</option>
               {types.map((t) => (
@@ -252,12 +252,12 @@ export default function UniversitySearch({ universities }: Props) {
                   <div className="p-5 flex flex-col flex-grow">
                     {/* Title + Location */}
                     <div className="mb-3">
-                      <h3 className="text-lg font-bold text-gray-800 mb-1.5 group-hover:text-[#285BB5] transition-colors leading-tight">
+                      <h3 className="text-lg font-bold text-gray-800 mb-1.5 group-hover:text-[#0047A0] transition-colors leading-tight">
                         {u.name}
                       </h3>
                       <div className="flex items-center text-gray-500 text-sm gap-1">
                         <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-red-500" />
-                        <span>{location || "Armenia"}</span>
+                        <span>{location || "South Korea"}</span>
                         {u.establishedYear && (
                           <>
                             <span className="mx-1">•</span>

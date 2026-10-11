@@ -102,7 +102,7 @@ export default function UniversityRankingsPage() {
                 score: "",
               });
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
           >
             <Plus size={16} className="mr-2" />
             Add Ranking
@@ -162,7 +162,7 @@ export default function UniversityRankingsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -240,7 +240,7 @@ export default function UniversityRankingsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                          className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]"
                           onClick={async () => {
                             if (confirm("Delete?")) {
                               await fetch(

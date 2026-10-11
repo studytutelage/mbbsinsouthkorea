@@ -120,7 +120,7 @@ export default function UniversityFaqsPage() {
               setQuestion("");
               setAnswer("");
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
           >
             <Plus size={16} className="mr-2" />
             Add FAQ
@@ -137,7 +137,7 @@ export default function UniversityFaqsPage() {
               <Input
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
-                placeholder="e.g. Is NEET mandatory for MBBS in Armenia?"
+                placeholder="e.g. Is NEET mandatory for MBBS in South Korea?"
               />
             </div>
             <div className="space-y-1.5">
@@ -153,7 +153,7 @@ export default function UniversityFaqsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -227,7 +227,7 @@ export default function UniversityFaqsPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                      className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]"
                       onClick={() => handleDelete(faq.id)}
                     >
                       <Trash2 size={13} />

@@ -44,11 +44,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .catch(() => null);
   if (!cat) return { title: "News Category Not Found" };
   return buildMetadata({
-    title: cat.metaTitle || `${cat.name} — MBBS Armenia News`,
+    title: cat.metaTitle || `${cat.name} — MBBS South Korea News`,
     description:
       cat.metaDescription ||
       cat.description ||
-      `Latest news about ${cat.name} — MBBS in Armenia.`,
+      `Latest news about ${cat.name} — MBBS in South Korea.`,
     path: `/news/${categorySlug}`,
   });
 }
@@ -109,11 +109,11 @@ export default async function NewsCategoryPage({ params }: Props) {
         {/* Breadcrumb */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-[#285BB5]">
+            <Link href="/" className="hover:text-[#0047A0]">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/news" className="hover:text-[#285BB5]">
+            <Link href="/news" className="hover:text-[#0047A0]">
               News
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -173,7 +173,7 @@ export default async function NewsCategoryPage({ params }: Props) {
                         )}
                       </div>
                       <div className="p-5">
-                        <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                        <h2 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-[#0047A0] transition-colors">
                           {item.title}
                         </h2>
                         {item.shortnote && (
@@ -217,7 +217,7 @@ export default async function NewsCategoryPage({ params }: Props) {
                     <li key={cat.id}>
                       <Link
                         href={`/news/${cat.slug}`}
-                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-red-600 font-semibold" : "text-gray-600 hover:text-[#285BB5]"}`}
+                        className={`flex items-center justify-between text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-red-600 font-semibold" : "text-gray-600 hover:text-[#0047A0]"}`}
                       >
                         <span>{cat.name}</span>
                         <span className="bg-white text-red-600 text-xs px-2 py-0.5 rounded-full">
@@ -230,14 +230,14 @@ export default async function NewsCategoryPage({ params }: Props) {
               </div>
               <div className="bg-red-600 rounded-2xl p-6 text-gray-900 text-center">
                 <h3 className="font-bold text-lg mb-2">
-                  Study MBBS in Armenia
+                  Study MBBS in South Korea
                 </h3>
                 <p className="text-slate-600 text-sm mb-4">
                   Get free expert counseling today
                 </p>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-white text-[#285BB5] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-white text-[#0047A0] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>

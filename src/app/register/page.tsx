@@ -78,12 +78,12 @@ export default function RegisterPage() {
           </div>
           <h1 className="text-2xl font-bold text-gray-800">Create Account</h1>
           <p className="text-gray-500 text-sm mt-1">
-            Start your MBBS journey in Armenia
+            Start your MBBS journey in South Korea
           </p>
         </div>
 
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm">
+          <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-lg mb-6 text-sm">
             {error}
           </div>
         )}
@@ -132,7 +132,7 @@ export default function RegisterPage() {
                 value={form[field.name as keyof RegistrationForm]}
                 onChange={handleChange}
                 placeholder={field.placeholder}
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
               />
             </div>
           ))}
@@ -169,7 +169,7 @@ export default function RegisterPage() {
           Already have an account?{" "}
           <Link
             href="/login"
-            className="text-red-600 hover:text-[#285BB5] font-semibold"
+            className="text-red-600 hover:text-[#0047A0] font-semibold"
           >
             Sign in here
           </Link>

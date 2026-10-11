@@ -85,16 +85,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title:
       u.metaTitle ||
-      `${u.name} | MBBS Fees ${APP_YEAR}, NMC Status & Admission for Indians | mbbsinarmenia.com`,
+      `${u.name} | MBBS Fees ${APP_YEAR}, NMC Status & Admission for Indians | mbbsinsouthkorea.com`,
     description:
       u.metaDescription ||
       u.shortnote ||
-      `Study MBBS at ${u.name}, Armenia. NMC & WHO recognized, English medium, affordable fees. Apply ${ADMISSION_YEAR}.`,
+      `Study MBBS at ${u.name}, South Korea. NMC & WHO recognized, English medium, affordable fees. Apply ${ADMISSION_YEAR}.`,
     path: `/universities/${slug}`,
     entitySeo: {
       metaKeyword:
         u.metaKeyword ||
-        `${u.name}, MBBS ${u.name}, ${u.city || "Armenia"} medical university, MBBS Armenia`,
+        `${u.name}, MBBS ${u.name}, ${u.city || "South Korea"} medical university, MBBS South Korea`,
     },
     ogImage: u.bannerPath
       ? (cdn(u.bannerPath) ?? undefined)
@@ -152,7 +152,7 @@ export default async function UniversityDetailPage({ params }: Props) {
   if (!university) notFound();
 
   const countryDocs = await prisma.countryDocument
-    .findMany({ where: { isActive: true, country: "Armenia" } })
+    .findMany({ where: { isActive: true, country: "South Korea" } })
     .catch(() => []);
 
   const universityMapped = {
@@ -226,7 +226,7 @@ export default async function UniversityDetailPage({ params }: Props) {
       icon: Plane,
       title: "Visa Processing",
       description:
-        "We assist with your Armenia student visa application and provide invitation letter.",
+        "We assist with your South Korea student visa application and provide invitation letter.",
       timeframe: "15–20 days",
       color: "orange",
     },
@@ -234,7 +234,7 @@ export default async function UniversityDetailPage({ params }: Props) {
       icon: Calendar,
       title: "Arrival & Enrollment",
       description:
-        "Arrive in Armenia and complete your university enrollment and orientation.",
+        "Arrive in South Korea and complete your university enrollment and orientation.",
       timeframe: "2–3 days",
       color: "pink",
     },
@@ -257,11 +257,11 @@ export default async function UniversityDetailPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-white border-b text-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center space-x-2 text-gray-500">
-          <Link href="/" className="hover:text-[#285BB5]">
+          <Link href="/" className="hover:text-[#0047A0]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/universities" className="hover:text-[#285BB5]">
+          <Link href="/universities" className="hover:text-[#0047A0]">
             Universities
           </Link>
           <ChevronRight className="w-3 h-3" />
@@ -284,10 +284,10 @@ export default async function UniversityDetailPage({ params }: Props) {
           </Link>
           <span className="text-gray-600">|</span>
           <Link
-            href="/universities/anna-medical-college"
-            className="hover:text-[#285BB5] transition-colors"
+            href="/universities/yonsei-university-college-of-medicine"
+            className="hover:text-[#0047A0] transition-colors"
           >
-            Anna Medical College
+            Yonsei University College of Medicine
           </Link>
         </div>
       </section>
@@ -363,12 +363,12 @@ export default async function UniversityDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Added Content Section: Location & Living in Armenia */}
+      {/* Added Content Section: Location & Living in South Korea */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Location & Student Life in {universityMapped.city || "Armenia"}
+              Location & Student Life in {universityMapped.city || "South Korea"}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Discover the environment where you will live and study for the
@@ -382,8 +382,8 @@ export default async function UniversityDetailPage({ params }: Props) {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">City Atmosphere</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                {universityMapped.city} is a major urban hub in Armenia,
-                offering a blend of modern lifestyle and traditional Armenia
+                {universityMapped.city} is a major urban hub in South Korea,
+                offering a blend of modern lifestyle and traditional South Korea
                 culture. It is extremely safe for international students with
                 24/7 security in university zones.
               </p>
@@ -476,7 +476,7 @@ export default async function UniversityDetailPage({ params }: Props) {
                     key={stat.label}
                     className="text-center group hover:scale-105 transition-transform duration-300"
                   >
-                    <div className="bg-[#285BB5] p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:shadow-xl transition-shadow">
+                    <div className="bg-[#0047A0] p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:shadow-xl transition-shadow">
                       <stat.icon className="h-9 w-9 text-white" />
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900 mb-1">
@@ -524,7 +524,7 @@ export default async function UniversityDetailPage({ params }: Props) {
         <section className="py-10 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <span className="inline-block bg-[#EAF1FB] text-[#285BB5] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-2">
+              <span className="inline-block bg-[#EAF1FB] text-[#0047A0] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-2">
                 Financial Aid
               </span>
               <h2 className="text-4xl font-bold text-gray-900 mb-2">
@@ -536,13 +536,13 @@ export default async function UniversityDetailPage({ params }: Props) {
                 <Link
                   key={s.id}
                   href={`/scholarships/${s.slug}`}
-                  className="group bg-white border border-gray-100 border-l-4 border-l-[#285BB5] rounded-xl p-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  className="group bg-white border border-gray-100 border-l-4 border-l-[#0047A0] rounded-xl p-4 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <h3 className="font-bold text-gray-900 text-sm leading-snug mb-1.5 group-hover:text-[#285BB5] transition-colors">
+                  <h3 className="font-bold text-gray-900 text-sm leading-snug mb-1.5 group-hover:text-[#0047A0] transition-colors">
                     {s.title}
                   </h3>
                   {s.amount && (
-                    <span className="inline-block bg-white text-[#285BB5] text-xs font-semibold px-2 py-0.5 rounded-full border border-gray-200">
+                    <span className="inline-block bg-white text-[#0047A0] text-xs font-semibold px-2 py-0.5 rounded-full border border-gray-200">
                       {s.amount}
                     </span>
                   )}
@@ -656,7 +656,7 @@ export default async function UniversityDetailPage({ params }: Props) {
               ))}
             </div>
           </div>
-          <div className="mt-14 bg-[#101B4D] rounded-2xl p-8 text-white text-center">
+          <div className="mt-14 bg-[#002B5C] rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-3">Need Assistance?</h3>
             <p className="text-white mb-6">
               Our dedicated admissions team is here to help you throughout the
@@ -664,7 +664,7 @@ export default async function UniversityDetailPage({ params }: Props) {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
-                href="mailto:info@mbbsinarmenia.com"
+                href="mailto:info@mbbsinsouthkorea.com"
                 className="flex items-center gap-3"
               >
                 <div className="bg-white p-2 rounded-full">
@@ -673,7 +673,7 @@ export default async function UniversityDetailPage({ params }: Props) {
                 <div className="text-left">
                   <p className="font-semibold text-white">Email Support</p>
                   <p className="text-white text-sm">
-                    info@mbbsinarmenia.com
+                    info@mbbsinsouthkorea.com
                   </p>
                 </div>
               </Link>
@@ -692,7 +692,7 @@ export default async function UniversityDetailPage({ params }: Props) {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-10 bg-[#101B4D] text-white">
+      <section className="py-10 bg-[#002B5C] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-3">
             Ready to Start Your Medical Journey?
@@ -708,13 +708,13 @@ export default async function UniversityDetailPage({ params }: Props) {
               rel={
                 universityMapped.applyNowUrl ? "noopener noreferrer" : undefined
               }
-              className="bg-[#D90012] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#B8000F] transition-all hover:scale-105"
+              className="bg-[#CD2E3A] text-white px-10 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#B8000F] transition-all hover:scale-105"
             >
               Apply Now <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="/universities"
-              className="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#101B4D] hover:border-[#173A7A] transition-all"
+              className="border-2 border-white text-white px-10 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 hover:bg-[#002B5C] hover:border-[#0047A0] transition-all"
             >
               ← Back to Universities
             </Link>

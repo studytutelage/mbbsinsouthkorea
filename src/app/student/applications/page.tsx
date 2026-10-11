@@ -189,7 +189,7 @@ export default function ApplicationsPage() {
                   {/* Link */}
                   <Link
                     href={`/universities/${app.program.university.slug}/courses/${app.program.programSlug}`}
-                    className="text-gray-500 hover:text-[#285BB5] transition-colors shrink-0"
+                    className="text-gray-500 hover:text-[#0047A0] transition-colors shrink-0"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </Link>

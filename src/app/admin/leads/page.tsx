@@ -51,7 +51,7 @@ const columns: Column<Lead>[] = [
           row.status === "active"
             ? "bg-green-100 text-green-700"
             : row.status === "converted"
-              ? "bg-[#EAF1FB] text-[#285BB5]"
+              ? "bg-[#EAF1FB] text-[#0047A0]"
               : "bg-gray-100 text-gray-600"
         }
       >

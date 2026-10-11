@@ -93,7 +93,7 @@ export default function UniversityTestimonials({
         )}
 
         {(parentSatisfaction || rating) && (
-          <div className="mt-12 bg-[#101B4D] rounded-2xl p-8 text-white text-center">
+          <div className="mt-12 bg-[#002B5C] rounded-2xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">
               Join Our Family of Satisfied Parents
             </h3>

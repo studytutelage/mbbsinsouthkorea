@@ -69,7 +69,7 @@ export default function CityCreatePage() {
           <Input
             value={form.name}
             onChange={(e) => set("name", e.target.value)}
-            placeholder="e.g. Curepipe"
+            placeholder="e.g. Seoul"
             required
           />
         </div>
@@ -102,7 +102,7 @@ export default function CityCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
           >
             {loading ? "Saving…" : "Create City"}
           </Button>

@@ -90,7 +90,7 @@ export default function StudyModesPage() {
           />
           <Button
             onClick={handleAdd}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#EAF1FB] hover:bg-[#EAF1FB] shrink-0"
           >
             <Plus size={14} className="mr-1" /> Add
           </Button>
@@ -145,7 +145,7 @@ export default function StudyModesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="text-red-600 hover:text-[#285BB5]"
+                    className="text-red-600 hover:text-[#0047A0]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

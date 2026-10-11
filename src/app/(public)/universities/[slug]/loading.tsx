@@ -2,7 +2,7 @@ export default function UniversityLoading() {
   return (
     <div className="animate-pulse">
       {/* Hero skeleton */}
-      <div className="bg-[#101B4D] h-64 lg:h-80 w-full" />
+      <div className="bg-[#002B5C] h-64 lg:h-80 w-full" />
       {/* Content skeleton */}
       <div className="max-w-7xl mx-auto px-4 py-16 space-y-8">
         <div className="h-8 bg-gray-200 rounded w-1/3 mx-auto" />

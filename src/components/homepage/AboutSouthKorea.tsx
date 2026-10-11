@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { getAboutCountryContent } from "@/lib/public-page-content";
 
-export default async function AboutArmenia() {
+export default async function AboutSouthKorea() {
   const content = await getAboutCountryContent();
 
   const quickFacts = [
@@ -22,7 +22,7 @@ export default async function AboutArmenia() {
       label: "Capital",
       value:
         content.summaryStats.find((item) => item.label === "Capital")?.value ||
-        "Port Louis",
+        "Seoul",
     },
     {
       icon: Users,
@@ -80,7 +80,7 @@ export default async function AboutArmenia() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <span className="inline-flex rounded-full bg-[#EAF1FB] px-4 py-2 text-sm font-semibold text-[#285BB5]">
+            <span className="inline-flex rounded-full bg-[#EAF1FB] px-4 py-2 text-sm font-semibold text-[#0047A0]">
               Why {content.countryName} for MBBS?
             </span>
 
@@ -96,7 +96,7 @@ export default async function AboutArmenia() {
                 {
                   title: "Safe & Student-Friendly Country",
                   description:
-                    "Armenia offers a peaceful, secure environment with a high quality of life—ideal for international MBBS students.",
+                    "South Korea offers a peaceful, secure environment with a high quality of life—ideal for international MBBS students.",
                 },
                 {
                   title: "Globally Aligned Medical Curriculum",
@@ -142,7 +142,7 @@ export default async function AboutArmenia() {
                     <CheckCircle className="h-5 w-5 text-emerald-600 transition-colors duration-300 group-hover:text-gray-900" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 text-sm transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h3 className="font-semibold text-slate-900 text-sm transition-colors duration-300 group-hover:text-[#0047A0]">
                       {item.title}
                     </h3>
                     <p className="mt-1 text-xs leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-slate-700">
@@ -155,7 +155,7 @@ export default async function AboutArmenia() {
 
             <div className="mt-8">
               <Link
-                href="/about-Armenia"
+                href="/about-south-korea"
                 className="inline-flex items-center gap-2 rounded-lg bg-red-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-red-700"
               >
                 Learn More About {content.countryName}
@@ -177,13 +177,13 @@ export default async function AboutArmenia() {
                     key={fact.label}
                     className="group relative overflow-hidden rounded-xl bg-white p-4 ring-1 ring-slate-200 transition-all duration-500 hover:-translate-y-0.5 hover:ring-red-200 hover:shadow-md hover:"
                   >
-                    <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <div className="relative flex items-center gap-4">
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white/50 transition-colors duration-300 group-hover:bg-[#EAF1FB]/50">
                         <fact.icon className="h-5 w-5 text-red-600 transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       <div>
-                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 transition-colors duration-300 group-hover:text-[#285BB5]">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 transition-colors duration-300 group-hover:text-[#0047A0]">
                           {fact.label}
                         </div>
                         <div className="mt-0.5 text-sm font-semibold text-slate-900 transition-colors duration-300 group-hover:text-slate-950">

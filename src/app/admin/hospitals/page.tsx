@@ -66,7 +66,7 @@ export default function HospitalsPage() {
             </p>
           </div>
         </div>
-        <Button asChild className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0">
+        <Button asChild className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white">
           <Link href="/admin/hospitals/create">
             <Plus size={16} className="mr-2" />
             Add Hospital
@@ -151,7 +151,7 @@ export default function HospitalsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={14} />

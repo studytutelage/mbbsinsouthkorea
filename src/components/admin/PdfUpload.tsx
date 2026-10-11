@@ -63,8 +63,8 @@ export function PdfUpload({
     <div className="space-y-2">
       <Label className="text-sm font-medium text-gray-700">{label}</Label>
       {value ? (
-        <div className="flex items-center gap-3 p-4 bg-[#EAF1FB]0 border border-gray-200 rounded-xl">
-          <div className="bg-[#EAF1FB]0 p-2 rounded-lg shrink-0">
+        <div className="flex items-center gap-3 p-4 bg-[#EAF1FB] border border-gray-200 rounded-xl">
+          <div className="bg-[#EAF1FB] p-2 rounded-lg shrink-0">
             <FileText size={20} className="text-red-600" />
           </div>
           <div className="flex-1 min-w-0">
@@ -111,7 +111,7 @@ export function PdfUpload({
         </div>
       ) : (
         <div
-          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]0/10 transition-colors"
+          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]/10 transition-colors"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();

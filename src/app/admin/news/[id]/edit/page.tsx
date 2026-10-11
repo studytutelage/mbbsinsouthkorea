@@ -89,7 +89,7 @@ export default function EditNewsPage() {
               href={`/news/${categories.find((c) => String(c.id) === String(form.categoryId))?.slug}/${form.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#285BB5] transition-all shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border bg-white text-gray-600 border-gray-200 hover:border-gray-200 hover:text-[#0047A0] transition-all shadow-sm"
             >
               Live <Eye size={14} />
             </a>
@@ -232,7 +232,7 @@ export default function EditNewsPage() {
             </Button>
             <Button
               type="submit"
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               disabled={loading}
             >
               {loading ? (

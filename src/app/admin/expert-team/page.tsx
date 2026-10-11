@@ -135,7 +135,7 @@ export default function ExpertTeamPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
         >
           {showForm ? (
             <>
@@ -196,7 +196,7 @@ export default function ExpertTeamPage() {
                 onChange={(e) => set("description", e.target.value)}
                 rows={3}
                 placeholder="Brief bio or introduction..."
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               />
             </div>
             <div className="md:col-span-2">
@@ -228,7 +228,7 @@ export default function ExpertTeamPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving ? (
                 <>
@@ -268,7 +268,7 @@ export default function ExpertTeamPage() {
                     className="w-12 h-12 rounded-full object-cover border border-gray-200 shrink-0"
                   />
                 ) : (
-                  <div className="w-12 h-12 rounded-full bg-[#EAF1FB]0 flex items-center justify-center text-red-600 font-semibold text-lg shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#EAF1FB] flex items-center justify-center text-red-600 font-semibold text-lg shrink-0">
                     {item.name.charAt(0)}
                   </div>
                 )}
@@ -280,7 +280,7 @@ export default function ExpertTeamPage() {
                         href={item.linkedinUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-red-500 hover:text-[#285BB5]"
+                        className="text-red-500 hover:text-[#0047A0]"
                       >
                         <Linkedin size={14} />
                       </a>
@@ -316,7 +316,7 @@ export default function ExpertTeamPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                    className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

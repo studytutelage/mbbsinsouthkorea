@@ -271,7 +271,7 @@ export default function LeadWebhookSettingsPage() {
         <div className="flex justify-end pb-8">
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={saving}
           >
             {saving ? (

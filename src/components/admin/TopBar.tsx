@@ -24,6 +24,14 @@ export function AdminTopBar() {
   const user = session?.user;
   const [profile, setProfile] = useState<AdminProfile | null>(null);
 
+  const getInitials = (name: string) => {
+    const parts = name.trim().split(" ");
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[1][0]).toUpperCase();
+    }
+    return name.substring(0, 2).toUpperCase();
+  };
+
   useEffect(() => {
     let mounted = true;
 
@@ -77,8 +85,8 @@ export function AdminTopBar() {
               variant="ghost"
               className="flex items-center gap-2 text-sm text-gray-700 hover:text-gray-900 px-2"
             >
-              <div className="w-8 h-8 rounded-full bg-[#EAF1FB]0 flex items-center justify-center text-gray-900 text-xs font-semibold">
-                {displayName?.charAt(0)?.toUpperCase() || "A"}
+              <div className="w-8 h-8 rounded-full bg-[#EAF1FB] flex items-center justify-center text-gray-900 text-xs font-semibold">
+                {displayName ? getInitials(displayName) : "A"}
               </div>
               <span className="hidden md:block max-w-[120px] truncate">
                 {displayName}

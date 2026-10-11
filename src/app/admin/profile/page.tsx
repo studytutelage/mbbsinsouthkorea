@@ -143,7 +143,7 @@ export default function AdminProfilePage() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               placeholder="Brief bio..."
             />
           </div>
@@ -151,7 +151,7 @@ export default function AdminProfilePage() {
         <Button
           onClick={handleSave}
           disabled={saving}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
         >
           {saving ? (
             <Loader2 size={16} className="animate-spin mr-2" />

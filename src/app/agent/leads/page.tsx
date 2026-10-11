@@ -21,9 +21,9 @@ type Inquiry = {
 
 const statusColors: Record<string, string> = {
   pending: "bg-red-400 text-red-600",
-  contacted: "bg-[#EAF1FB] text-[#285BB5]",
+  contacted: "bg-[#EAF1FB] text-[#0047A0]",
   enrolled: "bg-green-100 text-green-700",
-  rejected: "bg-[#EAF1FB] text-[#285BB5]",
+  rejected: "bg-[#EAF1FB] text-[#0047A0]",
 };
 
 export default function AgentLeadsPage() {
@@ -71,7 +71,7 @@ export default function AgentLeadsPage() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Filter by name or email…"
-            className="pl-9 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 w-64"
+            className="pl-9 pr-4 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 w-64"
           />
         </div>
       </div>

@@ -105,7 +105,7 @@ export default function InstituteTypesPage() {
           <Button
             onClick={handleAdd}
             disabled={adding || !newName.trim()}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#EAF1FB] hover:bg-[#EAF1FB] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="animate-spin mr-1" />
@@ -154,7 +154,7 @@ export default function InstituteTypesPage() {
                       />
                     ) : (
                       <span
-                        className="cursor-pointer hover:text-[#285BB5]"
+                        className="cursor-pointer hover:text-[#0047A0]"
                         onClick={() => {
                           setEditId(item.id);
                           setEditName(item.name);
@@ -185,7 +185,7 @@ export default function InstituteTypesPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 w-7 p-0 text-red-600 hover:text-[#285BB5] hover:bg-[#EAF1FB]0"
+                        className="h-7 w-7 p-0 text-red-600 hover:text-[#0047A0] hover:bg-[#EAF1FB]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />

@@ -72,15 +72,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     title:
       program.metaTitle ||
-      `${program.programName} at ${program.university.name} — Armenia ${APP_YEAR}`,
+      `${program.programName} at ${program.university.name} — South Korea ${APP_YEAR}`,
     description:
       program.metaDescription ||
-      `Study ${program.programName} at ${program.university.name}, Armenia. NMC recognized, English medium, affordable fees. Apply for ${ADMISSION_YEAR}.`,
+      `Study ${program.programName} at ${program.university.name}, South Korea. NMC recognized, English medium, affordable fees. Apply for ${ADMISSION_YEAR}.`,
     path: `/universities/${slug}/courses/${programSlug}`,
     entitySeo: {
       metaKeyword:
         program.metaKeyword ||
-        `${program.programName} Armenia, MBBS Armenia, ${program.university.name}`,
+        `${program.programName} South Korea, MBBS South Korea, ${program.university.name}`,
     },
   });
 }
@@ -202,7 +202,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       icon: Plane,
       title: "Visa Processing",
       description:
-        "Apply for Armenia student visa with your admission documents.",
+        "Apply for South Korea student visa with your admission documents.",
       timeline: "Aug–Sep",
       color: "bg-pink-100 text-pink-600",
     },
@@ -211,7 +211,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       icon: GraduationCap,
       title: "Travel & Enrollment",
       description:
-        "Travel to Armenia and complete university enrollment and orientation.",
+        "Travel to South Korea and complete university enrollment and orientation.",
       timeline: "September",
       color: "bg-[#EAF1FB] text-red-600",
     },
@@ -250,17 +250,17 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
       {/* Breadcrumb */}
       <nav className="bg-gray-50 border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center flex-wrap gap-x-2 gap-y-1 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#285BB5]">
+          <Link href="/" className="hover:text-[#0047A0]">
             Home
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <Link href="/universities" className="hover:text-[#285BB5]">
+          <Link href="/universities" className="hover:text-[#0047A0]">
             Universities
           </Link>
           <ChevronRight className="w-3 h-3" />
           <Link
             href={`/universities/${u.slug}`}
-            className="hover:text-[#285BB5]"
+            className="hover:text-[#0047A0]"
           >
             {u.name}
           </Link>
@@ -303,7 +303,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               </h1>
               <p className="text-slate-600 text-lg mb-2">{u.name}</p>
               {u.city && (
-                <p className="text-slate-600 text-sm">📍 {u.city}, Armenia</p>
+                <p className="text-slate-600 text-sm">📍 {u.city}, South Korea</p>
               )}
               {program.overview && (
                 <p className="text-slate-600 mt-5 leading-relaxed max-w-2xl line-clamp-4">
@@ -476,7 +476,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         <p className="font-semibold text-gray-800 text-base">
                           Duration
                         </p>
-                        <p className="text-[#285BB5] text-base">
+                        <p className="text-[#0047A0] text-base">
                           {program.duration}
                         </p>
                       </div>
@@ -604,7 +604,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               </h2>
               <p className="text-gray-500 text-base mb-5">
                 Learn more about the education system and opportunities in
-                Armenia
+                South Korea
               </p>
               <ExpandableText text={additionalInfoText} wordLimit={80} />
             </section>
@@ -624,18 +624,18 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   <details
                     key={year}
                     open
-                    className="group border border-gray-100 border-l-4 border-l-[#285BB5] rounded-2xl shadow-sm overflow-hidden"
+                    className="group border border-gray-100 border-l-4 border-l-[#0047A0] rounded-2xl shadow-sm overflow-hidden"
                   >
                     <summary className="flex justify-between items-center px-5 py-4 cursor-pointer hover:bg-gray-50 transition-colors">
                       <div className="flex items-center gap-3">
-                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-[#EAF1FB] text-white font-bold text-sm shadow-sm shrink-0">
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-[#0047A0] text-white font-bold text-sm shadow-sm shrink-0">
                           {idx + 1}
                         </span>
                         <div>
                           <span className="font-bold text-gray-900 text-base">
                             {year}
                           </span>
-                          <span className="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#EAF1FB] text-[#285BB5]">
+                          <span className="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#EAF1FB] text-[#0047A0]">
                             {label}
                           </span>
                         </div>
@@ -716,7 +716,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
               </h2>
               <p className="text-gray-600 mb-6 text-sm">
                 Students gain hands-on clinical experience at top-tier hospitals
-                across Armenia, ensuring comprehensive practical training.
+                across South Korea, ensuring comprehensive practical training.
               </p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 {u.hospitals.map((uh) => (
@@ -741,7 +741,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         </div>
                       </div>
                       {uh.hospital.beds && (
-                        <span className="bg-white text-[#285BB5] px-3 py-1 rounded-full text-xs font-medium shrink-0">
+                        <span className="bg-white text-[#0047A0] px-3 py-1 rounded-full text-xs font-medium shrink-0">
                           {uh.hospital.beds} Beds
                         </span>
                       )}
@@ -803,12 +803,12 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Why Armenia */}
+          {/* Why South Korea */}
           {program.whyChooseVietnam && !program.additionalInformation && (
             <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <GraduationCap className="w-7 h-7 text-red-600" /> Why Study in
-                Armenia?
+                South Korea?
               </h2>
               <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
                 <div
@@ -822,7 +822,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               {/* CTA Section */}
-              <div className="bg-[#101B4D] rounded-2xl p-8 text-gray-900 text-center">
+              <div className="bg-[#002B5C] rounded-2xl p-8 text-gray-900 text-center">
                 <h2 className="text-2xl font-bold mb-3">
                   Ready to Start Your Medical Journey?
                 </h2>
@@ -844,7 +844,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                   />
                   <Link
                     href="/contact-us"
-                    className="border-2 border-white text-white hover:bg-[#101B4D] hover:border-[#173A7A] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
+                    className="border-2 border-white text-white hover:bg-[#002B5C] hover:border-[#0047A0] px-6 py-3 rounded-xl font-semibold text-sm transition-colors"
                   >
                     Talk to Counsellor
                   </Link>
@@ -871,7 +871,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     </h3>
                     {u.city && (
                       <p className="text-xs text-gray-500 mt-0.5">
-                        📍 {u.city}, Armenia
+                        📍 {u.city}, South Korea
                       </p>
                     )}
                   </div>

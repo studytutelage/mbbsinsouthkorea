@@ -23,13 +23,13 @@ import TestimonialSection from "@/app/(public)/about-us/TestimonialSection";
 import { getHomepageStats } from "@/lib/public-page-content";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "About Us — Global MBBS in Armenia Consultants | mbbsinarmenia.com",
+  title: "About Us — Global MBBS in South Korea Consultants | mbbsinsouthkorea.com",
   description:
-    "We are Armenia's top medical education consultancy helping students from around the world secure admissions in recognized medical universities since 2015.",
+    "We are South Korea's top medical education consultancy helping students from around the world secure admissions in recognized medical universities since 2015.",
   path: "/about-us",
   entitySeo: {
     metaKeyword:
-      "about mbbs Armenia, global medical consultancy, mbbs admission support, study mbbs Armenia team",
+      "about mbbs South Korea, global medical consultancy, mbbs admission support, study mbbs South Korea team",
   },
   pageKey: "about-us",
 });
@@ -58,7 +58,7 @@ const services = [
   {
     icon: Home,
     title: "On-Arrival Support",
-    desc: "Airport pickup, hostel/accommodation setup, and local student assistance in Armenia.",
+    desc: "Airport pickup, hostel/accommodation setup, and local student assistance in South Korea.",
   },
 ];
 
@@ -97,8 +97,8 @@ export default async function AboutUsPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-            mbbsinarmenia.com is dedicated to bridging the gap between aspiring
-            medical students and world-class quality education in Armenia.
+            mbbsinsouthkorea.com is dedicated to bridging the gap between aspiring
+            medical students and world-class quality education in South Korea.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -125,12 +125,12 @@ export default async function AboutUsPage() {
               key={s.label}
               className={`group relative overflow-hidden rounded-2xl px-4 py-3 text-center transition-all duration-500 hover:-translate-y-1 hover:bg-white/60 ${idx < stats.length - 1 ? "lg:border-r border-gray-100" : ""}`}
             >
-              <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="relative">
                 <div className="mb-1 text-4xl font-extrabold text-red-600 transition-transform duration-300 group-hover:scale-105">
                   {s.val}
                 </div>
-                <div className="text-xs font-bold uppercase tracking-widest text-gray-500 transition-colors duration-300 group-hover:text-[#285BB5]">
+                <div className="text-xs font-bold uppercase tracking-widest text-gray-500 transition-colors duration-300 group-hover:text-[#0047A0]">
                   {s.label}
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default async function AboutUsPage() {
                     <Target className="h-8 w-8 text-current" />
                   </div>
                   <div>
-                    <h3 className="mb-3 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h3 className="mb-3 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0047A0]">
                       Mission
                     </h3>
                     <div className="space-y-3 text-lg leading-relaxed text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
@@ -174,7 +174,7 @@ export default async function AboutUsPage() {
                         <span>👉</span>
                         <span>
                           To connect students with globally recognized medical
-                          universities in Armenia
+                          universities in South Korea
                         </span>
                       </p>
                       <p className="flex items-start gap-2">
@@ -194,12 +194,12 @@ export default async function AboutUsPage() {
                     <Rocket className="h-8 w-8 text-current" />
                   </div>
                   <div>
-                    <h3 className="mb-3 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h3 className="mb-3 text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0047A0]">
                       Vision
                     </h3>
                     <p className="text-lg leading-relaxed text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                       To become the most trusted and comprehensive platform for
-                      MBBS admissions in Armenia, empowering students from every
+                      MBBS admissions in South Korea, empowering students from every
                       country to achieve their dreams of becoming medical
                       professionals.
                     </p>
@@ -209,8 +209,8 @@ export default async function AboutUsPage() {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden rounded-3xl bg-[#101B4D] p-10 text-white shadow-2xl transition-all duration-500 hover:-translate-y-1">
-            <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/15 via-transparent to-white/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div className="group relative overflow-hidden rounded-3xl bg-[#002B5C] p-10 text-white shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/15 via-transparent to-white/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <div className="absolute top-0 right-0 p-8 opacity-10">
               <GraduationCap className="w-32 h-32" />
             </div>
@@ -219,13 +219,13 @@ export default async function AboutUsPage() {
             </h3>
             <p className="relative mb-8 text-slate-300 text-lg">
               Unlike general study abroad consultants, we are 100% focused on
-              Armenia medical education.
+              South Korea medical education.
             </p>
 
             <div className="relative grid gap-6">
               {[
                 {
-                  title: "Armenia-Focused Expertise",
+                  title: "South Korea-Focused Expertise",
                   points: [
                     "Deep knowledge of medical universities, curriculum, and clinical exposure",
                     "Updated information on NMC, WHO, ECFMG eligibility",
@@ -296,13 +296,13 @@ export default async function AboutUsPage() {
                 key={service.title}
                 className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-gray-200 hover:shadow-2xl hover:"
               >
-                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white transition-colors duration-500 group-hover:bg-red-600">
                       <service.icon className="h-7 w-7 text-red-600 transition-colors duration-500 group-hover:text-gray-900" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#285BB5] leading-tight">
+                    <h3 className="text-xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0047A0] leading-tight">
                       {service.title}
                     </h3>
                   </div>
@@ -319,7 +319,7 @@ export default async function AboutUsPage() {
       {/* Testimonials Section */}
       <TestimonialSection testimonials={testimonials} />
 
-      {/* Why Armenia - Generic */}
+      {/* Why South Korea - Generic */}
       <div className="bg-gray-50 py-16 border-y border-gray-100">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <div className="inline-block p-4 bg-white rounded-full shadow-lg mb-8">
@@ -332,10 +332,10 @@ export default async function AboutUsPage() {
             in Education Consulting
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed mb-10">
-            mbbsinarmenia.com is a specialized education consultancy focused
-            exclusively on medical admissions in Armenia. We were the first to
+            mbbsinsouthkorea.com is a specialized education consultancy focused
+            exclusively on medical admissions in South Korea. We were the first to
             establish <strong>direct official partnerships</strong> with top
-            Armenia medical universities for international students.
+            South Korea medical universities for international students.
           </p>
           <p className="text-lg text-gray-500 italic max-w-3xl mx-auto">
             &quot;Our mission has always been to simplify the complex world of
@@ -354,7 +354,7 @@ export default async function AboutUsPage() {
           </h2>
           <p className="text-gray-600 text-xl mb-12 font-light">
             Join the global community of students pursuing their medical careers
-            in Armenia. Get personalized guidance from our experts today.
+            in South Korea. Get personalized guidance from our experts today.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link

@@ -20,7 +20,7 @@ export default function UniversityHospitals({ hospitals }: Props) {
     <section className="py-10 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-7">
-          <span className="inline-block bg-[#EAF1FB] text-[#285BB5] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+          <span className="inline-block bg-[#EAF1FB] text-[#0047A0] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
             Clinical Training
           </span>
           <h2 className="text-4xl font-bold text-gray-900">
@@ -34,11 +34,11 @@ export default function UniversityHospitals({ hospitals }: Props) {
           {hospitals.map((uh) => (
             <div
               key={uh.id}
-              className="bg-white border border-[#DCE3EF] border-t-4 border-t-[#285BB5] rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-white border border-[#DCE3EF] border-t-4 border-t-[#0047A0] rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start gap-3 mb-4">
                 <div className="bg-[#EAF1FB] p-2.5 rounded-xl shadow-sm shrink-0 border border-[#DCE3EF]">
-                  <Stethoscope className="w-5 h-5 text-[#285BB5]" />
+                  <Stethoscope className="w-5 h-5 text-[#0047A0]" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-base leading-snug pt-0.5">
                   {uh.hospital.name}

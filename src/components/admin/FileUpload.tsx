@@ -124,7 +124,7 @@ export function FileUpload({
         </div>
       ) : (
         <div
-          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]0/10 transition-colors"
+          className="border-2 border-dashed border-gray-200 rounded-xl p-8 text-center cursor-pointer hover:border-gray-200 hover:bg-[#EAF1FB]/10 transition-colors"
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
           onClick={() => inputRef.current?.click()}

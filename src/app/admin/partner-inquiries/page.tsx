@@ -67,7 +67,7 @@ const columns: Column<PartnerInquiry>[] = [
           row.status === "pending"
             ? "bg-red-400 text-red-600"
             : row.status === "contacted"
-              ? "bg-[#EAF1FB] text-[#285BB5]"
+              ? "bg-[#EAF1FB] text-[#0047A0]"
               : row.status === "converted"
                 ? "bg-green-100 text-green-700"
                 : "bg-gray-100 text-gray-600"

@@ -38,7 +38,7 @@ const blank: Omit<Office, "id"> = {
   address: "",
   city: "",
   state: "",
-  country: "Armenia",
+  country: "South Korea",
   phone: "",
   email: "",
   mapEmbed: "",
@@ -134,7 +134,7 @@ export default function OfficesPage() {
             setEditId(null);
             setForm(blank);
           }}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
         >
           {showForm ? (
             <>
@@ -244,7 +244,7 @@ export default function OfficesPage() {
             <Button
               onClick={handleSave}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving ? (
                 <>
@@ -315,7 +315,7 @@ export default function OfficesPage() {
                   <Button
                     size="sm"
                     variant="ghost"
-                    className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                    className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                     onClick={() => handleDelete(item.id)}
                   >
                     <Trash2 size={14} />

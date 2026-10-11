@@ -61,7 +61,7 @@ export default function ChangePasswordPage() {
           </div>
         )}
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-xl mb-5 text-sm">
+          <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-xl mb-5 text-sm">
             {error}
           </div>
         )}
@@ -80,7 +80,7 @@ export default function ChangePasswordPage() {
                   setForm({ ...form, currentPassword: e.target.value })
                 }
                 placeholder="Enter current password"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 pr-12 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 pr-12 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               />
               <button
                 type="button"
@@ -109,7 +109,7 @@ export default function ChangePasswordPage() {
                   setForm({ ...form, newPassword: e.target.value })
                 }
                 placeholder="At least 8 characters"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 pr-12 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 pr-12 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               />
               <button
                 type="button"
@@ -140,7 +140,7 @@ export default function ChangePasswordPage() {
               value={form.confirm}
               onChange={(e) => setForm({ ...form, confirm: e.target.value })}
               placeholder="Repeat new password"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
             />
             {form.confirm && form.confirm !== form.newPassword && (
               <p className="text-xs text-red-600 mt-1">

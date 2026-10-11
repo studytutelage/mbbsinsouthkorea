@@ -67,10 +67,10 @@ export default function AdminApplicationsPage() {
 
   const badge = (status: string | null) => {
     const map: Record<string, string> = {
-      new: "bg-[#EAF1FB] text-[#101B4D]",
+      new: "bg-[#EAF1FB] text-[#002B5C]",
       reviewed: "bg-red-400 text-red-600",
       approved: "bg-green-100 text-green-800",
-      rejected: "bg-[#EAF1FB]0 text-red-600",
+      rejected: "bg-[#EAF1FB] text-red-600",
     };
     return (
       <span
@@ -86,7 +86,7 @@ export default function AdminApplicationsPage() {
       {/* Header */}
       <div className="flex items-center justify-between flex-wrap gap-3">
         <div className="flex items-center gap-3">
-          <div className="bg-[#EAF1FB]0 p-2 rounded-lg">
+          <div className="bg-[#EAF1FB] p-2 rounded-lg">
             <ClipboardList size={20} className="text-red-600" />
           </div>
           <div>
@@ -118,7 +118,7 @@ export default function AdminApplicationsPage() {
             setSearch(e.target.value);
             setPage(1);
           }}
-          className="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#285BB5]/500 outline-none"
+          className="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-[#0047A0]/500 outline-none"
         />
       </div>
 
@@ -205,7 +205,7 @@ export default function AdminApplicationsPage() {
                     <td className="px-4 py-3">
                       <button
                         onClick={() => setSelected(app)}
-                        className="flex items-center gap-1 text-xs text-red-600 hover:text-[#285BB5] font-medium"
+                        className="flex items-center gap-1 text-xs text-red-600 hover:text-[#0047A0] font-medium"
                       >
                         <Eye size={13} /> View
                       </button>

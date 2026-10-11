@@ -188,7 +188,7 @@ export function DataTable<T extends { id: string | number }>({
             </Button>
           )}
           {createHref && (
-            <Button size="sm" className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0" asChild>
+            <Button size="sm" asChild>
               <Link href={createHref}>
                 <Plus size={14} className="mr-1.5" />
                 {createLabel}

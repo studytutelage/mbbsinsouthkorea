@@ -24,12 +24,12 @@ import { getEducationSystemContent } from "@/lib/public-page-content";
 
 export const metadata: Promise<Metadata> = buildMetadata({
   title:
-    "Education System in Armenia - MBBS Degree Structure | mbbsinarmenia.com",
+    "Education System in South Korea - MBBS Degree Structure | mbbsinsouthkorea.com",
   description:
-    "Learn about Armenia's medical education system, MBBS degree structure, recognition pathways, language support, and academic progression.",
+    "Learn about South Korea's medical education system, MBBS degree structure, recognition pathways, language support, and academic progression.",
   entitySeo: {
     metaKeyword:
-      "Armenia education system, mbbs Armenia curriculum, Armenia medical degree, NMC approved Armenia, FMGE Armenia",
+      "South Korea education system, mbbs South Korea curriculum, South Korea medical degree, NMC approved South Korea, FMGE South Korea",
   },
   path: "/education-system",
   pageKey: "education-system",
@@ -40,19 +40,19 @@ const themeStyles = {
     softPanel: "border-gray-200 bg-white/80",
     iconWrap: "bg-[#EAF1FB] text-red-600",
     iconHover: "group-hover:bg-red-600 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    titleHover: "group-hover:text-[#0047A0]",
     wash: " via-white/0 ",
     ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-[#EAF1FB] text-[#285BB5]",
+    pill: "bg-[#EAF1FB] text-[#0047A0]",
   },
   blue: {
     softPanel: "border-gray-200 bg-white/80",
     iconWrap: "bg-[#EAF1FB] text-red-600",
     iconHover: "group-hover:bg-red-600 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    titleHover: "group-hover:text-[#0047A0]",
     wash: " via-white/0 ",
     ringHover: "hover:border-gray-200 hover:",
-    pill: "bg-[#EAF1FB] text-[#285BB5]",
+    pill: "bg-[#EAF1FB] text-[#0047A0]",
   },
   green: {
     softPanel: "border-green-100 bg-green-50/80",
@@ -64,10 +64,10 @@ const themeStyles = {
     pill: "bg-green-100 text-green-700",
   },
   amber: {
-    softPanel: "border-gray-200 bg-[#EAF1FB]0/10",
+    softPanel: "border-gray-200 bg-[#EAF1FB]/10",
     iconWrap: "bg-red-400 text-red-600",
     iconHover: "group-hover:bg-red-400 group-hover:text-gray-900",
-    titleHover: "group-hover:text-[#285BB5]",
+    titleHover: "group-hover:text-[#0047A0]",
     wash: " via-white/0 ",
     ringHover: "hover:border-gray-200 hover:",
     pill: "bg-red-400 text-red-600",
@@ -116,7 +116,7 @@ export default async function EducationSystemPage() {
             </span>
           </div>
           <h1 className="mx-auto mb-4 max-w-4xl text-4xl font-bold leading-tight lg:text-6xl">
-            Education System in Armenia
+            Education System in South Korea
           </h1>
           <p className="mx-auto max-w-3xl text-base leading-8 text-slate-600 lg:text-xl">
             {content.description}
@@ -166,10 +166,10 @@ export default async function EducationSystemPage() {
                 Introduction
               </span>
               <h2 className="mt-3 text-3xl font-bold text-slate-900 lg:text-4xl">
-                Introduction to Armenia Education System
+                Introduction to South Korea Education System
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-700">
-                Armenia has one of the most advanced and structured education
+                South Korea has one of the most advanced and structured education
                 systems in Africa
               </p>
             </div>
@@ -208,7 +208,7 @@ export default async function EducationSystemPage() {
               Accreditation
             </span>
             <h2 className="mt-2 text-3xl font-bold text-slate-900 lg:text-4xl">
-              Main Education Authorities & Accreditations in Armenia
+              Main Education Authorities & Accreditations in South Korea
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-slate-600 text-sm leading-7">
               Explore the regulatory bodies, ministries, and quality assurance
@@ -219,79 +219,79 @@ export default async function EducationSystemPage() {
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {[
               {
-                title: "Ministry of Education (School Education)",
+                title: "Ministry of Education (MOE) South Korea",
                 description:
-                  "Governs Pre-primary, Primary, and Secondary education. Responsible for policy, curriculum, and national approvals.",
-                role: "National curriculum, School approvals, Teacher regulations",
-                portal: "https://education.govmu.org",
+                  "Formulates national educational policies, regulates universities, and oversees higher medical education standards in South Korea.",
+                role: "University approvals, National curriculum standards, International student policy",
+                portal: "https://english.moe.go.kr",
                 icon: Building2,
                 theme: "red",
               },
               {
-                title: "Ministry of Tertiary Education",
+                title: "Ministry of Health and Welfare (MOHW)",
                 description:
-                  "Governs Universities, Medical colleges, and Higher institutions. Focuses on policy, research, and innovation.",
-                role: "Higher education policy, University approvals, Research & Science",
-                portal: "https://tertiaryeducation.govmu.org",
+                  "Governs medical colleges, hospital training centers, doctor licensing, and healthcare standards across South Korea.",
+                role: "Medical licensing, Hospital accreditation, Public healthcare policy",
+                portal: "https://www.mohw.go.kr/eng/",
                 icon: GraduationCap,
                 theme: "blue",
               },
               {
-                title: "Higher Education Commission (HEC)",
+                title: "Korean Institute of Medical Education & Evaluation (KIMEE)",
                 description:
-                  "Primary body for university registration, programme accreditation, and quality assurance for 30+ private institutions.",
-                role: "Degree recognition, Programme accreditation, Equivalence checks",
-                portal: "https://www.hec.mu",
+                  "Accreditation body officially recognized by WFME and MOHW for medical school quality assessment and curriculum accreditation.",
+                role: "Medical school accreditation, WFME compliance, Quality assessment",
+                portal: "https://kimee.or.kr/en/",
                 subLink: {
-                  label: "Recognition Portal",
-                  url: "https://www.hec.mu/recognition_equivalence",
+                  label: "KIMEE Accreditation Portal",
+                  url: "https://kimee.or.kr/en/",
                 },
                 icon: ShieldCheck,
                 theme: "green",
               },
               {
-                title: "Armenia Qualifications Authority (MQA)",
+                title: "National Institute for International Education (NIIED)",
                 description:
-                  "Accredits TVET courses and maintains the National Qualifications Framework from Level 1 to PhD (Level 10).",
-                role: "Technical accreditation, NQF levels, Foreign qualification recognition",
-                portal: "https://mqa.govmu.org",
+                  "Government agency under MOE managing the Global Korea Scholarship (GKS) and international student admission frameworks.",
+                role: "Study in Korea portal, Government scholarships, International student support",
+                portal: "https://www.studyinkorea.go.kr",
                 subLink: {
-                  label: "MQA Register",
-                  url: "https://mqaeservices.org/mqa-registers",
+                  label: "Study in Korea Portal",
+                  url: "https://www.studyinkorea.go.kr",
                 },
                 icon: Award,
                 theme: "amber",
               },
               {
-                title: "Tertiary Education Commission (HEC Synergy)",
+                title: "Korean Health Personnel Licensing Examination Board (KHPLEB)",
                 description:
-                  "Functions of the former TEC are now integrated into HEC for unified planning and funding of the tertiary sector.",
-                role: "Funding universities, Strategic planning, Institutional accreditation",
+                  "National authority administering medical licensing examinations for physicians, dentists, and health specialists.",
+                role: "National medical exam (KMLE), Doctor licensure, Healthcare workforce certification",
                 icon: Layers3,
                 theme: "purple",
               },
               {
-                title: "Armenia Institute of Training & Development",
+                title: "National Health Insurance Service (NHIS)",
                 description:
-                  "Lead institution for technical and vocational training and professional skills development programs.",
-                role: "TVET training, Skills development, Vocational excellence",
-                portal: "https://www.armeniaeducationinitiative.org/en/programs",
+                  "Comprehensive statutory health insurance system providing universal healthcare and subsidized medical access for students.",
+                role: "Student healthcare coverage, Universal health insurance, Clinical system integration",
+                portal: "https://www.nhis.or.kr/english/",
                 icon: Briefcase,
                 theme: "blue",
               },
               {
-                title: "Medical Council of Armenia (For MBBS)",
+                title: "Medical Council of South Korea (For MBBS)",
                 description:
                   "Critical for MBBS students. Registers doctors, recognizes medical degrees, and approves medical colleges.",
                 role: "Doctor registration, Degree recognition, Institution approvals",
-                portal: "https://www.medicalcouncil-armenia.org/en/",
+                portal: "https://www.mohw.go.kr/eng/",
                 icon: Stethoscope,
                 theme: "red",
               },
               {
                 title: "International Recognition",
                 description:
-                  "Armenia medical degrees are globally accepted, allowing graduates to pursue careers in India, UK, USA, and beyond.",
+                  "South Korea medical degrees are globally accepted, allowing graduates to pursue careers in India, UK, USA, and beyond.",
                 role: "WHO (WDOMS), NMC (India), ECFMG (USA), GMC (UK), QAA",
                 icon: Globe2,
                 theme: "green",
@@ -346,7 +346,7 @@ export default async function EducationSystemPage() {
                             href={item.portal}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/link flex items-center gap-2 text-sm font-medium text-red-600 hover:text-[#285BB5] transition-colors"
+                            className="group/link flex items-center gap-2 text-sm font-medium text-red-600 hover:text-[#0047A0] transition-colors"
                           >
                             <span className="truncate group-hover/link:underline">
                               {item.portal.replace(/^https?:\/\//, "")}
@@ -365,7 +365,7 @@ export default async function EducationSystemPage() {
                             href={(item as any).subLink.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/link flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-[#285BB5] transition-colors"
+                            className="group/link flex items-center gap-2 text-xs font-medium text-slate-500 hover:text-[#0047A0] transition-colors"
                           >
                             <span className="truncate group-hover/link:underline">
                               {(item as any).subLink.url.replace(
@@ -393,7 +393,7 @@ export default async function EducationSystemPage() {
               Academic Progression
             </span>
             <h2 className="mt-2 text-3xl font-bold text-slate-900 lg:text-4xl">
-              How the MBBS journey progresses in Armenia
+              How the MBBS journey progresses in South Korea
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-600">
               Follow each stage from foundational learning to advanced clinical
@@ -478,7 +478,7 @@ export default async function EducationSystemPage() {
               Degree Pathways
             </span>
             <h2 className="mt-2 text-3xl font-bold text-slate-900 lg:text-4xl">
-              Programs aligned with Armenia medical pathways
+              Programs aligned with South Korea medical pathways
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-600">
               Compare available degree options, course duration, and recognition
@@ -603,7 +603,7 @@ export default async function EducationSystemPage() {
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-slate-600">
               Snapshot of the university and institution ecosystem that supports
-              MBBS education in Armenia.
+              MBBS education in South Korea.
             </p>
           </div>
           <div className="space-y-3.5">
@@ -612,9 +612,9 @@ export default async function EducationSystemPage() {
                 key={`${card.label}-${index}`}
                 className="group relative h-full overflow-hidden rounded-2xl border border-slate-100 bg-white p-4 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:"
               >
-                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative flex h-full flex-col">
-                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 group-hover:text-[#285BB5]">
+                  <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500 group-hover:text-[#0047A0]">
                     {card.label}
                   </div>
                   <div className="mt-2 text-xl font-bold leading-snug text-slate-900 sm:text-2xl">
@@ -653,13 +653,13 @@ export default async function EducationSystemPage() {
                 key={exam.title}
                 className="group relative overflow-hidden rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:"
               >
-                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative">
                   <div className="flex flex-wrap items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF1FB] text-red-600 transition-all duration-300 group-hover:bg-red-600 group-hover:text-gray-900">
                       <Clock className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-[#285BB5]">
+                    <h3 className="text-xl font-bold text-slate-900 transition-colors duration-300 group-hover:text-[#0047A0]">
                       {exam.title}
                     </h3>
                     {exam.gradeLevel ? (
@@ -668,7 +668,7 @@ export default async function EducationSystemPage() {
                       </span>
                     ) : null}
                     {exam.type ? (
-                      <span className="rounded-full bg-[#EAF1FB] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#285BB5]">
+                      <span className="rounded-full bg-[#EAF1FB] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#0047A0]">
                         {exam.type}
                       </span>
                     ) : null}
@@ -709,7 +709,7 @@ export default async function EducationSystemPage() {
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link
               href="/universities"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-[#285BB5] transition-colors hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 font-semibold text-[#0047A0] transition-colors hover:bg-white"
             >
               Browse Universities
               <ArrowRight className="h-4 w-4" />

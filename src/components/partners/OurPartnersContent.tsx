@@ -277,8 +277,8 @@ export default function OurPartnersContent({
         <div className="absolute inset-0 z-0 bg-white " />
 
         {/* decorative blobs */}
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#EAF1FB]0/20 rounded-full hidden z-0" />
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#F2A800]/20 rounded-full hidden z-0" />
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#EAF1FB]/20 rounded-full hidden z-0" />
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-[#CD2E3A]/20 rounded-full hidden z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 lg:py-10 text-center">
           <span className="inline-flex items-center gap-2 bg-white/20 text-gray-900 text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-3 border border-gray-200">
@@ -361,7 +361,7 @@ export default function OurPartnersContent({
                 <select
                   value={selectedCountry}
                   onChange={(e) => setSelectedCountry(e.target.value)}
-                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#285BB5]/500/20 focus:border-gray-200 transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#0047A0]/500/20 focus:border-gray-200 transition-all cursor-pointer"
                 >
                   <option value="All">All Countries</option>
                   <option value="India">India</option>
@@ -382,7 +382,7 @@ export default function OurPartnersContent({
                     setSelectedState(e.target.value);
                     setSelectedCity("All");
                   }}
-                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#285BB5]/500/20 focus:border-gray-200 transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none focus:ring-2 focus:ring-[#0047A0]/500/20 focus:border-gray-200 transition-all cursor-pointer"
                 >
                   <option value="All">All States</option>
                   {availableStates.map((st) => (
@@ -407,7 +407,7 @@ export default function OurPartnersContent({
                   disabled={
                     selectedState === "All" || availableCities.length === 0
                   }
-                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none disabled:opacity-50 disabled:bg-gray-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-[#285BB5]/500/20 focus:border-gray-200 transition-all cursor-pointer"
+                  className="w-full appearance-none bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-700 outline-none disabled:opacity-50 disabled:bg-gray-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-[#0047A0]/500/20 focus:border-gray-200 transition-all cursor-pointer"
                 >
                   <option value="All">All Cities</option>
                   {availableCities.map((c, i) => (
@@ -460,7 +460,7 @@ export default function OurPartnersContent({
               <h2 className="text-2xl font-bold text-gray-900">
                 {group.region}
               </h2>
-              <span className="px-3 py-1 bg-[#EAF1FB] text-[#285BB5] text-sm font-semibold rounded-full">
+              <span className="px-3 py-1 bg-[#EAF1FB] text-[#0047A0] text-sm font-semibold rounded-full">
                 {group.partners.length} Partners
               </span>
             </div>
@@ -733,8 +733,8 @@ export default function OurPartnersContent({
 
       {/* -- BOTTOM CTA -- */}
       <section className="relative overflow-hidden bg-white text-gray-900 py-16">
-        <div className="absolute -top-20 right-0 w-72 h-72 bg-[#EAF1FB]0/10 rounded-full hidden" />
-        <div className="absolute bottom-0 left-10 w-60 h-60 bg-[#EAF1FB]0/10 rounded-full hidden" />
+        <div className="absolute -top-20 right-0 w-72 h-72 bg-[#EAF1FB]/10 rounded-full hidden" />
+        <div className="absolute bottom-0 left-10 w-60 h-60 bg-[#EAF1FB]/10 rounded-full hidden" />
 
         <div className="relative max-w-3xl mx-auto px-4 text-center">
           <Star className="w-10 h-10 text-red-600 mx-auto mb-5" />
@@ -743,7 +743,7 @@ export default function OurPartnersContent({
           </h2>
           <p className="text-gray-600 mb-10 text-lg">
             Partner with us and be part of a trusted ecosystem that connects
-            aspiring medical students with world-class universities in Armenia.
+            aspiring medical students with world-class universities in South Korea.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button

@@ -28,15 +28,15 @@ const getAutoResponse = (userMessage: string): string => {
     return "Ensure all documents are in PDF format and clearly legible. Required documents typically include 10+2 marksheet, NEET scorecard, and passport. Need help with a specific document?";
   }
   if (msg.includes("visa")) {
-    return "Once you get an admission offer, our team will guide you through the Armenia student visa process. It typically takes 4–6 weeks. Want to know more?";
+    return "Once you get an admission offer, our team will guide you through the South Korea student visa process. It typically takes 4–6 weeks. Want to know more?";
   }
   if (msg.includes("fee") || msg.includes("cost") || msg.includes("tuition")) {
     return replaceCurrencySymbol(
-      "Tuition fees in Armenia are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?",
+      "Tuition fees in South Korea are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?",
     );
   }
   if (msg.includes("neet") || msg.includes("eligibility")) {
-    return "For MBBS in Armenia, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
+    return "For MBBS in South Korea, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
   }
   if (
     msg.includes("contact") ||
@@ -48,7 +48,7 @@ const getAutoResponse = (userMessage: string): string => {
   if (msg.includes("status")) {
     return "Check your inquiry status anytime in the 'Applied Colleges' section of your dashboard. Our team typically responds within 24 hours.";
   }
-  return "Thanks for your message! I'm here to help with questions about MBBS in Armenia — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
+  return "Thanks for your message! I'm here to help with questions about MBBS in South Korea — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
 };
 
 export default function StudentChatWidget() {
@@ -58,7 +58,7 @@ export default function StudentChatWidget() {
     {
       id: "1",
       message:
-        "Hello! 👋 I'm here to help with your MBBS Armenia journey. Ask me anything about fees, eligibility, universities, or the admission process!",
+        "Hello! 👋 I'm here to help with your MBBS South Korea journey. Ask me anything about fees, eligibility, universities, or the admission process!",
       isFromSupport: true,
       timestamp: new Date().toISOString(),
     },
@@ -134,12 +134,12 @@ export default function StudentChatWidget() {
       {/* Header */}
       <div className="bg-red-600 text-white px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-[#EAF1FB]0 rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-[#EAF1FB] rounded-full flex items-center justify-center">
             <Bot className="w-4 h-4" />
           </div>
           <div>
             <p className="font-semibold text-sm leading-none">
-              MBBS Armenia Support
+              MBBS South Korea Support
             </p>
             <p className="text-xs text-slate-600 mt-0.5">
               Typically replies instantly
@@ -149,14 +149,14 @@ export default function StudentChatWidget() {
         <div className="flex items-center gap-1">
           <button
             onClick={() => setIsMinimized(true)}
-            className="p-1 hover:bg-[#EAF1FB]0 rounded transition-colors"
+            className="p-1 hover:bg-[#EAF1FB] rounded transition-colors"
             aria-label="minimize"
           >
             <Minimize2 className="w-4 h-4" />
           </button>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-1 hover:bg-[#EAF1FB]0 rounded transition-colors"
+            className="p-1 hover:bg-[#EAF1FB] rounded transition-colors"
             aria-label="close"
           >
             <X className="w-4 h-4" />
@@ -170,7 +170,7 @@ export default function StudentChatWidget() {
           <button
             key={q}
             onClick={() => setInput(q)}
-            className="shrink-0 text-xs bg-gray-100 hover:bg-white hover:text-[#285BB5] text-gray-600 rounded-full px-3 py-1 transition-colors"
+            className="shrink-0 text-xs bg-gray-100 hover:bg-white hover:text-[#0047A0] text-gray-600 rounded-full px-3 py-1 transition-colors"
           >
             {q}
           </button>

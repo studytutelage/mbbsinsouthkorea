@@ -124,17 +124,17 @@ export default async function NewsDetailPage({ params }: Props) {
         {/* Breadcrumb */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500 flex-wrap">
-            <Link href="/" className="hover:text-[#285BB5]">
+            <Link href="/" className="hover:text-[#0047A0]">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/news" className="hover:text-[#285BB5]">
+            <Link href="/news" className="hover:text-[#0047A0]">
               News
             </Link>
             <ChevronRight className="w-4 h-4" />
             <Link
               href={`/news/${item.category.slug}`}
-              className="hover:text-[#285BB5]"
+              className="hover:text-[#0047A0]"
             >
               {item.category.name}
             </Link>
@@ -166,7 +166,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     <Link
                       href={`/news/${item.category.slug}`}
-                      className="bg-white text-[#285BB5] text-xs font-semibold px-3 py-1 rounded-full"
+                      className="bg-white text-[#0047A0] text-xs font-semibold px-3 py-1 rounded-full"
                     >
                       {item.category.name}
                     </Link>
@@ -278,7 +278,7 @@ export default async function NewsDetailPage({ params }: Props) {
                   <div className="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
                     <Link
                       href={`/news/${item.category.slug}`}
-                      className="flex items-center gap-2 text-red-600 hover:text-[#285BB5] font-medium transition-colors"
+                      className="flex items-center gap-2 text-red-600 hover:text-[#0047A0] font-medium transition-colors"
                     >
                       <ArrowLeft className="w-4 h-4" /> Back to{" "}
                       {item.category.name}
@@ -314,7 +314,7 @@ export default async function NewsDetailPage({ params }: Props) {
                           )}
                         </div>
                         <div className="p-3">
-                          <p className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-[#285BB5] transition-colors">
+                          <p className="text-sm font-semibold text-gray-900 line-clamp-2 group-hover:text-[#0047A0] transition-colors">
                             {r.title}
                           </p>
                         </div>
@@ -336,7 +336,7 @@ export default async function NewsDetailPage({ params }: Props) {
                     <li key={cat.name}>
                       <Link
                         href={`/news/${cat.slug}`}
-                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-red-600 font-semibold" : "text-gray-600 hover:text-[#285BB5]"}`}
+                        className={`flex items-center gap-2 text-sm py-1 border-b border-gray-50 last:border-0 transition-colors ${cat.slug === categorySlug ? "text-red-600 font-semibold" : "text-gray-600 hover:text-[#0047A0]"}`}
                       >
                         <ArrowRight className="w-3 h-3 shrink-0" /> {cat.name}
                       </Link>
@@ -351,7 +351,7 @@ export default async function NewsDetailPage({ params }: Props) {
                 </p>
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 bg-white text-[#285BB5] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 bg-white text-[#0047A0] font-semibold px-4 py-2 rounded-xl hover:bg-white transition-colors text-sm"
                 >
                   Contact Us <ArrowRight className="w-4 h-4" />
                 </Link>

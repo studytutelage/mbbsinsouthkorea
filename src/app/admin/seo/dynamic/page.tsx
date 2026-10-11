@@ -134,7 +134,7 @@ export default function DynamicSeoPage() {
         </div>
         <Button
           size="sm"
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
           onClick={() => setShowAdd(true)}
         >
           <Plus size={14} className="mr-1" /> Add Template
@@ -162,7 +162,7 @@ export default function DynamicSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, page: e.target.value })
                 }
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               >
                 <option value="">Select page type...</option>
                 {PAGE_SUGGESTIONS.filter(
@@ -183,7 +183,7 @@ export default function DynamicSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, metaTitle: e.target.value })
                 }
-                placeholder={`{{name}} - MBBS in Armenia`}
+                placeholder={`{{name}} - MBBS in South Korea`}
               />
             </div>
             <div className="col-span-2">
@@ -196,8 +196,8 @@ export default function DynamicSeoPage() {
                   setNewEntry({ ...newEntry, metaDescription: e.target.value })
                 }
                 rows={2}
-                placeholder={`Learn about {{name}} - top medical university in Armenia...`}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                placeholder={`Learn about {{name}} - top medical university in South Korea...`}
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
               />
             </div>
             <div>
@@ -209,7 +209,7 @@ export default function DynamicSeoPage() {
                 onChange={(e) =>
                   setNewEntry({ ...newEntry, metaKeyword: e.target.value })
                 }
-                placeholder="mbbs Armenia, {{name}}"
+                placeholder="mbbs South Korea, {{name}}"
               />
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function DynamicSeoPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -290,7 +290,7 @@ export default function DynamicSeoPage() {
                             })
                           }
                           rows={2}
-                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                          className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
                         />
                       </div>
                       <div>
@@ -374,7 +374,7 @@ export default function DynamicSeoPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                         onClick={() => handleDelete(entry.id)}
                       >
                         <Trash2 size={14} />

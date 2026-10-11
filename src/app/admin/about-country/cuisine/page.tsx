@@ -98,7 +98,7 @@ export default function CuisineAdminPage() {
         </div>
         <Button
           onClick={() => setShowAdd(true)}
-          className="ml-auto bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="ml-auto bg-[#EAF1FB] hover:bg-[#EAF1FB]"
         >
           <Plus size={14} className="mr-1" /> Add Dish
         </Button>
@@ -280,7 +280,7 @@ export default function CuisineAdminPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-red-600 hover:text-[#285BB5]"
+                      className="text-red-600 hover:text-[#0047A0]"
                       onClick={() => handleDelete(item.id)}
                     >
                       <Trash2 size={14} />

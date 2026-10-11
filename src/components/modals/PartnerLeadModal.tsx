@@ -83,8 +83,8 @@ export default function PartnerLeadModal({
       {/* modal */}
       <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg animate-in fade-in zoom-in-95 duration-300">
         {/* Decoration */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#EAF1FB]0/10 rounded-full translate-x-16 -translate-y-16 hidden" />
-        <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#EAF1FB]0/10 rounded-full -translate-x-12 translate-y-12 hidden" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#EAF1FB]/10 rounded-full translate-x-16 -translate-y-16 hidden" />
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#EAF1FB]/10 rounded-full -translate-x-12 translate-y-12 hidden" />
 
         <div className="relative p-7">
           {/* Header */}
@@ -124,7 +124,7 @@ export default function PartnerLeadModal({
                   required
                   value={form.name}
                   onChange={(e) => update("name", e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#285BB5]/500/10 focus:border-gray-200 outline-none transition-all placeholder:text-gray-500"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#0047A0]/500/10 focus:border-gray-200 outline-none transition-all placeholder:text-gray-500"
                   placeholder="Full Name"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function PartnerLeadModal({
                     required
                     value={form.email}
                     onChange={(e) => update("email", e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#285BB5]/500/10 focus:border-gray-200 outline-none transition-all placeholder:text-gray-500"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#0047A0]/500/10 focus:border-gray-200 outline-none transition-all placeholder:text-gray-500"
                     placeholder="Email"
                   />
                 </div>
@@ -149,7 +149,7 @@ export default function PartnerLeadModal({
                     required
                     value={form.phone}
                     onChange={(e) => update("phone", e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#285BB5]/500/10 focus:border-gray-200 outline-none transition-all placeholder:text-gray-500"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#0047A0]/500/10 focus:border-gray-200 outline-none transition-all placeholder:text-gray-500"
                     placeholder="Phone"
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function PartnerLeadModal({
                       const val = e.target.value;
                       setForm((prev) => ({ ...prev, state: val, city: "" }));
                     }}
-                    className="w-full pl-10 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#285BB5]/500/10 focus:border-gray-200 outline-none transition-all appearance-none cursor-pointer"
+                    className="w-full pl-10 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#0047A0]/500/10 focus:border-gray-200 outline-none transition-all appearance-none cursor-pointer"
                   >
                     <option value="" disabled>
                       Select State
@@ -187,7 +187,7 @@ export default function PartnerLeadModal({
                     disabled={!form.state}
                     value={form.city}
                     onChange={(e) => update("city", e.target.value)}
-                    className="w-full pl-10 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#285BB5]/500/10 focus:border-gray-200 outline-none transition-all appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full pl-10 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-4 focus:ring-[#0047A0]/500/10 focus:border-gray-200 outline-none transition-all appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <option value="" disabled>
                       Select City

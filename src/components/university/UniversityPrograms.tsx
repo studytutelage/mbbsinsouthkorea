@@ -44,7 +44,7 @@ export default function UniversityPrograms({
     <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <span className="inline-block bg-[#EAF1FB] text-[#285BB5] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+          <span className="inline-block bg-[#EAF1FB] text-[#0047A0] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
             Admissions Open
           </span>
           <h2 className="text-3xl font-bold text-gray-900">
@@ -56,10 +56,10 @@ export default function UniversityPrograms({
             <Link
               href={`/universities/${universitySlug}/courses/${program.programSlug}`}
               key={program.id}
-              className="block group/card bg-white border border-gray-100 border-l-4 border-l-[#285BB5] rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-pointer"
+              className="block group/card bg-white border border-gray-100 border-l-4 border-l-[#0047A0] rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 overflow-hidden cursor-pointer"
             >
               <div className="flex flex-col md:flex-row">
-                <div className="bg-[#101B4D] px-5 py-5 md:w-44 flex flex-col justify-center shrink-0">
+                <div className="bg-[#002B5C] px-5 py-5 md:w-44 flex flex-col justify-center shrink-0">
                   <div className="flex items-center gap-1.5 mb-1.5">
                     <GraduationCap className="w-3.5 h-3.5 text-white shrink-0" />
                     <span className="text-white text-[10px] font-semibold uppercase tracking-widest">
@@ -186,13 +186,13 @@ export default function UniversityPrograms({
                         </span>
                       )}
                       {program.medium && (
-                        <span className="flex items-center gap-1 text-[10px] text-[#285BB5] bg-white border border-gray-200 px-2.5 py-1 rounded-full font-semibold">
+                        <span className="flex items-center gap-1 text-[10px] text-[#0047A0] bg-white border border-gray-200 px-2.5 py-1 rounded-full font-semibold">
                           <Globe className="w-3 h-3" />
                           {program.medium}
                         </span>
                       )}
                     </div>
-                    <span className="inline-flex items-center gap-1.5 bg-[#285BB5] text-white py-2 px-5 rounded-xl font-semibold text-xs transition-all duration-300 shadow-sm group-hover/card:shadow-md pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 bg-[#0047A0] text-white py-2 px-5 rounded-xl font-semibold text-xs transition-all duration-300 shadow-sm group-hover/card:shadow-md pointer-events-none">
                       View Full Details{" "}
                       <ExternalLink className="w-3.5 h-3.5 group-hover/card:translate-x-0.5 transition-transform" />
                     </span>

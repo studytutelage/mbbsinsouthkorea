@@ -85,7 +85,7 @@ export default async function StudentDashboard() {
           <h2 className="text-lg font-bold text-gray-800">Recent Inquiries</h2>
           <Link
             href="/student/applications"
-            className="text-red-600 text-sm font-medium hover:text-[#285BB5] flex items-center space-x-1"
+            className="text-red-600 text-sm font-medium hover:text-[#0047A0] flex items-center space-x-1"
           >
             <span>View all</span>
             <ArrowRight className="w-4 h-4" />
@@ -118,7 +118,7 @@ export default async function StudentDashboard() {
                   </div>
                 </div>
                 <span
-                  className={`text-xs font-medium px-3 py-1 rounded-full ${inq.status === "contacted" ? "bg-green-100 text-green-700" : inq.status === "rejected" ? "bg-[#EAF1FB] text-[#285BB5]" : "bg-red-400 text-red-600"}`}
+                  className={`text-xs font-medium px-3 py-1 rounded-full ${inq.status === "contacted" ? "bg-green-100 text-green-700" : inq.status === "rejected" ? "bg-[#EAF1FB] text-[#0047A0]" : "bg-red-400 text-red-600"}`}
                 >
                   {inq.status}
                 </span>
@@ -136,7 +136,7 @@ export default async function StudentDashboard() {
         >
           <div className="font-bold text-lg mb-1">Browse Universities</div>
           <div className="text-slate-600 text-sm">
-            Find your ideal MBBS university in Armenia
+            Find your ideal MBBS university in South Korea
           </div>
           <ArrowRight className="w-5 h-5 mt-4 group-hover:translate-x-1 transition-transform" />
         </Link>

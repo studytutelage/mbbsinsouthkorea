@@ -65,7 +65,7 @@ export default function AdminSettingsPage() {
             {
               key: "siteName",
               label: "Site Name",
-              placeholder: "MBBS in Armenia",
+              placeholder: "MBBS in South Korea",
             },
             {
               key: "tagline",
@@ -173,7 +173,7 @@ export default function AdminSettingsPage() {
         <div className="flex justify-end pb-8">
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={saving}
           >
             {saving ? (

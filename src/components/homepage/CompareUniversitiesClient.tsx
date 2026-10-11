@@ -163,7 +163,7 @@ export default function CompareUniversitiesClient({
               <select
                 value={selectedIds[slot] ?? ""}
                 onChange={(e) => handleSelect(slot, Number(e.target.value))}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
                 suppressHydrationWarning={true}
               >
                 {allUniversities.map((u) => (
@@ -198,7 +198,7 @@ export default function CompareUniversitiesClient({
                               className="object-cover w-full h-full"
                             />
                           ) : (
-                            <div className="w-full h-full bg-blue-200 flex items-center justify-center text-[#285BB5] font-bold text-lg">
+                            <div className="w-full h-full bg-blue-200 flex items-center justify-center text-[#0047A0] font-bold text-lg">
                               {u.name[0]}
                             </div>
                           )}

@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Privacy Policy — MBBS in Armenia",
+    title: "Privacy Policy — MBBS in South Korea",
     description:
       "Our privacy policy outlines how we collect, use, and protect your information.",
     path: "/privacy-policy",
@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <nav className="flex items-center justify-center space-x-2 text-red-600/80 text-sm mb-8 animate-in fade-in slide-in- duration-700">
-            <Link href="/" className="hover:text-[#285BB5] transition-colors">
+            <Link href="/" className="hover:text-[#0047A0] transition-colors">
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg pl-2 border-l-2 border-transparent group-hover:border-gray-200 transition-colors duration-300">
-                At MBBS in Armenia, we respect your privacy and are committed to
+                At MBBS in South Korea, we respect your privacy and are committed to
                 protecting your personal data. This privacy policy will inform
                 you as to how we look after your personal data when you visit
                 our website and tell you about your privacy rights and how the
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
                 <h4 className="font-bold text-gray-800 mb-1 leading-tight text-xl">
                   Have questions about your data?
                 </h4>
-                <p className="text-[#285BB5] text-sm opacity-80">
+                <p className="text-[#0047A0] text-sm opacity-80">
                   Our privacy team is here to help you understand your rights.
                 </p>
               </div>

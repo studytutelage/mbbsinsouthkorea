@@ -49,7 +49,7 @@ async function seedAdminUser() {
       role: UserRole.admin,
       password: hashedPassword,
       designation: "Administrator",
-      description: "Platform administrator for MBBS in Armenia.",
+      description: "Platform administrator for MBBS in South Korea.",
       status: true,
     },
     create: {
@@ -58,7 +58,7 @@ async function seedAdminUser() {
       role: UserRole.admin,
       password: hashedPassword,
       designation: "Administrator",
-      description: "Platform administrator for MBBS in Armenia.",
+      description: "Platform administrator for MBBS in South Korea.",
       status: true,
     },
   });
@@ -66,8 +66,8 @@ async function seedAdminUser() {
 
 async function seedWebsiteSettings() {
   const settings = [
-    { key: "site_name", value: "MBBS in Armenia", type: "text", group: "general" },
-    { key: "support_email", value: "admissions@mbbsinarmenia.com", type: "text", group: "contact" },
+    { key: "site_name", value: "MBBS in South Korea", type: "text", group: "general" },
+    { key: "support_email", value: "admissions@mbbsinsouthkorea.com", type: "text", group: "contact" },
     { key: "support_phone", value: "+91-11-2410-2161", type: "text", group: "contact" },
     { key: "stats_total_students", value: "2500+", type: "text", group: "stats" },
     { key: "stats_total_universities", value: "8+", type: "text", group: "stats" },
@@ -93,14 +93,14 @@ async function seedReferenceData() {
   }
 
   const provinceNames = [
-    "Port Louis",
-    "Plaines Wilhems",
-    "Flacq",
-    "Grand Port",
-    "Savanne",
-    "Pamplemousses",
-    "Moka",
-    "Black River",
+    "Seoul Special City",
+    "Busan Metropolitan City",
+    "Daegu Metropolitan City",
+    "Incheon Metropolitan City",
+    "Gwangju Metropolitan City",
+    "Daejeon Metropolitan City",
+    "Gyeonggi Province",
+    "Jeju Special Self-Governing Province",
   ];
   const provinceIds = new Map<string, number>();
   for (const name of provinceNames) {
@@ -109,14 +109,14 @@ async function seedReferenceData() {
   }
 
   const cities = [
-    { name: "Port Louis", province: "Port Louis" },
-    { name: "Curepipe", province: "Plaines Wilhems" },
-    { name: "Vacoas-Phoenix", province: "Plaines Wilhems" },
-    { name: "Quatre Bornes", province: "Plaines Wilhems" },
-    { name: "Mahebourg", province: "Grand Port" },
-    { name: "Flacq", province: "Flacq" },
-    { name: "Triolet", province: "Pamplemousses" },
-    { name: "Bambous", province: "Black River" },
+    { name: "Seoul", province: "Seoul Special City" },
+    { name: "Busan", province: "Busan Metropolitan City" },
+    { name: "Daegu", province: "Daegu Metropolitan City" },
+    { name: "Incheon", province: "Incheon Metropolitan City" },
+    { name: "Gwangju", province: "Gwangju Metropolitan City" },
+    { name: "Daejeon", province: "Daejeon Metropolitan City" },
+    { name: "Suwon", province: "Gyeonggi Province" },
+    { name: "Jeju City", province: "Jeju Special Self-Governing Province" },
   ];
 
   for (const item of cities) {
@@ -162,16 +162,16 @@ async function seedReferenceData() {
   }
 
   const hospitals = [
-    { name: "Sir Seewoosagur Ramgoolam National Hospital", city: "Pamplemousses", beds: 850 },
-    { name: "Victoria Hospital Candos", city: "Quatre Bornes", beds: 700 },
-    { name: "Jawaharlal Nehru Hospital", city: "Rose Belle", beds: 600 },
+    { name: "Seoul National University Hospital", city: "Seoul", beds: 1800 },
+    { name: "Severance Hospital - Yonsei University", city: "Seoul", beds: 2400 },
+    { name: "Pusan National University Hospital", city: "Busan", beds: 1400 },
   ];
   for (const item of hospitals) {
     const slug = slugify(item.name);
     await prisma.hospital.upsert({
       where: { slug },
-      update: { ...item, slug, state: "Armenia", status: true },
-      create: { ...item, slug, state: "Armenia", status: true },
+      update: { ...item, slug, state: "South Korea", status: true },
+      create: { ...item, slug, state: "South Korea", status: true },
     });
   }
 
@@ -184,66 +184,66 @@ async function seedCountryAndEducationPages() {
   const aboutCountry = await prisma.aboutCountryPage.upsert({
     where: { id: 1 },
     update: {
-      name: "Armenia",
-      tagline: "A safe and multicultural destination for medical studies",
-      capital: "Yerevan",
-      population: "2.8 Million+",
-      languages: "English, French, Armenian",
-      currency: "AMD",
-      location: "Indian Ocean, East of Madagascar",
-      timezone: "UTC+4",
-      independenceDay: new Date("1968-03-12"),
-      highestPeak: "Piton de la Petite Riviere Noire",
-      highestPeakHeight: "828 m",
+      name: "South Korea",
+      tagline: "World-Class Medical Education in the Heart of East Asia",
+      capital: "Seoul",
+      population: "51.7 Million+",
+      languages: "Korean, English (Academic)",
+      currency: "KRW",
+      location: "East Asia, Korean Peninsula",
+      timezone: "UTC+9 (KST)",
+      independenceDay: new Date("1945-08-15"),
+      highestPeak: "Hallasan",
+      highestPeakHeight: "1,947 m",
       whoRecognized: true,
       englishMedium: true,
       mbbsAffordableEducation:
-        "Globally aligned medical education with practical fees and student-friendly support.",
+        "Globally aligned medical education with practical fees and world-leading hospital infrastructure.",
       academicExcellence:
-        "Structured curriculum with clinical exposure and modern teaching standards.",
+        "Structured curriculum with clinical exposure, advanced simulation, and modern robotic training.",
       studentLife:
-        "Students benefit from a secure, welcoming, and culturally diverse island environment.",
-      visaConnectivity: "Straightforward student visa process with advisory support.",
-      publicHealthcare: "Public teaching hospitals offer useful practical exposure.",
-      privateHealthcare: "Private hospitals complement public care with specialist services.",
-      studentHealthcare: "Medical support services are accessible in major study cities.",
-      tourismGrowth: "A globally popular island destination with modern infrastructure.",
-      bannerImage: "/uploads/about-country/armenia-banner.jpg",
+        "Students benefit from an exceptionally safe, technologically advanced, and welcoming environment.",
+      visaConnectivity: "Straightforward D-2 student visa process with dedicated international student advisory support.",
+      publicHealthcare: "World-class National Health Insurance System (NHIS) providing comprehensive subsidized care.",
+      privateHealthcare: "Top-tier private university hospitals with advanced medical equipment and English-speaking doctors.",
+      studentHealthcare: "On-campus health centers and student health support across major university cities.",
+      tourismGrowth: "A globally popular cultural destination with iconic palaces, vibrant cities, and scenic nature.",
+      bannerImage: "/uploads/about-country/South Korea-banner.jpg",
     },
     create: {
       id: 1,
-      name: "Armenia",
-      tagline: "A safe and multicultural destination for medical studies",
-      capital: "Yerevan",
-      population: "2.8 Million+",
-      languages: "English, French, Armenian",
-      currency: "AMD",
-      location: "Indian Ocean, East of Madagascar",
-      timezone: "UTC+4",
-      independenceDay: new Date("1968-03-12"),
-      highestPeak: "Piton de la Petite Riviere Noire",
-      highestPeakHeight: "828 m",
+      name: "South Korea",
+      tagline: "World-Class Medical Education in the Heart of East Asia",
+      capital: "Seoul",
+      population: "51.7 Million+",
+      languages: "Korean, English (Academic)",
+      currency: "KRW",
+      location: "East Asia, Korean Peninsula",
+      timezone: "UTC+9 (KST)",
+      independenceDay: new Date("1945-08-15"),
+      highestPeak: "Hallasan",
+      highestPeakHeight: "1,947 m",
       whoRecognized: true,
       englishMedium: true,
       mbbsAffordableEducation:
-        "Globally aligned medical education with practical fees and student-friendly support.",
+        "Globally aligned medical education with practical fees and world-leading hospital infrastructure.",
       academicExcellence:
-        "Structured curriculum with clinical exposure and modern teaching standards.",
+        "Structured curriculum with clinical exposure, advanced simulation, and modern robotic training.",
       studentLife:
-        "Students benefit from a secure, welcoming, and culturally diverse island environment.",
-      visaConnectivity: "Straightforward student visa process with advisory support.",
-      publicHealthcare: "Public teaching hospitals offer useful practical exposure.",
-      privateHealthcare: "Private hospitals complement public care with specialist services.",
-      studentHealthcare: "Medical support services are accessible in major study cities.",
-      tourismGrowth: "A globally popular island destination with modern infrastructure.",
-      bannerImage: "/uploads/about-country/armenia-banner.jpg",
+        "Students benefit from an exceptionally safe, technologically advanced, and welcoming environment.",
+      visaConnectivity: "Straightforward D-2 student visa process with dedicated international student advisory support.",
+      publicHealthcare: "World-class National Health Insurance System (NHIS) providing comprehensive subsidized care.",
+      privateHealthcare: "Top-tier private university hospitals with advanced medical equipment and English-speaking doctors.",
+      studentHealthcare: "On-campus health centers and student health support across major university cities.",
+      tourismGrowth: "A globally popular cultural destination with iconic palaces, vibrant cities, and scenic nature.",
+      bannerImage: "/uploads/about-country/South Korea-banner.jpg",
     },
   });
 
   const cityCards = [
-    { cityName: "Port Louis", description: "Capital city and administrative hub.", population: "150,000+" },
-    { cityName: "Curepipe", description: "Student-friendly central city with good connectivity.", population: "85,000+" },
-    { cityName: "Vacoas-Phoenix", description: "Large urban cluster with residential facilities.", population: "105,000+" },
+    { cityName: "Seoul", description: "Capital city and primary healthcare innovation hub with top university hospitals.", population: "9.7 Million+" },
+    { cityName: "Busan", description: "Premier coastal metropolis and maritime education center.", population: "3.4 Million+" },
+    { cityName: "Daegu", description: "Korea's specialized medical city featuring advanced health complexes.", population: "2.4 Million+" },
   ];
   for (const item of cityCards) {
     await upsertByWhere(
@@ -254,8 +254,8 @@ async function seedCountryAndEducationPages() {
   }
 
   const cuisines = [
-    { dishName: "Ghaprsa", dishDescription: "Popular Armenian street meal.", dishImage: "/uploads/about-country/ghaprsa.jpg" },
-    { dishName: "Khash", dishDescription: "Fried lentil snack served island-wide.", dishImage: "/uploads/about-country/khash.jpg" },
+    { dishName: "Kimchi", dishDescription: "Iconic fermented vegetable dish rich in vitamins and probiotics.", dishImage: "/uploads/about-country/kimchi.jpg" },
+    { dishName: "Bibimbap", dishDescription: "Nutritious traditional mixed rice bowl with seasoned vegetables and proteins.", dishImage: "/uploads/about-country/bibimbap.jpg" },
   ];
   for (const item of cuisines) {
     await upsertByWhere(
@@ -266,8 +266,8 @@ async function seedCountryAndEducationPages() {
   }
 
   const lifestyles = [
-    { title: "Multicultural Community", description: "Students from multiple countries learn together." },
-    { title: "Safe Student Lifestyle", description: "Armenia is known for social stability and community support." },
+    { title: "Safe & Modern Society", description: "Consistently ranked among the world's safest countries with 24/7 vibrant city life." },
+    { title: "High-Tech Educational Environment", description: "Smart campuses, 5G digital libraries, and advanced biomedical labs." },
   ];
   for (const item of lifestyles) {
     await upsertByWhere(
@@ -278,8 +278,8 @@ async function seedCountryAndEducationPages() {
   }
 
   const attractions = [
-    { attractionName: "Le Morne Brabant", description: "UNESCO listed mountain and landmark.", ordering: 1, isActive: true },
-    { attractionName: "Black River Gorges", description: "National park with forests and trails.", ordering: 2, isActive: true },
+    { attractionName: "Gyeongbokgung Palace", description: "Historic Joseon Dynasty royal palace in Seoul.", ordering: 1, isActive: true },
+    { attractionName: "Jeju Island & Hallasan", description: "UNESCO World Heritage volcanic island and highest peak.", ordering: 2, isActive: true },
   ];
   for (const item of attractions) {
     await upsertByWhere(
@@ -292,41 +292,41 @@ async function seedCountryAndEducationPages() {
   const educationSystem = await prisma.educationSystem.upsert({
     where: { id: 1 },
     update: {
-      title: "Education System in Armenia",
+      title: "Education System in South Korea",
       description:
-        "Armenia follows a British-influenced framework with strong quality control and international compatibility.",
-      introductionTitle: "Structured and Recognized Academic Pathway",
+        "South Korea follows a rigorous global medical framework with strong hospital immersion, simulation training, and research excellence.",
+      introductionTitle: "A Global Benchmark in Medical Training",
       introductionDescription:
-        "Medical education combines theory, simulation, and hospital-based practical learning.",
-      literacyRate: 92.0,
-      officialLanguage: "English",
+        "Medical education integrates foundation sciences, cutting-edge robotic simulation, and extensive hospital rotations.",
+      literacyRate: 98.8,
+      officialLanguage: "Korean",
       officialLanguagePercentage: 100,
-      officialLanguageNote: "Primary language of instruction",
-      foreignLanguage: "French and Armenian Creole",
-      foreignLanguagePercentage: 80,
-      foreignLanguageNote: "Widely used in daily communication",
-      universitiesCount: 8,
-      universitiesNote: "Public and private institutions",
-      higherEducationDescription: "Medical and allied health programs available for international students.",
+      officialLanguageNote: "National language with English-medium medical tracks",
+      foreignLanguage: "English",
+      foreignLanguagePercentage: 85,
+      foreignLanguageNote: "Widely used in medical journals, lectures, and international conferences",
+      universitiesCount: 40,
+      universitiesNote: "Accredited national and private medical colleges",
+      higherEducationDescription: "World-ranked medical faculties offering globally recognized MBBS/MD degrees.",
     },
     create: {
       id: 1,
-      title: "Education System in Armenia",
+      title: "Education System in South Korea",
       description:
-        "Armenia follows a British-influenced framework with strong quality control and international compatibility.",
-      introductionTitle: "Structured and Recognized Academic Pathway",
+        "South Korea follows a rigorous global medical framework with strong hospital immersion, simulation training, and research excellence.",
+      introductionTitle: "A Global Benchmark in Medical Training",
       introductionDescription:
-        "Medical education combines theory, simulation, and hospital-based practical learning.",
-      literacyRate: 92.0,
-      officialLanguage: "English",
+        "Medical education integrates foundation sciences, cutting-edge robotic simulation, and extensive hospital rotations.",
+      literacyRate: 98.8,
+      officialLanguage: "Korean",
       officialLanguagePercentage: 100,
-      officialLanguageNote: "Primary language of instruction",
-      foreignLanguage: "Armenian",
-      foreignLanguagePercentage: 80,
-      foreignLanguageNote: "Widely used in daily communication",
-      universitiesCount: 8,
-      universitiesNote: "Public and private institutions",
-      higherEducationDescription: "Medical and allied health programs available for international students.",
+      officialLanguageNote: "National language with English-medium medical tracks",
+      foreignLanguage: "English",
+      foreignLanguagePercentage: 85,
+      foreignLanguageNote: "Widely used in medical journals, lectures, and international conferences",
+      universitiesCount: 40,
+      universitiesNote: "Accredited national and private medical colleges",
+      higherEducationDescription: "World-ranked medical faculties offering globally recognized MBBS/MD degrees.",
     },
   });
 
@@ -382,7 +382,7 @@ async function seedCountryAndEducationPages() {
   await prisma.aboutUs.upsert({
     where: { id: 1 },
     update: {
-      heroTitle: "Your Trusted MBBS in Armenia Advisory Team",
+      heroTitle: "Your Trusted MBBS in South Korea Advisory Team",
       heroDescription:
         "We guide students from profile assessment to admission and pre-departure support.",
       partnerUniversities: 8,
@@ -390,16 +390,16 @@ async function seedCountryAndEducationPages() {
       channelPartners: 35,
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
-      vision: "To be the most trusted Armenia medical admission support platform.",
+      vision: "To be the most trusted South Korea medical admission support platform.",
       contact1: "+91-11-2410-2161",
-      contact2: "+230-208-9000",
-      email1: "admissions@mbbsinarmenia.com",
-      email2: "support@mbbsinarmenia.com",
-      address: "New Delhi, India and Ebene Cybercity, Armenia",
+      contact2: "+82-2-3456-7890",
+      email1: "admissions@mbbsinsouthkorea.com",
+      email2: "support@mbbsinsouthkorea.com",
+      address: "New Delhi, India and Gangnam-gu, Seoul, South Korea",
     },
     create: {
       id: 1,
-      heroTitle: "Your Trusted MBBS in Armenia Advisory Team",
+      heroTitle: "Your Trusted MBBS in South Korea Advisory Team",
       heroDescription:
         "We guide students from profile assessment to admission and pre-departure support.",
       partnerUniversities: 8,
@@ -407,12 +407,12 @@ async function seedCountryAndEducationPages() {
       channelPartners: 35,
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
-      vision: "To be the most trusted Armenia medical admission support platform.",
+      vision: "To be the most trusted South Korea medical admission support platform.",
       contact1: "+91-11-2410-2161",
-      contact2: "+230-208-9000",
-      email1: "admissions@mbbsinarmenia.com",
-      email2: "support@mbbsinarmenia.com",
-      address: "New Delhi, India and Ebene Cybercity, Armenia",
+      contact2: "+82-2-3456-7890",
+      email1: "admissions@mbbsinsouthkorea.com",
+      email2: "support@mbbsinsouthkorea.com",
+      address: "New Delhi, India and Gangnam-gu, Seoul, South Korea",
     },
   });
 
@@ -432,16 +432,16 @@ async function seedCountryAndEducationPages() {
 
 async function seedContentAndMisc(adminId: number) {
   const staticSeoPages = [
-    { page: "home", metaTitle: "Study MBBS in Armenia 2026", metaDescription: "Admission guidance, fee insights, and university comparison." },
-    { page: "about-us", metaTitle: "About MBBS in Armenia Team", metaDescription: "Meet the counselors and operations team supporting students." },
-    { page: "about-Armenia", metaTitle: "About Armenia for Students", metaDescription: "Understand lifestyle, safety, and healthcare ecosystem." },
-    { page: "education-system", metaTitle: "Education System in Armenia", metaDescription: "Academic structure and MBBS training overview." },
-    { page: "universities", metaTitle: "Medical Universities in Armenia", metaDescription: "Compare colleges, tuition, and support facilities." },
-    { page: "blog", metaTitle: "MBBS Armenia Blog", metaDescription: "Guides for admission, visa, and student life." },
-    { page: "news", metaTitle: "MBBS Armenia News", metaDescription: "Education and policy updates for aspirants." },
-    { page: "articles", metaTitle: "MBBS Armenia Articles", metaDescription: "Long-form practical planning guides." },
-    { page: "contact-us", metaTitle: "Contact MBBS Armenia Advisors", metaDescription: "Book counseling with India and Armenia teams." },
-    { page: "scholarships", metaTitle: "MBBS Scholarships in Armenia", metaDescription: "Merit and tuition support opportunities." },
+    { page: "home", metaTitle: "Study MBBS in South Korea 2026", metaDescription: "Admission guidance, fee insights, and university comparison." },
+    { page: "about-us", metaTitle: "About MBBS in South Korea Team", metaDescription: "Meet the counselors and operations team supporting students." },
+    { page: "about-south-korea", metaTitle: "About South Korea for Students", metaDescription: "Understand lifestyle, safety, and healthcare ecosystem." },
+    { page: "education-system", metaTitle: "Education System in South Korea", metaDescription: "Academic structure and MBBS training overview." },
+    { page: "universities", metaTitle: "Medical Universities in South Korea", metaDescription: "Compare colleges, tuition, and support facilities." },
+    { page: "blog", metaTitle: "MBBS South Korea Blog", metaDescription: "Guides for admission, visa, and student life." },
+    { page: "news", metaTitle: "MBBS South Korea News", metaDescription: "Education and policy updates for aspirants." },
+    { page: "articles", metaTitle: "MBBS South Korea Articles", metaDescription: "Long-form practical planning guides." },
+    { page: "contact-us", metaTitle: "Contact MBBS South Korea Advisors", metaDescription: "Book counseling with India and South Korea teams." },
+    { page: "scholarships", metaTitle: "MBBS Scholarships in South Korea", metaDescription: "Merit and tuition support opportunities." },
   ];
   for (const item of staticSeoPages) {
     await prisma.staticPageSeo.upsert({
@@ -462,21 +462,21 @@ async function seedContentAndMisc(adminId: number) {
       where: { page: item },
       update: {
         page: item,
-        metaTitle: "MBBS in Armenia",
-        metaDescription: "Dynamic page SEO baseline for Armenia-focused content.",
+        metaTitle: "MBBS in South Korea",
+        metaDescription: "Dynamic page SEO baseline for South Korea-focused content.",
         status: true,
       },
       create: {
         page: item,
-        metaTitle: "MBBS in Armenia",
-        metaDescription: "Dynamic page SEO baseline for Armenia-focused content.",
+        metaTitle: "MBBS in South Korea",
+        metaDescription: "Dynamic page SEO baseline for South Korea-focused content.",
         status: true,
       },
     });
   }
 
-  await upsertByWhere(prisma.defaultOgImage, { name: "Armenia Default OG" }, {
-    name: "Armenia Default OG",
+  await upsertByWhere(prisma.defaultOgImage, { name: "South Korea Default OG" }, {
+    name: "South Korea Default OG",
     imageName: "og-default.jpg",
     imagePath: "/og-default.jpg",
     status: true,
@@ -487,9 +487,9 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Homepage", slug: "homepage", status: true },
     create: { name: "Homepage", slug: "homepage", status: true },
   });
-  await upsertByWhere(prisma.faq, { question: "Is MBBS in Armenia taught in English?" }, {
-    question: "Is MBBS in Armenia taught in English?",
-    answer: "Yes, most international MBBS pathways in Armenia are delivered in English.",
+  await upsertByWhere(prisma.faq, { question: "Is MBBS in South Korea taught in English?" }, {
+    question: "Is MBBS in South Korea taught in English?",
+    answer: "Yes, most international MBBS pathways in South Korea are delivered in English.",
     categoryId: faqCategory.id,
     position: 1,
     status: true,
@@ -502,24 +502,24 @@ async function seedContentAndMisc(adminId: number) {
     state: "Delhi",
     country: "India",
     phone: "+91-11-2410-2161",
-    email: "india@mbbsinarmenia.com",
+    email: "india@mbbsinsouthkorea.com",
     mapEmbed: "https://maps.google.com/?q=Chanakyapuri+New+Delhi",
     imageName: "office-india.jpg",
     imagePath: "/uploads/offices/india-head-office.jpg",
     position: 1,
     status: true,
   });
-  await upsertByWhere(prisma.office, { name: "Armenia Support Office" }, {
-    name: "Armenia Support Office",
+  await upsertByWhere(prisma.office, { name: "South Korea Support Office" }, {
+    name: "South Korea Support Office",
     address: "Cyber Tower 1, Ebene Cybercity",
     city: "Ebene",
     state: "Plaines Wilhems",
-    country: "Armenia",
+    country: "South Korea",
     phone: "+230-208-9000",
-    email: "armenia@mbbsinarmenia.com",
-    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+Armenia",
-    imageName: "office-armenia.jpg",
-    imagePath: "/uploads/offices/armenia-office.jpg",
+    email: "South Korea@mbbsinsouthkorea.com",
+    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+South Korea",
+    imageName: "office-South Korea.jpg",
+    imagePath: "/uploads/offices/South Korea-office.jpg",
     position: 2,
     status: true,
   });
@@ -548,9 +548,9 @@ async function seedContentAndMisc(adminId: number) {
       position: 2,
     },
     {
-      name: "Ministry of Health and Wellness - Armenia",
-      url: "https://health.govmu.org",
-      category: "armenia-government",
+      name: "Ministry of Health and Welfare (MOHW) - South Korea",
+      url: "https://www.mohw.go.kr",
+      category: "South Korea-government",
       position: 3,
     },
   ];
@@ -562,16 +562,16 @@ async function seedContentAndMisc(adminId: number) {
     });
   }
 
-  await upsertByWhere(prisma.countryDocument, { country: "Armenia", type: CountryDocType.embassy_letter }, {
-    country: "Armenia",
+  await upsertByWhere(prisma.countryDocument, { country: "South Korea", type: CountryDocType.embassy_letter }, {
+    country: "South Korea",
     type: CountryDocType.embassy_letter,
     title: "Embassy Student Letter Template",
     fileName: "embassy-student-letter.pdf",
     filePath: "/uploads/country-documents/embassy-student-letter.pdf",
     isActive: true,
   });
-  await upsertByWhere(prisma.countryDocument, { country: "Armenia", type: CountryDocType.nmc_guidelines }, {
-    country: "Armenia",
+  await upsertByWhere(prisma.countryDocument, { country: "South Korea", type: CountryDocType.nmc_guidelines }, {
+    country: "South Korea",
     type: CountryDocType.nmc_guidelines,
     title: "NMC Guidelines Reference",
     fileName: "nmc-guidelines-reference.pdf",
@@ -579,9 +579,9 @@ async function seedContentAndMisc(adminId: number) {
     isActive: true,
   });
 
-  await upsertByWhere(prisma.pageContent, { pageSlug: "about-us", title: "Why Armenia" }, {
+  await upsertByWhere(prisma.pageContent, { pageSlug: "about-us", title: "Why South Korea" }, {
     pageSlug: "about-us",
-    title: "Why Armenia",
+    title: "Why South Korea",
     content: "Affordable medical education, English-medium instruction, and practical hospital exposure.",
     position: 1,
     status: true,
@@ -592,11 +592,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Admission Guides", slug: "admission-guides", status: true },
     create: { name: "Admission Guides", slug: "admission-guides", status: true },
   });
-  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-armenia-admission-roadmap-2026" }, {
+  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-South Korea-admission-roadmap-2026" }, {
     categoryId: blogCategory.id,
     authorId: adminId,
-    title: "MBBS in Armenia Admission Roadmap 2026",
-    slug: "mbbs-in-armenia-admission-roadmap-2026",
+    title: "MBBS in South Korea Admission Roadmap 2026",
+    slug: "mbbs-in-South Korea-admission-roadmap-2026",
     shortnote: "A practical timeline from counseling to visa.",
     description: "Stepwise checklist for profile review, documents, application, and travel readiness.",
     status: true,
@@ -623,11 +623,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
     create: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
   });
-  const news = await upsertByWhere(prisma.news, { slug: "armenia-intake-advisory-2026" }, {
+  const news = await upsertByWhere(prisma.news, { slug: "South Korea-intake-advisory-2026" }, {
     categoryId: newsCategory.id,
     authorId: adminId,
-    title: "Armenia Intake Advisory for 2026 Applicants",
-    slug: "armenia-intake-advisory-2026",
+    title: "South Korea Intake Advisory for 2026 Applicants",
+    slug: "South Korea-intake-advisory-2026",
     description: "Applicants are advised to complete document checks early.",
     status: true,
     homeView: true,
@@ -652,11 +652,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
     create: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
   });
-  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-armenia" }, {
+  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-South Korea" }, {
     categoryId: articleCategory.id,
     authorId: adminId,
-    title: "Realistic Cost Breakdown for MBBS in Armenia",
-    slug: "realistic-cost-breakdown-mbbs-armenia",
+    title: "Realistic Cost Breakdown for MBBS in South Korea",
+    slug: "realistic-cost-breakdown-mbbs-South Korea",
     description: "Understand tuition, living costs, and annual budget planning.",
     status: true,
     homeView: true,
@@ -677,10 +677,10 @@ async function seedContentAndMisc(adminId: number) {
   });
 
   const scholarship = await prisma.scholarship.upsert({
-    where: { slug: "armenia-merit-scholarship-mbbs" },
+    where: { slug: "South Korea-merit-scholarship-mbbs" },
     update: {
-      title: "Armenia Merit Scholarship for MBBS",
-      slug: "armenia-merit-scholarship-mbbs",
+      title: "South Korea Merit Scholarship for MBBS",
+      slug: "South Korea-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -692,8 +692,8 @@ async function seedContentAndMisc(adminId: number) {
       isActive: true,
     },
     create: {
-      title: "Armenia Merit Scholarship for MBBS",
-      slug: "armenia-merit-scholarship-mbbs",
+      title: "South Korea Merit Scholarship for MBBS",
+      slug: "South Korea-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -716,7 +716,7 @@ async function seedContentAndMisc(adminId: number) {
   await upsertByWhere(prisma.testimonial, { name: "Arjun Sharma", designation: "MBBS Graduate" }, {
     name: "Arjun Sharma",
     designation: "MBBS Graduate",
-    description: "Smooth admission support and strong post-arrival coordination in Armenia.",
+    description: "Smooth admission support and strong post-arrival coordination in South Korea.",
     rating: 4.8,
     position: 1,
     status: true,
@@ -798,11 +798,11 @@ async function seedUniversityDependentData() {
 
   await upsertByWhere(
     prisma.universityStudent,
-    { universityId: university.id, email: "intl.batch@mbbsinarmenia.com" },
+    { universityId: university.id, email: "intl.batch@mbbsinsouthkorea.com" },
     {
       universityId: university.id,
       name: "International Student Cohort",
-      email: "intl.batch@mbbsinarmenia.com",
+      email: "intl.batch@mbbsinsouthkorea.com",
       phone: "+230-5555-0101",
       country: "India",
       numberOfStudents: 120,
@@ -924,7 +924,7 @@ async function seedOptionalLeadData(adminId: number, universityProgramId: number
     { leadId: lead.id, source: "website", message: "Need counseling for September intake." },
     {
       leadId: lead.id,
-      universityName: "Armenia MBBS options",
+      universityName: "South Korea MBBS options",
       message: "Need counseling for September intake.",
       source: "website",
       status: "pending",
@@ -949,7 +949,7 @@ async function seedOptionalLeadData(adminId: number, universityProgramId: number
 }
 
 async function main() {
-  console.log("Starting Armenia baseline database seed...");
+  console.log("Starting South Korea baseline database seed...");
   console.log(
     "University bulk-upload tables are intentionally not seeded here (University, UniversityRanking, UniversityLink, UniversityIntake, UniversityProgram, UniversityDocument, UniversityPhoto, UniversityFmgeRate).",
   );
@@ -962,7 +962,7 @@ async function main() {
   const { universityProgramId } = await seedUniversityDependentData();
   await seedOptionalLeadData(admin.id, universityProgramId);
 
-  console.log("Armenia baseline seed completed.");
+  console.log("South Korea baseline seed completed.");
 }
 
 main()

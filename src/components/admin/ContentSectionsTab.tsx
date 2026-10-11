@@ -139,7 +139,7 @@ export function ContentSectionsTab({
 
       {adding && (
         <div className="border border-gray-200 rounded-xl p-4 bg-white space-y-3">
-          <h4 className="font-medium text-[#101B4D]">New Section</h4>
+          <h4 className="font-medium text-[#002B5C]">New Section</h4>
           <div className="grid sm:grid-cols-2 gap-3">
             <div>
               <Label>Title *</Label>
@@ -326,7 +326,7 @@ export function ContentSectionsTab({
                       size="sm"
                       variant="ghost"
                       onClick={() => handleDelete(section.id)}
-                      className="text-red-600 hover:text-[#285BB5]"
+                      className="text-red-600 hover:text-[#0047A0]"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>
@@ -420,7 +420,7 @@ export function ContentSectionsTab({
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-7 px-2 text-red-600 hover:text-[#285BB5]"
+                          className="h-7 px-2 text-red-600 hover:text-[#0047A0]"
                           onClick={() => handleDelete(child.id)}
                         >
                           <Trash2 className="w-3 h-3" />

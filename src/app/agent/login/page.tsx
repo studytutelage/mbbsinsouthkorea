@@ -38,7 +38,7 @@ export default function AgentLoginPage() {
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Agent Portal</h1>
           <p className="text-slate-500 mt-1 text-sm">
-            MBBS Armenia — Partner Access
+            MBBS South Korea — Partner Access
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function AgentLoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="agent@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 outline-none text-sm"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 outline-none text-sm"
                 />
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function AgentLoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
-                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#285BB5]/500 outline-none text-sm"
+                  className="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#0047A0]/500 outline-none text-sm"
                 />
                 <button
                   type="button"
@@ -93,7 +93,7 @@ export default function AgentLoginPage() {
               </div>
             </div>
             {error && (
-              <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#285BB5]">
+              <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm text-[#0047A0]">
                 {error}
               </div>
             )}

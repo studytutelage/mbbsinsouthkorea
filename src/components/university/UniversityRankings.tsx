@@ -30,7 +30,7 @@ export default function UniversityRankings({ rankings }: Props) {
     {
       icon: Shield,
       title: "Ministry Recognition",
-      desc: "Recognized by Ministry of Education, Armenia",
+      desc: "Recognized by Ministry of Education, South Korea",
       status: "Licensed",
     },
     {
@@ -76,7 +76,7 @@ export default function UniversityRankings({ rankings }: Props) {
                               href={accred.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="hover:text-[#285BB5] hover:underline transition-colors"
+                              className="hover:text-[#0047A0] hover:underline transition-colors"
                             >
                               {accred.title}
                             </a>

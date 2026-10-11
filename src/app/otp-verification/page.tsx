@@ -104,7 +104,7 @@ export default function OtpVerificationPage() {
         <p className="font-semibold text-gray-800 mb-8">{email}</p>
 
         {error && (
-          <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-6 text-sm text-left">
+          <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-lg mb-6 text-sm text-left">
             {error}
           </div>
         )}
@@ -129,7 +129,7 @@ export default function OtpVerificationPage() {
                 value={digit}
                 onChange={(e) => handleOtpChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="w-12 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-xl focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/200 transition-colors"
+                className="w-12 h-14 text-center text-xl font-bold border-2 border-gray-300 rounded-xl focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/200 transition-colors"
               />
             ))}
           </div>
@@ -157,7 +157,7 @@ export default function OtpVerificationPage() {
             <button
               onClick={handleResend}
               disabled={resending}
-              className="flex items-center justify-center space-x-1.5 text-red-600 hover:text-[#285BB5] font-medium text-sm mx-auto disabled:opacity-60"
+              className="flex items-center justify-center space-x-1.5 text-red-600 hover:text-[#0047A0] font-medium text-sm mx-auto disabled:opacity-60"
             >
               <RefreshCw
                 className={`w-4 h-4 ${resending ? "animate-spin" : ""}`}

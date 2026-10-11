@@ -26,7 +26,7 @@ export default function HomepageFAQ({ dynamicFaqs }: HomepageFAQProps) {
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600">
-            Everything you need to know about studying MBBS in Armenia as an
+            Everything you need to know about studying MBBS in South Korea as an
             Indian student.
           </p>
         </div>

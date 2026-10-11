@@ -56,9 +56,9 @@ export default async function FmgeSection() {
                 className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white/60 p-6 shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-gray-200 hover:bg-white/72 hover:shadow-2xl hover:"
               >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/65 via-white/10 opacity-100" />
-                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]0/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-0 bg-[#EAF1FB]/10 via-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative">
-                  <h3 className="mb-4 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#285BB5]">
+                  <h3 className="mb-4 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#0047A0]">
                     {year} Overview
                   </h3>
                   <div className="space-y-3">
@@ -82,7 +82,7 @@ export default async function FmgeSection() {
                       <span className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-gray-700">
                         Rate:
                       </span>
-                      <span className="font-semibold text-red-600 transition-colors duration-300 group-hover:text-[#285BB5]">
+                      <span className="font-semibold text-red-600 transition-colors duration-300 group-hover:text-[#0047A0]">
                         {rate.toFixed(2)}%
                       </span>
                     </div>

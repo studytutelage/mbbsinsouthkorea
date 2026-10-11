@@ -201,7 +201,7 @@ export default function UniversityProgramsPage() {
               setEditId(null);
               setForm(blankForm());
             }}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
           >
             <Plus size={16} className="mr-2" />
             Add Program
@@ -223,7 +223,7 @@ export default function UniversityProgramsPage() {
               <>
                 {/* Basic */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#0047A0] uppercase tracking-wider mb-2">
                     Basic Info
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -315,7 +315,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Fees */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#0047A0] uppercase tracking-wider mb-2">
                     Fees
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -353,7 +353,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Content */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#0047A0] uppercase tracking-wider mb-2">
                     Program Content
                   </p>
                   <div className="grid grid-cols-1 gap-3">
@@ -374,14 +374,14 @@ export default function UniversityProgramsPage() {
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <Label>Why Choose Armenia</Label>
+                      <Label>Why Choose South Korea</Label>
                       <Textarea
                         value={form.whyChooseVietnam}
                         onChange={(e) =>
                           set("whyChooseVietnam", e.target.value)
                         }
                         rows={3}
-                        placeholder="Reasons why students should choose Armenia for MBBS..."
+                        placeholder="Reasons why students should choose South Korea for MBBS..."
                       />
                     </div>
                     <div className="space-y-1.5">
@@ -400,7 +400,7 @@ export default function UniversityProgramsPage() {
 
                 {/* Syllabus */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#0047A0] uppercase tracking-wider mb-2">
                     Year-wise Syllabus
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -426,7 +426,7 @@ export default function UniversityProgramsPage() {
 
                 {/* SEO */}
                 <div>
-                  <p className="text-xs font-semibold text-[#285BB5] uppercase tracking-wider mb-2">
+                  <p className="text-xs font-semibold text-[#0047A0] uppercase tracking-wider mb-2">
                     SEO
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -468,7 +468,7 @@ export default function UniversityProgramsPage() {
               <Button
                 onClick={handleSave}
                 disabled={saving || loadingEdit}
-                className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
               >
                 {saving ? (
                   <Loader2 size={14} className="mr-2 animate-spin" />
@@ -574,7 +574,7 @@ export default function UniversityProgramsPage() {
                         <Button
                           size="sm"
                           variant="ghost"
-                          className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                          className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                           onClick={() => handleDelete(p.id)}
                         >
                           <Trash2 size={14} />

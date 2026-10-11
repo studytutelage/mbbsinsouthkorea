@@ -168,9 +168,9 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email Us",
       desc: "Official inquiries",
-      val: "info@mbbsinarmenia.com",
+      val: "info@mbbsinsouthkorea.com",
       action: "Send Email",
-      href: "mailto:info@mbbsinarmenia.com",
+      href: "mailto:info@mbbsinsouthkorea.com",
       color: "bg-blue-500",
     },
     {
@@ -202,7 +202,7 @@ export default function ContactPage() {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAF1FB]0/20 text-slate-600 text-sm font-medium mb-8 border border-gray-200">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAF1FB]/20 text-slate-600 text-sm font-medium mb-8 border border-gray-200">
               <HeadphonesIcon className="w-4 h-4" />
               24/7 Consultation Available
             </div>
@@ -211,7 +211,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
               Start your journey to international medical education with the
-              help of India's most trusted consultants for MBBS in Armenia.
+              help of India's most trusted consultants for MBBS in South Korea.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto">
@@ -302,7 +302,7 @@ export default function ContactPage() {
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Our dedicated team is here to guide you through admission, visa,
-                and relocation for MBBS in Armenia.
+                and relocation for MBBS in South Korea.
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
@@ -389,7 +389,7 @@ export default function ContactPage() {
                   {
                     icon: AlertCircle,
                     title: "Pre-departure Info",
-                    desc: "Briefing sessions before you leave for Armenia",
+                    desc: "Briefing sessions before you leave for South Korea",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-5">
@@ -448,7 +448,7 @@ export default function ContactPage() {
                               handleInputChange("name", e.target.value)
                             }
                             placeholder="e.g. John Doe"
-                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0047A0]/600/20 focus:border-gray-200 transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -467,7 +467,7 @@ export default function ContactPage() {
                               handleInputChange("email", e.target.value)
                             }
                             placeholder="john@example.com"
-                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0047A0]/600/20 focus:border-gray-200 transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -489,7 +489,7 @@ export default function ContactPage() {
                               handleInputChange("phone", e.target.value)
                             }
                             placeholder="+91 98765 43210"
-                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                            className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0047A0]/600/20 focus:border-gray-200 transition-all font-medium"
                           />
                         </div>
                       </div>
@@ -504,7 +504,7 @@ export default function ContactPage() {
                           onChange={(e) =>
                             handleInputChange("inquiryType", e.target.value)
                           }
-                          className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium appearance-none"
+                          className="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0047A0]/600/20 focus:border-gray-200 transition-all font-medium appearance-none"
                         >
                           <option value="">Select Option</option>
                           <option value="admission">Admission Guidance</option>
@@ -530,7 +530,7 @@ export default function ContactPage() {
                           handleInputChange("subject", e.target.value)
                         }
                         placeholder="Subject of your inquiry"
-                        className="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium"
+                        className="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0047A0]/600/20 focus:border-gray-200 transition-all font-medium"
                       />
                     </div>
 
@@ -547,7 +547,7 @@ export default function ContactPage() {
                           handleInputChange("message", e.target.value)
                         }
                         placeholder="Write your message here..."
-                        className="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#285BB5]/600/20 focus:border-gray-200 transition-all font-medium resize-none"
+                        className="w-full px-6 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0047A0]/600/20 focus:border-gray-200 transition-all font-medium resize-none"
                       />
                     </div>
 
@@ -615,7 +615,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-[#285BB5] transition-colors uppercase tracking-tight">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-[#0047A0] transition-colors uppercase tracking-tight">
                       {office.name}
                     </h3>
                     <div className="space-y-5 text-[15px] text-gray-500 flex-1">
@@ -635,7 +635,7 @@ export default function ContactPage() {
                           </div>
                           <a
                             href={`tel:${office.phone}`}
-                            className="font-medium text-gray-500 hover:text-[#285BB5] transition-colors"
+                            className="font-medium text-gray-500 hover:text-[#0047A0] transition-colors"
                           >
                             {office.phone}
                           </a>
@@ -648,7 +648,7 @@ export default function ContactPage() {
                           </div>
                           <a
                             href={`mailto:${office.email}`}
-                            className="font-medium text-gray-500 hover:text-[#285BB5] transition-colors"
+                            className="font-medium text-gray-500 hover:text-[#0047A0] transition-colors"
                           >
                             {office.email}
                           </a>
@@ -732,7 +732,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("name", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none"
                         placeholder="Enter name"
                       />
                     </div>
@@ -747,7 +747,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("email", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none"
                         placeholder="Enter email"
                       />
                     </div>
@@ -765,7 +765,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           handleScheduleChange("phone", e.target.value)
                         }
-                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none"
+                        className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none"
                         placeholder="+91..."
                       />
                     </div>
@@ -784,7 +784,7 @@ export default function ContactPage() {
                               e.target.value,
                             )
                           }
-                          className="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none text-sm"
+                          className="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none text-sm"
                         />
                         <input
                           required
@@ -796,7 +796,7 @@ export default function ContactPage() {
                               e.target.value,
                             )
                           }
-                          className="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none text-sm"
+                          className="w-full px-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none text-sm"
                         />
                       </div>
                     </div>
@@ -812,7 +812,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         handleScheduleChange("consultationType", e.target.value)
                       }
-                      className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none font-medium appearance-none"
+                      className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none font-medium appearance-none"
                     >
                       <option value="">Choose Priority</option>
                       <option value="admission">
@@ -838,7 +838,7 @@ export default function ContactPage() {
                       onChange={(e) =>
                         handleScheduleChange("message", e.target.value)
                       }
-                      className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#285BB5]/600 focus:outline-none resize-none"
+                      className="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-[#0047A0]/600 focus:outline-none resize-none"
                       placeholder="What would you like to discuss?"
                     ></textarea>
                   </div>

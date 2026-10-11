@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Terms of Service — MBBS in Armenia",
+    title: "Terms of Service — MBBS in South Korea",
     description:
       "Read our terms of service to understand the rules and guidelines for using our platform.",
     path: "/terms-of-service",
@@ -29,7 +29,7 @@ export default function TermsOfServicePage() {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <nav className="flex items-center justify-center space-x-2 text-red-600/80 text-sm mb-8 animate-in fade-in slide-in- duration-700">
-            <Link href="/" className="hover:text-[#285BB5] transition-colors">
+            <Link href="/" className="hover:text-[#0047A0] transition-colors">
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
@@ -76,7 +76,7 @@ export default function TermsOfServicePage() {
                 </h2>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg pl-2 border-l-2 border-transparent group-hover:border-gray-200 transition-colors duration-300">
-                By accessing or using mbbsinarmenia.com, you agree to be bound
+                By accessing or using mbbsinsouthkorea.com, you agree to be bound
                 by these terms of service and all applicable laws and
                 regulations. If you do not agree with any of these terms, you
                 are prohibited from using or accessing this site.
@@ -136,7 +136,7 @@ export default function TermsOfServicePage() {
                 </h2>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg pl-2 border-l-2 border-transparent group-hover:border-gray-200 transition-colors duration-300">
-                The materials on MBBS in Armenia's website are provided on an
+                The materials on MBBS in South Korea's website are provided on an
                 'as is' basis. We make no warranties, expressed or implied, and
                 hereby disclaim all other warranties including merchantability
                 or fitness for a particular purpose.
@@ -153,7 +153,7 @@ export default function TermsOfServicePage() {
                 </h2>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg pl-2 border-l-2 border-transparent group-hover:border-gray-200 transition-colors duration-300">
-                In no event shall MBBS in Armenia or its suppliers be liable for
+                In no event shall MBBS in South Korea or its suppliers be liable for
                 any damages arising out of the use or inability to use the
                 materials on the website, even if notified of the possibility of
                 such damage.
@@ -165,7 +165,7 @@ export default function TermsOfServicePage() {
                 <h4 className="font-bold text-gray-800 mb-1 leading-tight text-xl">
                   Need more clarity on our terms?
                 </h4>
-                <p className="text-[#285BB5] text-sm opacity-80">
+                <p className="text-[#0047A0] text-sm opacity-80">
                   Our support team can help explain our usage guidelines.
                 </p>
               </div>

@@ -117,7 +117,7 @@ export default function LevelsPage() {
           <Button
             onClick={handleAdd}
             disabled={adding || !newName.trim()}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+            className="bg-[#EAF1FB] hover:bg-[#EAF1FB] shrink-0"
           >
             {adding ? (
               <Loader2 size={14} className="animate-spin mr-1" />
@@ -166,7 +166,7 @@ export default function LevelsPage() {
                       />
                     ) : (
                       <span
-                        className="cursor-pointer hover:text-[#285BB5]"
+                        className="cursor-pointer hover:text-[#0047A0]"
                         onClick={() => {
                           setEditId(item.id);
                           setEditData({ name: item.name, slug: item.slug });
@@ -212,7 +212,7 @@ export default function LevelsPage() {
                       <Button
                         size="sm"
                         variant="ghost"
-                        className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                        className="h-7 w-7 p-0 text-red-600 hover:bg-[#EAF1FB]"
                         onClick={() => handleDelete(item.id)}
                       >
                         <Trash2 size={13} />

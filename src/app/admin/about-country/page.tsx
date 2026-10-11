@@ -8,7 +8,7 @@ const sections = [
     title: "Cuisine & Food",
     href: "/admin/about-country/cuisine",
     icon: "🍜",
-    desc: "Armenia traditional dishes and food culture",
+    desc: "South Korea traditional dishes and food culture",
     done: true,
   },
   {
@@ -47,9 +47,9 @@ export default function AboutCountryPage() {
       <div className="flex items-center gap-3">
         <Globe2 size={22} className="text-red-600" />
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">About Armenia</h1>
+          <h1 className="text-2xl font-bold text-gray-900">About South Korea</h1>
           <p className="text-sm text-gray-500">
-            Manage country information shown on the public About Armenia page
+            Manage country information shown on the public About South Korea page
           </p>
         </div>
       </div>
@@ -74,7 +74,7 @@ export default function AboutCountryPage() {
       </div>
 
       <Link
-        href="/about-Armenia"
+        href="/about-south-korea"
         target="_blank"
         className="inline-flex items-center gap-2 border border-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm hover:bg-gray-50 transition-colors"
       >

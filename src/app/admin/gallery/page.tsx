@@ -94,7 +94,7 @@ export default function GalleryPage() {
         </div>
         <Button
           onClick={() => setShowAdd(!showAdd)}
-          className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+          className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
         >
           {showAdd ? (
             <>
@@ -137,7 +137,7 @@ export default function GalleryPage() {
             <Button
               onClick={handleAdd}
               disabled={uploading || !newImage}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {uploading ? (
                 <>
@@ -208,7 +208,7 @@ export default function GalleryPage() {
                 </div>
               )}
               {!item.status && (
-                <div className="absolute top-2 right-2 bg-[#EAF1FB]0 text-white text-xs px-2 py-0.5 rounded">
+                <div className="absolute top-2 right-2 bg-[#0047A0] text-white text-xs px-2 py-0.5 rounded">
                   Hidden
                 </div>
               )}

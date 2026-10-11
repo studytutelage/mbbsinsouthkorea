@@ -44,9 +44,9 @@ export default async function AgentDashboardPage() {
   const statusBadge = (status: string) => {
     const map: Record<string, string> = {
       pending: "bg-red-400 text-red-600",
-      contacted: "bg-[#EAF1FB] text-[#285BB5]",
+      contacted: "bg-[#EAF1FB] text-[#0047A0]",
       enrolled: "bg-green-100 text-green-700",
-      rejected: "bg-[#EAF1FB] text-[#285BB5]",
+      rejected: "bg-[#EAF1FB] text-[#0047A0]",
     };
     return map[status] ?? "bg-gray-100 text-gray-700";
   };

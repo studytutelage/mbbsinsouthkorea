@@ -122,7 +122,7 @@ export default function PartnerInquiryEditPage() {
             inquiry.status === "pending"
               ? "bg-red-400 text-red-600 hover:bg-red-400"
               : inquiry.status === "contacted"
-                ? "bg-[#EAF1FB] text-[#285BB5] hover:bg-[#EAF1FB]"
+                ? "bg-[#EAF1FB] text-[#0047A0] hover:bg-[#EAF1FB]"
                 : inquiry.status === "converted"
                   ? "bg-green-100 text-green-700 hover:bg-green-100"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-100"
@@ -356,7 +356,7 @@ export default function PartnerInquiryEditPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+                className="flex-1 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
               >
                 {loading ? "Saving…" : "Save Changes"}
               </Button>

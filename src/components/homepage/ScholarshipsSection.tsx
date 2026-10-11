@@ -38,7 +38,7 @@ function getTypeColor(type: string | null): string {
     case "government":
       return "bg-green-100 text-green-800";
     case "embassy":
-      return "bg-[#EAF1FB] text-[#101B4D]";
+      return "bg-[#EAF1FB] text-[#002B5C]";
     case "university":
       return "bg-purple-100 text-purple-800";
     case "merit":
@@ -82,7 +82,7 @@ export default async function ScholarshipsSection({
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Make your education dreams affordable with various scholarship
             opportunities available for international students studying in
-            Armenia.
+            South Korea.
           </p>
         </div>
 

@@ -31,7 +31,7 @@ export default function TestimonialSection({
           </h2>
           <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
             Discover the experiences of students who have embarked on their
-            medical journey in Armenia with our guidance.
+            medical journey in South Korea with our guidance.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function TestimonialSection({
                     )}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg group-hover:text-[#285BB5] transition-colors duration-300">
+                    <h4 className="font-bold text-gray-900 text-lg group-hover:text-[#0047A0] transition-colors duration-300">
                       {testimonial.name}
                     </h4>
                     {testimonial.designation && (

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { CountryDocType } from "@prisma/client";
 
-const COUNTRY = "Armenia";
+const COUNTRY = "South Korea";
 
 export async function GET() {
   const docs = await prisma.countryDocument.findMany({

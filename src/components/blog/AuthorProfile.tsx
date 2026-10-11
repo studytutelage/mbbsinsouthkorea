@@ -12,7 +12,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
     <section className="mt-16 border-t border-gray-100 pt-12 pb-8">
       <div className="bg-gray-50 to-white rounded-3xl p-8 border border-gray-100 shadow-sm relative overflow-hidden">
         {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#EAF1FB]0/5 rounded-full hidden -mr-16 -mt-16" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#EAF1FB]/5 rounded-full hidden -mr-16 -mt-16" />
 
         <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
           {/* Photo Container */}
@@ -94,7 +94,7 @@ const AuthorProfile: React.FC<AuthorProfileProps> = ({ profile }) => {
         <div className="mt-8 pt-6 border-t border-gray-100 bg-white/50 -mx-8 -mb-8 px-8 flex items-center justify-between text-xs text-gray-500">
           <span>Verified Expert Contributor</span>
           <span className="flex items-center gap-1">
-            MBBS in Armenia Authority Certification{" "}
+            MBBS in South Korea Authority Certification{" "}
             <Award className="w-3 h-3 text-red-500" />
           </span>
         </div>

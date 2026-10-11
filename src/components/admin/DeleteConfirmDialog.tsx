@@ -58,7 +58,7 @@ export function DeleteConfirmDialog({
           <AlertDialogAction
             onClick={handleConfirm}
             disabled={loading}
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 text-white"
+            className="bg-[#EAF1FB] hover:bg-[#0047A0] text-white"
           >
             {loading ? (
               <>

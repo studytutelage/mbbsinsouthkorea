@@ -7,13 +7,13 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-  title: "Articles — MBBS Armenia Guides & Medical Education Resources",
+  title: "Articles — MBBS South Korea Guides & Medical Education Resources",
   description:
-    "In-depth articles and guides on MBBS in Armenia, admission process, university rankings, curriculum, and student life.",
+    "In-depth articles and guides on MBBS in South Korea, admission process, university rankings, curriculum, and student life.",
   path: "/articles",
   entitySeo: {
     metaKeyword:
-      "MBBS Armenia articles, MBBS guides, medical education Armenia",
+      "MBBS South Korea articles, MBBS guides, medical education South Korea",
   },
   pageKey: "articles",
 });
@@ -56,7 +56,7 @@ export default async function ArticlesPage() {
             </h1>
           </div>
           <p className="text-xl text-black-100 max-w-3xl mx-auto">
-            In-depth guides and expert articles on MBBS in Armenia, admission
+            In-depth guides and expert articles on MBBS in South Korea, admission
             tips, and student experiences.
           </p>
         </div>

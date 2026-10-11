@@ -38,7 +38,7 @@ export default async function AgentLayout({
             </div>
             <div>
               <p className="text-sm font-bold">Agent Portal</p>
-              <p className="text-xs text-slate-500">MBBS Armenia</p>
+              <p className="text-xs text-slate-500">MBBS South Korea</p>
             </div>
           </div>
         </div>

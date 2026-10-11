@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Cookie Policy — MBBS in Armenia",
+    title: "Cookie Policy — MBBS in South Korea",
     description:
       "Our cookie policy explains how we use cookies and similar technologies on our website.",
     path: "/cookie-policy",
@@ -32,7 +32,7 @@ export default function CookiePolicyPage() {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <nav className="flex items-center justify-center space-x-2 text-red-600/80 text-sm mb-8 animate-in fade-in slide-in- duration-700">
-            <Link href="/" className="hover:text-[#285BB5] transition-colors">
+            <Link href="/" className="hover:text-[#0047A0] transition-colors">
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
@@ -154,7 +154,7 @@ export default function CookiePolicyPage() {
                 <h4 className="font-bold text-gray-800 mb-1 leading-tight text-xl">
                   Manage your preferences
                 </h4>
-                <p className="text-[#285BB5] text-sm opacity-80">
+                <p className="text-[#0047A0] text-sm opacity-80">
                   Would you like to review your current cookie settings?
                 </p>
               </div>

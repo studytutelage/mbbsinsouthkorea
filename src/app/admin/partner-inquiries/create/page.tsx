@@ -63,7 +63,7 @@ export default function PartnerInquiryCreatePage() {
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-[#EAF1FB]0 flex items-center justify-center text-red-600">
+        <div className="w-10 h-10 rounded-lg bg-[#EAF1FB] flex items-center justify-center text-red-600">
           <Building2 size={20} />
         </div>
         <div>
@@ -236,7 +236,7 @@ export default function PartnerInquiryCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-40 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="w-40 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
           >
             {loading ? "Saving…" : "Create Partner"}
           </Button>

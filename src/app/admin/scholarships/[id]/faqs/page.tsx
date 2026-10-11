@@ -133,7 +133,7 @@ export default function ScholarshipFaqsPage() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             onClick={() => setShowAdd(true)}
           >
             <Plus size={14} className="mr-1" /> Add FAQ
@@ -155,7 +155,7 @@ export default function ScholarshipFaqsPage() {
               value={newA}
               onChange={(e) => setNewA(e.target.value)}
               rows={4}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
             />
           </div>
           <div className="flex gap-2">
@@ -163,7 +163,7 @@ export default function ScholarshipFaqsPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -206,7 +206,7 @@ export default function ScholarshipFaqsPage() {
                     value={editA}
                     onChange={(e) => setEditA(e.target.value)}
                     rows={4}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500"
                   />
                   <div className="flex gap-2">
                     <Button
@@ -255,7 +255,7 @@ export default function ScholarshipFaqsPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                      className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                       onClick={() => handleDelete(f.id)}
                     >
                       <Trash2 size={14} />

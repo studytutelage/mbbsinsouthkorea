@@ -105,7 +105,7 @@ export function FaqsTab({ apiBase }: Props) {
 
       {adding && (
         <div className="border border-gray-200 rounded-xl p-4 bg-white space-y-3">
-          <h4 className="font-medium text-[#101B4D]">New FAQ</h4>
+          <h4 className="font-medium text-[#002B5C]">New FAQ</h4>
           <div>
             <Label>Question *</Label>
             <Input
@@ -213,7 +213,7 @@ export function FaqsTab({ apiBase }: Props) {
                       size="sm"
                       variant="ghost"
                       onClick={() => handleDelete(faq.id)}
-                      className="text-red-600 hover:text-[#285BB5]"
+                      className="text-red-600 hover:text-[#0047A0]"
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>

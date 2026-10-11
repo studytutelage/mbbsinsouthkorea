@@ -47,7 +47,7 @@ export default async function AppliedCollegesPage() {
       case "contacted":
         return "bg-green-100 text-green-700";
       case "rejected":
-        return "bg-[#EAF1FB] text-[#285BB5]";
+        return "bg-[#EAF1FB] text-[#0047A0]";
       default:
         return "bg-red-400 text-red-600";
     }
@@ -73,7 +73,7 @@ export default async function AppliedCollegesPage() {
             No Applications Yet
           </h2>
           <p className="text-gray-500 text-center max-w-sm mb-8">
-            {`You haven't applied to any colleges yet. Browse our universities and find your ideal MBBS program in Armenia.`}
+            {`You haven't applied to any colleges yet. Browse our universities and find your ideal MBBS program in South Korea.`}
           </p>
           <Link
             href="/universities"
@@ -173,7 +173,7 @@ export default async function AppliedCollegesPage() {
                 Looking for more options?
               </h3>
               <p className="text-sm text-gray-600">
-                Explore all universities and programs available in Armenia.
+                Explore all universities and programs available in South Korea.
               </p>
             </div>
             <Link

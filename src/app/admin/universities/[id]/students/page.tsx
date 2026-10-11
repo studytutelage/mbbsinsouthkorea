@@ -135,7 +135,7 @@ export default function UniversityStudentsPage() {
           </Button>
           <Button
             size="sm"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             onClick={() => setShowAdd(true)}
           >
             <Plus size={14} className="mr-1" /> Add Student
@@ -196,7 +196,7 @@ export default function UniversityStudentsPage() {
               size="sm"
               onClick={handleAdd}
               disabled={saving}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+              className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             >
               {saving ? (
                 <Loader2 size={14} className="animate-spin mr-1" />
@@ -359,7 +359,7 @@ export default function UniversityStudentsPage() {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]0"
+                            className="h-8 w-8 p-0 text-red-600 hover:bg-[#EAF1FB]"
                             onClick={() => handleDelete(s.id)}
                           >
                             <Trash2 size={14} />

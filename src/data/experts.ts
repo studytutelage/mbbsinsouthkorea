@@ -14,12 +14,12 @@ export const expertProfiles: Record<number, ExpertProfile> = {
     id: 13,
     name: "Dr. Amitabh Sharma",
     designation: "Senior Medical Education Consultant",
-    bio: "With over 12 years of experience in international medical admissions, Dr. Amitabh has helped 1,500+ Indian students secure seats in top-tier medical universities in Armenia and Central Asia. He specializes in NMC (National Medical Commission) regulations and NEXT exam preparation roadmaps.",
+    bio: "With over 12 years of experience in international medical admissions, Dr. Amitabh has helped 1,500+ Indian students secure seats in top-tier medical universities in South Korea and Central Asia. He specializes in NMC (National Medical Commission) regulations and NEXT exam preparation roadmaps.",
     linkedinUrl: "https://www.linkedin.com/in/expert-medical-consultant",
     expertise: [
       "NMC Regulations",
       "FMGE Preparation",
-      "Armenia Education System",
+      "South Korea Education System",
       "Student Visa Support",
     ],
   },
@@ -27,7 +27,7 @@ export const expertProfiles: Record<number, ExpertProfile> = {
     id: 2,
     name: "Priyanka Verma",
     designation: "Legal & Visa Counselor",
-    bio: "Priyanka is a specialist in the documentation and legal processes for Indian students studying abroad. She manages the entire visa cycle, from Apostille to residence permit approvals in Curepipe and Port Louis.",
+    bio: "Priyanka is a specialist in the documentation and legal processes for Indian students studying abroad. She manages the entire visa cycle, from Apostille to residence permit approvals in Seoul and Incheon.",
     linkedinUrl: "https://www.linkedin.com/in/vista-counselor",
     expertise: [
       "Visa Processing",

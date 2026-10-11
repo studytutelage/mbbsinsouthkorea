@@ -8,13 +8,13 @@ import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
   title:
-    "MBBS Armenia Blog — Medical Education Tips, University Reviews & More",
+    "MBBS South Korea Blog — Medical Education Tips, University Reviews & More",
   description:
-    "Read our expert blog on MBBS in Armenia. University reviews, student experiences, admission tips, and medical education guides.",
+    "Read our expert blog on MBBS in South Korea. University reviews, student experiences, admission tips, and medical education guides.",
   path: "/blog",
   entitySeo: {
     metaKeyword:
-      "MBBS Armenia blog, medical education Armenia, study abroad blog",
+      "MBBS South Korea blog, medical education South Korea, study abroad blog",
   },
   pageKey: "blog",
 });
@@ -61,7 +61,7 @@ export default async function BlogPage() {
             Blog &amp; News
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Expert insights on MBBS in Armenia, admission tips, university
+            Expert insights on MBBS in South Korea, admission tips, university
             reviews, and student success stories.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default async function BlogPage() {
               <a
                 key={tab.href}
                 href={tab.href}
-                className="px-6 py-4 text-sm font-semibold text-gray-600 hover:text-[#285BB5] border-b-2 border-transparent hover:border-gray-200 transition-colors"
+                className="px-6 py-4 text-sm font-semibold text-gray-600 hover:text-[#0047A0] border-b-2 border-transparent hover:border-gray-200 transition-colors"
               >
                 {tab.label}
               </a>
@@ -130,7 +130,7 @@ export default async function BlogPage() {
                       </div>
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <h2 className="font-bold text-gray-800 text-lg mb-2 line-clamp-2 group-hover:text-[#285BB5] transition-colors relative z-0">
+                      <h2 className="font-bold text-gray-800 text-lg mb-2 line-clamp-2 group-hover:text-[#0047A0] transition-colors relative z-0">
                         {blog.title}
                       </h2>
                       {blog.shortnote && (
@@ -161,7 +161,7 @@ export default async function BlogPage() {
                             </span>
                           </span>
                         </div>
-                        <span className="text-red-600 hover:text-[#285BB5] font-medium flex items-center space-x-1">
+                        <span className="text-red-600 hover:text-[#0047A0] font-medium flex items-center space-x-1">
                           <span>Read</span>
                           <ArrowRight className="w-3 h-3" />
                         </span>
@@ -182,7 +182,7 @@ export default async function BlogPage() {
                   <li key={cat.id}>
                     <Link
                       href={`/blog/${cat.slug}`}
-                      className="flex items-center justify-between text-gray-600 hover:text-[#285BB5] py-2 border-b border-gray-50 last:border-0 transition-colors"
+                      className="flex items-center justify-between text-gray-600 hover:text-[#0047A0] py-2 border-b border-gray-50 last:border-0 transition-colors"
                     >
                       <span className="text-sm">{cat.name}</span>
                       <span className="text-xs bg-white text-red-600 px-2 py-0.5 rounded-full">

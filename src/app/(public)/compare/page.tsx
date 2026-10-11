@@ -9,9 +9,9 @@ import CompareForm from "@/components/compare/CompareForm";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Compare MBBS Universities in Armenia | MBBS Armenia",
+  title: "Compare MBBS Universities in South Korea | MBBS South Korea",
   description:
-    "Compare top MBBS universities in Armenia side by side — fees, duration, facilities, rankings, and more.",
+    "Compare top MBBS universities in South Korea side by side — fees, duration, facilities, rankings, and more.",
   path: "/compare",
 });
 
@@ -256,7 +256,7 @@ export default async function ComparePage({
                 gridTemplateColumns: `220px repeat(${selected.length}, 1fr)`,
               }}
             >
-              <div className="p-5 font-semibold text-slate-600 text-sm">
+              <div className="p-5 font-semibold text-sm">
                 Features
               </div>
               {selected.map((u) => (

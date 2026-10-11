@@ -143,7 +143,7 @@ export default function UserCreatePage() {
           <Button
             type="submit"
             disabled={loading}
-            className="flex-1 bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="flex-1 bg-[#EAF1FB] hover:bg-[#EAF1FB]"
           >
             {loading ? "Creating…" : "Create User"}
           </Button>

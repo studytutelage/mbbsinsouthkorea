@@ -296,7 +296,7 @@ export default function CreateUniversityPage() {
                   set("name", e.target.value);
                   set("slug", slugify(e.target.value));
                 }}
-                placeholder="e.g. Armenia State Medical Academy"
+                placeholder="e.g. South Korea State Medical Academy"
               />
             </div>
             <div className="space-y-1.5">
@@ -306,7 +306,7 @@ export default function CreateUniversityPage() {
               <Input
                 value={form.slug}
                 onChange={(e) => set("slug", e.target.value)}
-                placeholder="Armenia-state-medical-academy"
+                placeholder="South Korea-state-medical-academy"
               />
             </div>
             <div className="space-y-1.5">
@@ -316,7 +316,7 @@ export default function CreateUniversityPage() {
               <Input
                 value={form.city}
                 onChange={(e) => set("city", e.target.value)}
-                placeholder="Curepipe"
+                placeholder="Seoul"
               />
             </div>
             <div className="space-y-1.5">
@@ -838,7 +838,7 @@ export default function CreateUniversityPage() {
           </Button>
           <Button
             type="submit"
-            className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0"
+            className="bg-[#0047A0] hover:bg-[#0047A0]/90 text-white"
             disabled={loading}
           >
             {loading ? (

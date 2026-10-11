@@ -31,7 +31,7 @@ const createMarkerIcon = () =>
     html: `
  <div style="
  width: 32px; height: 32px;
- background: #1565C0;
+ background: #0047A0;
  border: 3px solid white;
  border-radius: 50% 50% 50% 0;
  transform: rotate(-45deg);
@@ -58,11 +58,11 @@ const createClusterCustomIcon = (cluster: any) => {
     html: `
  <div style="
  width: ${size}px; height: ${size}px;
- background: rgba(21, 101, 192, 0.85);
+ background: rgba(0, 71, 160, 0.85);
  border: 3px solid rgba(255,255,255,0.9);
  border-radius: 50%;
  display: flex; align-items: center; justify-content: center;
- box-shadow: 0 0 0 4px rgba(21, 101, 192, 0.3);
+ box-shadow: 0 0 0 4px rgba(0, 71, 160, 0.3);
  font-size: ${count < 10 ? 14 : 13}px;
  font-weight: 700; color: white; font-family: sans-serif;
  ">${count}</div>`,
@@ -139,6 +139,32 @@ function CtrlScrollHandler() {
   );
 }
 
+// Auto-fit bounds or center to show both India and South Korea
+function MapBoundsController({
+  universities,
+}: {
+  universities: UniversityLocation[];
+}) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (universities.length === 1) {
+      const u = universities[0];
+      if (u.latitude && u.longitude) {
+        map.setView([Number(u.latitude), Number(u.longitude)], 13, {
+          animate: true,
+        });
+      }
+    } else {
+      // Zoom out to show both India (lat ~20, lng ~78) and South Korea (lat ~36, lng ~128)
+      // Centered between India & South Korea (approx 28°N, 103°E) at zoom level 4
+      map.setView([28.0, 103.0], 4);
+    }
+  }, [map, universities]);
+
+  return null;
+}
+
 type LayerType = "map" | "satellite";
 
 export default function UniversityMap({
@@ -153,7 +179,14 @@ export default function UniversityMap({
   );
 
   const markerIcon = createMarkerIcon();
-  const center: [number, number] = [40.0691, 45.0382];
+  // Center between India and South Korea so both are visible, zoom 4
+  const defaultCenter: [number, number] =
+    mapUniversities.length === 1 &&
+    mapUniversities[0].latitude &&
+    mapUniversities[0].longitude
+      ? [Number(mapUniversities[0].latitude), Number(mapUniversities[0].longitude)]
+      : [28.0, 103.0];
+  const defaultZoom = mapUniversities.length === 1 ? 13 : 4;
 
   const tileLayers: Record<LayerType, { url: string; attribution: string }> = {
     map: {
@@ -171,8 +204,8 @@ export default function UniversityMap({
   return (
     <div style={{ position: "relative", width: "100%", height: "520px" }}>
       <MapContainer
-        center={center}
-        zoom={10}
+        center={defaultCenter}
+        zoom={defaultZoom}
         scrollWheelZoom={false}
         zoomControl={false}
         style={{ height: "100%", width: "100%", background: "#e5e3df" }}
@@ -180,6 +213,7 @@ export default function UniversityMap({
         <TileLayer key={activeLayer} {...tileLayers[activeLayer]} />
         <ZoomControl position="bottomright" />
         <CtrlScrollHandler />
+        <MapBoundsController universities={mapUniversities} />
 
         <MarkerClusterGroup
           iconCreateFunction={createClusterCustomIcon}
@@ -215,7 +249,7 @@ export default function UniversityMap({
                       marginBottom: "10px",
                     }}
                   >
-                    📍 {uni.city}, Armenia
+                    📍 {uni.city}, South Korea
                   </div>
                   <Link
                     href={`/universities/${uni.slug}`}

@@ -32,7 +32,7 @@ export default function UniversityTrustSeals({ university }: Props) {
       desc: "Listed in the WHO World Directory of Medical Schools.",
       badge: "LISTED",
       grad: " ",
-      badgeCls: "bg-[#EAF1FB] text-[#101B4D]",
+      badgeCls: "bg-[#EAF1FB] text-[#002B5C]",
       active: university.whoListed,
     },
     {
@@ -48,8 +48,8 @@ export default function UniversityTrustSeals({ university }: Props) {
     {
       icon: CheckCircle,
       title: "Ministry Licensed",
-      subtitle: "Government of Armenia",
-      desc: "Licensed by the Ministry of Education & Science, Armenia.",
+      subtitle: "Government of South Korea",
+      desc: "Licensed by the Ministry of Education & Science, South Korea.",
       badge: "LICENSED",
       grad: " ",
       badgeCls: "bg-orange-100 text-orange-800",
@@ -126,7 +126,7 @@ export default function UniversityTrustSeals({ university }: Props) {
                         href={seal.titleHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#285BB5] hover:underline transition-colors"
+                        className="hover:text-[#0047A0] hover:underline transition-colors"
                       >
                         {seal.title}
                       </a>
@@ -146,7 +146,7 @@ export default function UniversityTrustSeals({ university }: Props) {
         {additional.some((r) => r.active) && (
           <div className="mt-10">
             <div className="text-center mb-8">
-              <span className="inline-block bg-[#EAF1FB] text-[#285BB5] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+              <span className="inline-block bg-[#EAF1FB] text-[#0047A0] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
                 Global Standards
               </span>
               <h3 className="text-2xl font-bold text-gray-900">

@@ -156,7 +156,7 @@ export default function UniversityFacilitiesPage() {
             <Button
               onClick={handleLink}
               disabled={adding || !selectedFacility}
-              className="bg-[#EAF1FB]0 hover:bg-[#EAF1FB]0 shrink-0"
+              className="bg-[#EAF1FB] hover:bg-[#EAF1FB] shrink-0"
             >
               {adding ? (
                 <Loader2 size={14} className="mr-2 animate-spin" />
@@ -202,7 +202,7 @@ export default function UniversityFacilitiesPage() {
                   </span>
                   <button
                     onClick={() => handleUnlink(l.facilityId)}
-                    className="text-gray-500 hover:text-[#285BB5] transition-colors"
+                    className="text-gray-500 hover:text-[#0047A0] transition-colors"
                     title="Unlink"
                   >
                     <Trash2 size={14} />

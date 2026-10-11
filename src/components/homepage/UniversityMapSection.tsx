@@ -21,9 +21,10 @@ export default async function UniversityMapSection() {
     })
     .catch(() => []);
 
-  if (universities.length === 0) {
-    return null;
-  }
+  // Always render the map to show the section even if no universities exist
+  // if (universities.length === 0) {
+  //   return null;
+  // }
 
   const mapData = universities.map((u) => ({
     ...u,
@@ -39,14 +40,14 @@ export default async function UniversityMapSection() {
       {/* Heading above the map */}
       <div className="max-w-7xl mx-auto px-4 pt-14 pb-8">
         <div className="text-center">
-          <span className="inline-block bg-[#EAF1FB] text-[#285BB5] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
+          <span className="inline-block bg-[#EAF1FB] text-[#0047A0] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">
             Interactive Map
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Universities Across Armenia
+            Universities Across South Korea
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base">
-            Discover top MBBS universities across Armenia with our interactive
+            Discover top MBBS universities across South Korea with our interactive
             map—compare locations, explore campuses, and choose the right
             medical college for your global career.
           </p>

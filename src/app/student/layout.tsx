@@ -71,7 +71,7 @@ export default async function StudentLayout({
             </div>
             <div>
               <div className="text-sm font-bold text-gray-800">
-                MBBS Armenia
+                MBBS South Korea
               </div>
               <div className="text-xs text-gray-500">Student Portal</div>
             </div>
@@ -104,9 +104,9 @@ export default async function StudentLayout({
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-white hover:text-[#285BB5] transition-colors group"
+                  className="flex items-center space-x-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-white hover:text-[#0047A0] transition-colors group"
                 >
-                  <span className="group-hover:text-[#285BB5]">{item.icon}</span>
+                  <span className="group-hover:text-[#0047A0]">{item.icon}</span>
                   <span className="text-sm font-medium">{item.label}</span>
                 </Link>
               </li>
@@ -119,7 +119,7 @@ export default async function StudentLayout({
           <form action="/api/auth/signout" method="POST">
             <button
               type="submit"
-              className="w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-white hover:text-[#285BB5] transition-colors"
+              className="w-full flex items-center space-x-3 px-3 py-2.5 rounded-lg text-gray-600 hover:bg-white hover:text-[#0047A0] transition-colors"
             >
               <LogOut className="w-5 h-5" />
               <span className="text-sm font-medium">Sign Out</span>

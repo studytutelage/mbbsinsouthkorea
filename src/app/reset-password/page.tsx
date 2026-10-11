@@ -88,7 +88,7 @@ export default function ResetPasswordPage() {
         ) : (
           <>
             {error && (
-              <div className="bg-white border border-gray-200 text-[#285BB5] px-4 py-3 rounded-lg mb-5 text-sm">
+              <div className="bg-white border border-gray-200 text-[#0047A0] px-4 py-3 rounded-lg mb-5 text-sm">
                 {error}
               </div>
             )}
@@ -103,7 +103,7 @@ export default function ResetPasswordPage() {
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="your@email.com"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -122,7 +122,7 @@ export default function ResetPasswordPage() {
                   }
                   placeholder="6-digit OTP"
                   maxLength={6}
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 font-mono text-lg tracking-widest focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 font-mono text-lg tracking-widest focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
                 />
               </div>
               <div>
@@ -138,7 +138,7 @@ export default function ResetPasswordPage() {
                       setForm({ ...form, password: e.target.value })
                     }
                     placeholder="Min 8 characters"
-                    className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                    className="w-full border border-gray-300 rounded-xl px-4 py-3 pr-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
                   />
                   <button
                     type="button"
@@ -165,7 +165,7 @@ export default function ResetPasswordPage() {
                     setForm({ ...form, confirm: e.target.value })
                   }
                   placeholder="Repeat new password"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#285BB5]/500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0047A0]/500 focus:border-transparent"
                 />
               </div>
               <button
@@ -189,7 +189,7 @@ export default function ResetPasswordPage() {
         <div className="mt-6 text-center text-sm text-gray-600">
           <Link
             href="/forgot-password"
-            className="text-red-600 hover:text-[#285BB5] font-medium"
+            className="text-red-600 hover:text-[#0047A0] font-medium"
           >
             ← Request New OTP
           </Link>

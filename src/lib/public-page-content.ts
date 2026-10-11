@@ -282,7 +282,7 @@ export const getAboutCountryContent = cache(
         return null;
       });
 
-    const countryName = page?.name || "Armenia";
+    const countryName = page?.name || "South Korea";
     const heroTitle = page?.tagline || `Life and study in ${countryName}`;
     const heroDescription =
       page?.studentLife ||
@@ -292,10 +292,10 @@ export const getAboutCountryContent = cache(
       `Explore why ${countryName} continues to attract international medical students looking for affordable, structured, and globally aligned education.`;
 
     const summaryStats = compact<ValueCard>([
-      { label: "Capital", value: page?.capital || "Port Louis" },
-      { label: "Population", value: page?.population || "1.3 Million+" },
-      { label: "Languages", value: page?.languages || "English, French" },
-      { label: "Currency", value: page?.currency || "MUR" },
+      { label: "Capital", value: page?.capital || "Seoul" },
+      { label: "Population", value: page?.population || "51.7 Million+" },
+      { label: "Languages", value: page?.languages || "Korean, English" },
+      { label: "Currency", value: page?.currency || "KRW" },
     ]);
 
     const highlights = page?.lifestyles.length
@@ -454,28 +454,28 @@ export const getAboutCountryContent = cache(
 
         const fallback: UniversityCityCard[] = [
           {
-            city: "Port Louis",
+            city: "Seoul",
             description:
-              "Capital city with major hospitals, universities, and student facilities.",
-            universityCount: 1,
-            universityNames: ["Leading MBBS institutions"],
-            avgTuition: "$3,500-8,000",
+              "Capital city and primary healthcare innovation hub with world-ranked university teaching hospitals.",
+            universityCount: 3,
+            universityNames: ["Seoul National University", "Yonsei University", "Korea University"],
+            avgTuition: "$6,000-12,000",
           },
           {
-            city: "Curepipe",
+            city: "Busan",
             description:
-              "Central academic hub with a peaceful and student-friendly environment.",
-            universityCount: 1,
-            universityNames: ["Established medical campuses"],
-            avgTuition: "$3,500-8,000",
+              "Dynamic coastal metropolis with premier national medical faculties and student-friendly living.",
+            universityCount: 2,
+            universityNames: ["Pusan National University College of Medicine"],
+            avgTuition: "$5,500-10,000",
           },
           {
-            city: "Quatre Bornes",
+            city: "Daegu",
             description:
-              "Urban center with strong educational access, housing, and connectivity.",
-            universityCount: 1,
-            universityNames: ["Accessible university options"],
-            avgTuition: "$3,500-8,000",
+              "Korea's specialized medical city featuring advanced healthcare complexes and medical schools.",
+            universityCount: 2,
+            universityNames: ["Kyungpook National University", "Keimyung University"],
+            avgTuition: "$5,000-9,500",
           },
         ];
 
@@ -496,28 +496,28 @@ export const getAboutCountryContent = cache(
         );
         return [
           {
-            city: "Port Louis",
+            city: "Seoul",
             description:
-              "Capital city with major hospitals, universities, and student facilities.",
-            universityCount: 1,
-            universityNames: ["Leading MBBS institutions"],
-            avgTuition: "$3,500-8,000",
+              "Capital city and primary healthcare innovation hub with world-ranked university teaching hospitals.",
+            universityCount: 3,
+            universityNames: ["Seoul National University", "Yonsei University", "Korea University"],
+            avgTuition: "$6,000-12,000",
           },
           {
-            city: "Curepipe",
+            city: "Busan",
             description:
-              "Central academic hub with a peaceful and student-friendly environment.",
-            universityCount: 1,
-            universityNames: ["Established medical campuses"],
-            avgTuition: "$3,500-8,000",
+              "Dynamic coastal metropolis with premier national medical faculties and student-friendly living.",
+            universityCount: 2,
+            universityNames: ["Pusan National University College of Medicine"],
+            avgTuition: "$5,500-10,000",
           },
           {
-            city: "Quatre Bornes",
+            city: "Daegu",
             description:
-              "Urban center with strong educational access, housing, and connectivity.",
-            universityCount: 1,
-            universityNames: ["Accessible university options"],
-            avgTuition: "$3,500-8,000",
+              "Korea's specialized medical city featuring advanced healthcare complexes and medical schools.",
+            universityCount: 2,
+            universityNames: ["Kyungpook National University", "Keimyung University"],
+            avgTuition: "$5,000-9,500",
           },
         ] satisfies UniversityCityCard[];
       });
@@ -548,7 +548,7 @@ export const getAboutCountryContent = cache(
 
     const location =
       page?.location || "Indian Ocean, Off the South East coast of Africa";
-    const timezone = page?.timezone || "UTC+4 (Armenia Time)";
+    const timezone = page?.timezone || "UTC+4 (South Korea Time)";
     const independenceDay = page?.independenceDay
       ? new Date(page.independenceDay).toLocaleDateString("en-GB", {
           day: "numeric",
@@ -628,10 +628,10 @@ export const getEducationSystemContent = cache(
         return null;
       });
 
-    const title = system?.title || "Education System in Armenia";
+    const title = system?.title || "Education System in South Korea";
     const description =
       system?.description ||
-      "Understand the academic structure, teaching approach, and progression pathways that shape medical education in Armenia.";
+      "Understand the academic structure, teaching approach, and progression pathways that shape medical education in South Korea.";
 
     const primaryDegree = system?.degrees[0];
     const summaryStats = [
@@ -911,10 +911,10 @@ export const getEducationSystemContent = cache(
       title,
       description,
       introductionTitle:
-        system?.introductionTitle || "Academic Framework in Armenia",
+        system?.introductionTitle || "Academic Framework in South Korea",
       introductionDescription:
         system?.introductionDescription ||
-        "Armenia's education system is modeled on the British system, offering a high standard of academic excellence and globally recognized qualifications through Cambridge-aligned assessments.",
+        "South Korea's education system is modeled on the British system, offering a high standard of academic excellence and globally recognized qualifications through Cambridge-aligned assessments.",
       supportingNarrative: finalNarrative,
       summaryStats,
       focusAreas,
