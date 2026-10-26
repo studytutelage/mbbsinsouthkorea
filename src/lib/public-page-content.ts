@@ -547,17 +547,17 @@ export const getAboutCountryContent = cache(
       : [];
 
     const location =
-      page?.location || "Indian Ocean, Off the South East coast of Africa";
-    const timezone = page?.timezone || "UTC+4 (South Korea Time)";
+      page?.location || "East Asia, Korean Peninsula";
+    const timezone = page?.timezone || "UTC+9 (KST)";
     const independenceDay = page?.independenceDay
       ? new Date(page.independenceDay).toLocaleDateString("en-GB", {
           day: "numeric",
           month: "long",
           year: "numeric",
         })
-      : "12 March 1968";
-    const highestPeak = page?.highestPeak || "Piton de la Petite Rivière Noire";
-    const highestPeakHeight = page?.highestPeakHeight || "828 m";
+      : "15 August 1945";
+    const highestPeak = page?.highestPeak || "Hallasan";
+    const highestPeakHeight = page?.highestPeakHeight || "1,947 m";
 
     return {
       countryName,
@@ -636,28 +636,28 @@ export const getEducationSystemContent = cache(
     const primaryDegree = system?.degrees[0];
     const summaryStats = [
       {
-        label: "Pre-Primary (Kindergarten)",
-        value: "1018+",
+        label: "Kindergartens",
+        value: "8,000+",
         detail:
-          "~769 to 1,018 pre-primary schools. Majority are private institutions (~75%)",
+          "Early childhood education for ages 3 to 5, largely privately run",
       },
       {
-        label: "Primary Schools",
-        value: "325+",
+        label: "Elementary Schools",
+        value: "6,100+",
         detail:
-          "~305 to 325 primary schools. Includes both government and private schools",
+          "Six compulsory years for ages 6 to 12 across public and private schools",
       },
       {
         label: "Secondary Schools",
-        value: "180+",
+        value: "5,500+",
         detail:
-          "~178 to 180 secondary schools. Mix of Private & aided institutions",
+          "~3,200 middle schools and ~2,300 high schools nationwide",
       },
       {
-        label: "Tertiary Institutions",
-        value: "50+",
+        label: "Higher Education Institutions",
+        value: "330+",
         detail:
-          "Universities, Medical colleges, Technical institutes (public + private + international)",
+          "Universities, colleges and graduate schools, including 40 medical schools",
       },
     ];
 
@@ -673,11 +673,11 @@ export const getEducationSystemContent = cache(
       supportingNarrative.length > 0
         ? supportingNarrative.slice(0, 5)
         : [
-            "Modeled on the British education system with high academic standards.",
-            "Compulsory education from age 5 to 16 ensuring high literacy.",
-            "Cambridge-aligned assessment standards for secondary education.",
-            "Free transport for all students in the public and private sectors.",
-            "Quality Assurance through the Higher Education Commission (HEC).",
+            "Follows a 6-3-3-4 structure: elementary, middle, high school and university.",
+            "Nine years of free, compulsory education (elementary and middle school).",
+            "University admission is driven by the national CSAT (Suneung) exam.",
+            "Medical schools are accredited by the Korean Institute of Medical Education and Evaluation (KIMEE).",
+            "Doctors are licensed through the national Korean Medical Licensing Examination (KMLE).",
           ];
 
     const focusAreas = system?.popularFields.length
@@ -698,9 +698,9 @@ export const getEducationSystemContent = cache(
         }))
       : [
           {
-            title: "British-based academic framework",
+            title: "6-3-3-4 academic framework",
             description:
-              "The curriculum and assessments are closely aligned with UK standards, ensuring global recognition.",
+              "A centrally regulated system overseen by the Ministry of Education with nationally standardized assessments.",
             theme: "red" as const,
           },
           {
@@ -749,8 +749,8 @@ export const getEducationSystemContent = cache(
             description:
               "Initial foundational stage focusing on early development and school readiness.",
             points: [
-              "~769 to 1,018 schools",
-              "75% Private institutions",
+              "8,000+ kindergartens",
+              "Largely private institutions",
               "Ages 3 to 5",
             ],
             duration: "3 years",
@@ -758,9 +758,9 @@ export const getEducationSystemContent = cache(
           },
           {
             label: "Primary",
-            title: "Primary School Achievement Certificate (PSAC)",
+            title: "Elementary School (Chodeung Hakgyo)",
             description:
-              "Foundational education focusing on core literacy and numeracy across 325+ schools.",
+              "Foundational education focusing on core literacy and numeracy across 6,100+ schools.",
             points: [
               "Grades 1 to 6",
               "Compulsory Stage",
@@ -771,28 +771,28 @@ export const getEducationSystemContent = cache(
           },
           {
             label: "Secondary",
-            title: "Lower and Upper Secondary (NCE / SC / HSC)",
+            title: "Middle and High School",
             description:
-              "High school education aligned with Cambridge standards in ~180 institutions.",
+              "Three years of compulsory middle school followed by three years of high school leading to the CSAT.",
             points: [
-              "Grades 7 to 13",
-              "Cambridge O/A Levels",
-              "Private & Aided mix",
+              "Grades 7 to 12",
+              "CSAT (Suneung) at the end",
+              "General, science and vocational high schools",
             ],
-            duration: "7 years",
+            duration: "6 years",
             theme: "green" as const,
           },
           {
             label: "Tertiary",
             title: "University and Professional Training",
             description:
-              "Higher education offering degrees in Medicine and other fields across 50+ institutions.",
+              "Higher education offering degrees in Medicine and other fields across 330+ institutions.",
             points: [
               "Universities",
               "Medical Colleges",
               "Technical Institutes",
             ],
-            duration: "3 to 6 years",
+            duration: "4 to 6 years",
             theme: "purple" as const,
           },
         ];
@@ -812,7 +812,7 @@ export const getEducationSystemContent = cache(
           {
             title: "MBBS (Bachelor of Medicine)",
             description:
-              "Standard medical degree duration of 5-6 years including clinical internship. Globally recognized.",
+              "Six-year medical program (2 years pre-medicine + 4 years medicine) followed by the KMLE.",
             theme: "green" as const,
           },
         ];
@@ -853,24 +853,24 @@ export const getEducationSystemContent = cache(
     const institutionCards = [
       {
         label: "Higher institutions",
-        value: "50+",
+        value: "330+",
         detail:
           "Total tertiary institutions including public and private sectors",
       },
       {
-        label: "Universities",
-        value: "10+",
+        label: "Medical Schools",
+        value: "40",
         detail:
-          "Including international campuses and specialist medical universities",
+          "KIMEE-accredited medical colleges and graduate medical schools",
       },
       {
         label: "Secondary Schools",
-        value: "~180",
-        detail: "Mix of private and government-aided institutions",
+        value: "~5,500",
+        detail: "Middle and high schools, public and private",
       },
       {
-        label: "Primary Schools",
-        value: "~325",
+        label: "Elementary Schools",
+        value: "~6,100",
         detail: "Foundational education centers across all districts",
       },
     ];
@@ -889,21 +889,22 @@ export const getEducationSystemContent = cache(
         }))
       : [
           {
-            title: "PSAC (Primary Achievement)",
-            description: "Assessment conducted at the end of Primary Grade 6.",
+            title: "CSAT (Suneung)",
+            description:
+              "National College Scholastic Ability Test taken at the end of high school for university entry.",
             subjects: [
-              "English",
+              "Korean",
               "Mathematics",
-              "French",
-              "Science",
-              "History & Geography",
+              "English",
+              "Korean History",
+              "Science / Social Studies Inquiry",
             ],
           },
           {
-            title: "HSC (Higher School Certificate)",
+            title: "KMLE (Korean Medical Licensing Examination)",
             description:
-              "Cambridge-aligned assessment marking the end of secondary school and entry to university.",
-            subjects: ["Specialized A-Level Subjects"],
+              "National licensing exam taken by medical graduates to practise as doctors in South Korea.",
+            subjects: ["Written examination", "Clinical skills assessment"],
           },
         ];
 
@@ -914,7 +915,7 @@ export const getEducationSystemContent = cache(
         system?.introductionTitle || "Academic Framework in South Korea",
       introductionDescription:
         system?.introductionDescription ||
-        "South Korea's education system is modeled on the British system, offering a high standard of academic excellence and globally recognized qualifications through Cambridge-aligned assessments.",
+        "South Korea's education system follows a 6-3-3-4 structure with nationally standardized assessments, high literacy and one of the highest tertiary enrolment rates in the world.",
       supportingNarrative: finalNarrative,
       summaryStats,
       focusAreas,
@@ -925,10 +926,10 @@ export const getEducationSystemContent = cache(
           ? languageCards
           : [
               {
-                label: "English / French",
-                value: "Fully Multilingual",
+                label: "Korean / English",
+                value: "Bilingual Medical Study",
                 detail:
-                  "English is the official language of instruction, while French is widely spoken and integrated into daily life.",
+                  "Korean is the national language; English is taught from elementary school and widely used in medical literature.",
               },
             ],
       institutionCards:
@@ -937,9 +938,9 @@ export const getEducationSystemContent = cache(
           : [
               {
                 label: "Academic Network",
-                value: "HEC Regulated",
+                value: "KIMEE Accredited",
                 detail:
-                  "Public and private universities operate under strict quality assurance from the Higher Education Commission.",
+                  "Medical schools operate under quality assurance from the Korean Institute of Medical Education and Evaluation.",
               },
             ],
       examinations,

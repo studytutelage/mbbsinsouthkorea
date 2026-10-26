@@ -68,7 +68,7 @@ async function seedWebsiteSettings() {
   const settings = [
     { key: "site_name", value: "MBBS in South Korea", type: "text", group: "general" },
     { key: "support_email", value: "admissions@mbbsinsouthkorea.com", type: "text", group: "contact" },
-    { key: "support_phone", value: "+91-11-2410-2161", type: "text", group: "contact" },
+    { key: "support_phone", value: "+91-9667-667-331", type: "text", group: "contact" },
     { key: "stats_total_students", value: "2500+", type: "text", group: "stats" },
     { key: "stats_total_universities", value: "8+", type: "text", group: "stats" },
     { key: "stats_total_scholarships", value: "20+", type: "text", group: "stats" },
@@ -208,7 +208,7 @@ async function seedCountryAndEducationPages() {
       privateHealthcare: "Top-tier private university hospitals with advanced medical equipment and English-speaking doctors.",
       studentHealthcare: "On-campus health centers and student health support across major university cities.",
       tourismGrowth: "A globally popular cultural destination with iconic palaces, vibrant cities, and scenic nature.",
-      bannerImage: "/uploads/about-country/South Korea-banner.jpg",
+      bannerImage: "/uploads/about-country/south-korea-banner.jpg",
     },
     create: {
       id: 1,
@@ -236,7 +236,7 @@ async function seedCountryAndEducationPages() {
       privateHealthcare: "Top-tier private university hospitals with advanced medical equipment and English-speaking doctors.",
       studentHealthcare: "On-campus health centers and student health support across major university cities.",
       tourismGrowth: "A globally popular cultural destination with iconic palaces, vibrant cities, and scenic nature.",
-      bannerImage: "/uploads/about-country/South Korea-banner.jpg",
+      bannerImage: "/uploads/about-country/south-korea-banner.jpg",
     },
   });
 
@@ -331,8 +331,8 @@ async function seedCountryAndEducationPages() {
   });
 
   const exams = [
-    { examName: "PSAC", gradeLevel: "Grade 6", type: "National", subjects: "English; Maths; Science" },
-    { examName: "HSC", gradeLevel: "Grade 13", type: "Cambridge aligned", subjects: "A-level tracks for higher education" },
+    { examName: "CSAT (Suneung)", gradeLevel: "High School Grade 3", type: "National university entrance exam", subjects: "Korean; Mathematics; English; Korean History; Science / Social Studies Inquiry" },
+    { examName: "KMLE", gradeLevel: "Final year of medical school", type: "National medical licensing exam (KHPLEI)", subjects: "Written examination; Clinical skills assessment" },
   ];
   for (const item of exams) {
     await upsertByWhere(
@@ -343,9 +343,10 @@ async function seedCountryAndEducationPages() {
   }
 
   const schoolLevels = [
-    { level: "Primary", ageRange: "5-11", durationYears: 6, isCompulsory: true, title: "Primary School" },
-    { level: "Secondary", ageRange: "12-18", durationYears: 7, isCompulsory: true, title: "Secondary and HSC" },
-    { level: "Tertiary", ageRange: "18+", durationYears: 3, isCompulsory: false, title: "University Level" },
+    { level: "Elementary", ageRange: "6-12", durationYears: 6, isCompulsory: true, title: "Elementary School (Chodeung Hakgyo)" },
+    { level: "Middle School", ageRange: "12-15", durationYears: 3, isCompulsory: true, title: "Middle School (Jung Hakgyo)" },
+    { level: "High School", ageRange: "15-18", durationYears: 3, isCompulsory: false, title: "High School and CSAT" },
+    { level: "University", ageRange: "18+", durationYears: 6, isCompulsory: false, title: "Medical School (2 pre-med + 4 medicine)" },
   ];
   for (const item of schoolLevels) {
     await upsertByWhere(
@@ -356,7 +357,7 @@ async function seedCountryAndEducationPages() {
   }
 
   const degrees = [
-    { degree: "MBBS / MBChB", duration: "5-6 Years", recognition: "Internationally aligned pathway" },
+    { degree: "MD / MBBS", duration: "6 Years", recognition: "Listed in WHO World Directory of Medical Schools" },
     { degree: "BSc Nursing", duration: "4 Years", recognition: "Professional healthcare degree" },
   ];
   for (const item of degrees) {
@@ -368,7 +369,7 @@ async function seedCountryAndEducationPages() {
   }
 
   const fields = [
-    { field: "Medicine", description: "Primary track for MBBS aspirants.", numberOfInstitutions: "5+", durationYears: "5-6" },
+    { field: "Medicine", description: "Primary track for MBBS aspirants.", numberOfInstitutions: "40", durationYears: "6" },
     { field: "Allied Health", description: "Growing options in nursing and therapy fields.", numberOfInstitutions: "7+", durationYears: "3-4" },
   ];
   for (const item of fields) {
@@ -391,11 +392,11 @@ async function seedCountryAndEducationPages() {
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
       vision: "To be the most trusted South Korea medical admission support platform.",
-      contact1: "+91-11-2410-2161",
+      contact1: "+91-9667-667-331",
       contact2: "+82-2-3456-7890",
       email1: "admissions@mbbsinsouthkorea.com",
       email2: "support@mbbsinsouthkorea.com",
-      address: "New Delhi, India and Gangnam-gu, Seoul, South Korea",
+      address: "Gurugram, India and Gangnam-gu, Seoul, South Korea",
     },
     create: {
       id: 1,
@@ -408,11 +409,11 @@ async function seedCountryAndEducationPages() {
       yearsExperience: 10,
       mission: "Ethical and transparent MBBS counseling for students and parents.",
       vision: "To be the most trusted South Korea medical admission support platform.",
-      contact1: "+91-11-2410-2161",
+      contact1: "+91-9667-667-331",
       contact2: "+82-2-3456-7890",
       email1: "admissions@mbbsinsouthkorea.com",
       email2: "support@mbbsinsouthkorea.com",
-      address: "New Delhi, India and Gangnam-gu, Seoul, South Korea",
+      address: "Gurugram, India and Gangnam-gu, Seoul, South Korea",
     },
   });
 
@@ -497,13 +498,13 @@ async function seedContentAndMisc(adminId: number) {
 
   await upsertByWhere(prisma.office, { name: "India Head Office" }, {
     name: "India Head Office",
-    address: "EP-41, Jesus and Mary Marg, Chanakyapuri",
-    city: "New Delhi",
-    state: "Delhi",
+    address: "B-16 Ground Floor, Mayfield Garden, Sector 50",
+    city: "Gurugram",
+    state: "Haryana",
     country: "India",
-    phone: "+91-11-2410-2161",
+    phone: "+91-9667-667-331",
     email: "india@mbbsinsouthkorea.com",
-    mapEmbed: "https://maps.google.com/?q=Chanakyapuri+New+Delhi",
+    mapEmbed: "https://maps.google.com/?q=Mayfield+Garden+Sector+50+Gurugram",
     imageName: "office-india.jpg",
     imagePath: "/uploads/offices/india-head-office.jpg",
     position: 1,
@@ -511,15 +512,15 @@ async function seedContentAndMisc(adminId: number) {
   });
   await upsertByWhere(prisma.office, { name: "South Korea Support Office" }, {
     name: "South Korea Support Office",
-    address: "Cyber Tower 1, Ebene Cybercity",
-    city: "Ebene",
-    state: "Plaines Wilhems",
+    address: "Gangnam-gu",
+    city: "Seoul",
+    state: "Seoul Special City",
     country: "South Korea",
-    phone: "+230-208-9000",
-    email: "South Korea@mbbsinsouthkorea.com",
-    mapEmbed: "https://maps.google.com/?q=Ebene+Cybercity+South Korea",
-    imageName: "office-South Korea.jpg",
-    imagePath: "/uploads/offices/South Korea-office.jpg",
+    phone: "+82-2-3456-7890",
+    email: "korea@mbbsinsouthkorea.com",
+    mapEmbed: "https://maps.google.com/?q=Gangnam-gu+Seoul+South+Korea",
+    imageName: "office-south-korea.jpg",
+    imagePath: "/uploads/offices/south-korea-office.jpg",
     position: 2,
     status: true,
   });
@@ -550,7 +551,7 @@ async function seedContentAndMisc(adminId: number) {
     {
       name: "Ministry of Health and Welfare (MOHW) - South Korea",
       url: "https://www.mohw.go.kr",
-      category: "South Korea-government",
+      category: "south-korea-government",
       position: 3,
     },
   ];
@@ -592,11 +593,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Admission Guides", slug: "admission-guides", status: true },
     create: { name: "Admission Guides", slug: "admission-guides", status: true },
   });
-  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-South Korea-admission-roadmap-2026" }, {
+  const blog = await upsertByWhere(prisma.blog, { slug: "mbbs-in-south-korea-admission-roadmap-2026" }, {
     categoryId: blogCategory.id,
     authorId: adminId,
     title: "MBBS in South Korea Admission Roadmap 2026",
-    slug: "mbbs-in-South Korea-admission-roadmap-2026",
+    slug: "mbbs-in-south-korea-admission-roadmap-2026",
     shortnote: "A practical timeline from counseling to visa.",
     description: "Stepwise checklist for profile review, documents, application, and travel readiness.",
     status: true,
@@ -623,11 +624,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
     create: { name: "Policy and Admissions", slug: "policy-and-admissions", status: true },
   });
-  const news = await upsertByWhere(prisma.news, { slug: "South Korea-intake-advisory-2026" }, {
+  const news = await upsertByWhere(prisma.news, { slug: "south-korea-intake-advisory-2026" }, {
     categoryId: newsCategory.id,
     authorId: adminId,
     title: "South Korea Intake Advisory for 2026 Applicants",
-    slug: "South Korea-intake-advisory-2026",
+    slug: "south-korea-intake-advisory-2026",
     description: "Applicants are advised to complete document checks early.",
     status: true,
     homeView: true,
@@ -652,11 +653,11 @@ async function seedContentAndMisc(adminId: number) {
     update: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
     create: { name: "MBBS Planning", slug: "mbbs-planning", status: true },
   });
-  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-South Korea" }, {
+  const article = await upsertByWhere(prisma.article, { slug: "realistic-cost-breakdown-mbbs-south-korea" }, {
     categoryId: articleCategory.id,
     authorId: adminId,
     title: "Realistic Cost Breakdown for MBBS in South Korea",
-    slug: "realistic-cost-breakdown-mbbs-South Korea",
+    slug: "realistic-cost-breakdown-mbbs-south-korea",
     description: "Understand tuition, living costs, and annual budget planning.",
     status: true,
     homeView: true,
@@ -677,10 +678,10 @@ async function seedContentAndMisc(adminId: number) {
   });
 
   const scholarship = await prisma.scholarship.upsert({
-    where: { slug: "South Korea-merit-scholarship-mbbs" },
+    where: { slug: "south-korea-merit-scholarship-mbbs" },
     update: {
       title: "South Korea Merit Scholarship for MBBS",
-      slug: "South Korea-merit-scholarship-mbbs",
+      slug: "south-korea-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -693,7 +694,7 @@ async function seedContentAndMisc(adminId: number) {
     },
     create: {
       title: "South Korea Merit Scholarship for MBBS",
-      slug: "South Korea-merit-scholarship-mbbs",
+      slug: "south-korea-merit-scholarship-mbbs",
       scholarshipType: "Merit-based",
       amountMin: 1500,
       amountMax: 4000,
@@ -803,7 +804,7 @@ async function seedUniversityDependentData() {
       universityId: university.id,
       name: "International Student Cohort",
       email: "intl.batch@mbbsinsouthkorea.com",
-      phone: "+230-5555-0101",
+      phone: "+82-10-5555-0101",
       country: "India",
       numberOfStudents: 120,
       course: "MBBS",

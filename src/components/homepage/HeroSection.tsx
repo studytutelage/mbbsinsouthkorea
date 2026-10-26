@@ -13,7 +13,7 @@ import {
 import { useDownloadModal } from "@/lib/modalContext";
 import { HomePageStats } from "@/lib/public-page-content";
 
-const FALLBACK_BROCHURE = "/brochures/South Korea_university.pdf";
+const FALLBACK_BROCHURE = "/brochures/south-korea-university.pdf";
 
 interface HeroSectionProps {
   stats: HomePageStats;

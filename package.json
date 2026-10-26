@@ -12,9 +12,9 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "dotenv -e .env -- npx ts-node --project tsconfig.json -e 'require(\"./prisma/seed.ts\")'",
-    "seed:South Korea": "npx dotenv-cli -e .env -- npx tsx scripts/seed-South Korea.ts",
-    "seed:South Korea:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-South Korea-comprehensive.ts",
-    "seed:South Korea:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-South Korea-universities.ts",
+    "seed:southkorea": "npx dotenv-cli -e .env -- npx tsx prisma/seed.ts",
+    "seed:southkorea:all": "npx dotenv-cli -e .env -- npx tsx scripts/seed-southkorea-comprehensive.ts",
+    "seed:southkorea:universities": "npx dotenv-cli -e .env -- npx tsx scripts/seed-southkorea-universities.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

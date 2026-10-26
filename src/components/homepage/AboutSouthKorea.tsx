@@ -43,35 +43,35 @@ export default async function AboutSouthKorea() {
       label: "Currency",
       value:
         content.summaryStats.find((item) => item.label === "Currency")?.value ||
-        "MUR",
+        "South Korean Won (KRW)",
     },
     {
       icon: Landmark,
       label: "Government",
       value:
         content.summaryStats.find((item) => item.label === "Government")
-          ?.value || "Parliamentary democracy",
+          ?.value || "Presidential republic",
     },
     {
       icon: TrendingUp,
       label: "GDP per head",
       value:
         content.summaryStats.find((item) => item.label === "GDP per head")
-          ?.value || "US$10,300",
+          ?.value || "US$33,000+",
     },
     {
       icon: Map,
       label: "Area",
       value:
         content.summaryStats.find((item) => item.label === "Area")?.value ||
-        "1860 sq km (725 sq mi)",
+        "100,410 sq km (38,770 sq mi)",
     },
     {
       icon: Factory,
       label: "Major Industries",
       value:
         content.summaryStats.find((item) => item.label === "Major Industries")
-          ?.value || "Sugar, textiles, tea, tobacco, tourism",
+          ?.value || "Semiconductors, automobiles, shipbuilding, electronics",
     },
   ];
 

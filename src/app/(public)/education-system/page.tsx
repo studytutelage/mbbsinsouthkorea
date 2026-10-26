@@ -170,7 +170,7 @@ export default async function EducationSystemPage() {
               </h2>
               <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-slate-700">
                 South Korea has one of the most advanced and structured education
-                systems in Africa
+                systems in Asia
               </p>
             </div>
 

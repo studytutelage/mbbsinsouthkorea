@@ -123,8 +123,26 @@ async function main() {
     },
   ];
 
+  // Reference IDs in the list above are hints only; resolve real IDs by name so
+  // this script works whichever seed (prisma/seed.ts or comprehensive) ran first.
+  const provinceNames: Record<number, string> = {
+    1: 'Seoul Special City',
+    2: 'Busan Metropolitan City',
+    3: 'Daegu Metropolitan City',
+  };
+
   for (const u of universities) {
     const slug = slugify(u.name);
+
+    const province = await prisma.province.findFirst({ where: { name: provinceNames[u.provinceId] } });
+    const city = await prisma.city.findFirst({ where: { name: u.city, ...(province ? { provinceId: province.id } : {}) } });
+    const instituteType = await prisma.instituteType.findFirst({
+      where: { name: { startsWith: u.instituteTypeId === 1 ? 'Public' : 'Private' } },
+    });
+    if (!province || !city || !instituteType) {
+      throw new Error(`Missing reference data for ${u.name}. Run "npx prisma db seed" first.`);
+    }
+    const refs = { provinceId: province.id, cityId: city.id, instituteTypeId: instituteType.id };
 
     // 1. Create/Update University
     const university = await prisma.university.upsert({
@@ -145,9 +163,9 @@ async function main() {
         eligibility: u.eligibility,
         status: u.status,
         isFeatured: u.isFeatured,
-        provinceId: u.provinceId,
-        cityId: u.cityId,
-        instituteTypeId: u.instituteTypeId,
+        provinceId: refs.provinceId,
+        cityId: refs.cityId,
+        instituteTypeId: refs.instituteTypeId,
         latitude: u.latitude,
         longitude: u.longitude,
       },
@@ -168,9 +186,9 @@ async function main() {
         eligibility: u.eligibility,
         status: u.status,
         isFeatured: u.isFeatured,
-        provinceId: u.provinceId,
-        cityId: u.cityId,
-        instituteTypeId: u.instituteTypeId,
+        provinceId: refs.provinceId,
+        cityId: refs.cityId,
+        instituteTypeId: refs.instituteTypeId,
         latitude: u.latitude,
         longitude: u.longitude,
       },
