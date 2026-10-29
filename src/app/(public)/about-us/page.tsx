@@ -62,6 +62,8 @@ const services = [
   },
 ];
 
+export const dynamic = "force-dynamic";
+
 export default async function AboutUsPage() {
   const [testimonials, dynamicStats] = await Promise.all([
     prisma.testimonial.findMany({

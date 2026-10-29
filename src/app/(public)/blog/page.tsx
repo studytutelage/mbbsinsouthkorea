@@ -19,7 +19,7 @@ export const metadata: Promise<Metadata> = buildMetadata({
   pageKey: "blog",
 });
 
-export const revalidate = 1800;
+export const dynamic = "force-dynamic";
 
 export default async function BlogPage() {
   const [categories, recentBlogs] = await Promise.all([
@@ -28,8 +28,7 @@ export default async function BlogPage() {
         where: { status: true },
         include: { _count: { select: { blogs: { where: { status: true } } } } },
         orderBy: { id: "asc" },
-      })
-      .catch(() => []),
+      }),
     prisma.blog
       .findMany({
         where: { status: true },
@@ -39,8 +38,7 @@ export default async function BlogPage() {
         },
         orderBy: { createdAt: "desc" },
         take: 12,
-      })
-      .catch(() => []),
+      }),
   ]);
 
   const jsonLd = breadcrumbSchema([

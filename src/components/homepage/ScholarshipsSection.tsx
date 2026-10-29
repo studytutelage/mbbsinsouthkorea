@@ -69,8 +69,7 @@ export default async function ScholarshipsSection({
       },
       take: 4,
       orderBy: { id: "asc" },
-    })
-    .catch(() => []);
+    });
 
   return (
     <section id="scholarships" className="py-16 bg-white">

@@ -34,11 +34,10 @@ export default async function CompareUniversities() {
           hostelBuilding: true,
           countriesRepresented: true,
           instituteType: { select: { name: true } },
-          cityRelation: { select: { name: true } },
+          cityRelation: { select: { name: true }           },
         },
         orderBy: { id: "asc" },
       })
-      .catch(() => [])
   ).map((u) => ({
     ...u,
     rating: u.rating ? Number(u.rating) : null,

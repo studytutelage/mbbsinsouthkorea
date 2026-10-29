@@ -18,8 +18,7 @@ export default async function UniversityMapSection() {
         longitude: true,
         thumbnailPath: true,
       },
-    })
-    .catch(() => []);
+    });
 
   // Always render the map to show the section even if no universities exist
   // if (universities.length === 0) {

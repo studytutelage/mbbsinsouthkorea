@@ -14,8 +14,7 @@ export default async function FmgeSection() {
         university: { select: { name: true, slug: true } },
       },
       orderBy: { year: "desc" },
-    })
-    .catch(() => []);
+    });
 
   const data = rows.map((r) => ({
     universityName: r.university.name,

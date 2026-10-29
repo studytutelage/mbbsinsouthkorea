@@ -47,8 +47,7 @@ export default async function UniversityGrid() {
       },
       orderBy: { id: "asc" },
       take: 6,
-    })
-    .catch(() => []);
+    });
 
   // Fallback un-curated universities if the admin hasn't enabled homeView yet
   if (universities.length === 0) {
@@ -74,8 +73,7 @@ export default async function UniversityGrid() {
         },
         orderBy: [{ rating: "desc" }, { id: "asc" }],
         take: 6,
-      })
-      .catch(() => []);
+      });
   }
 
   return (

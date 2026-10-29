@@ -99,6 +99,8 @@ function getLanguageCardIcon(label: string, value: string, detail?: string) {
   return School;
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function EducationSystemPage() {
   const content = await getEducationSystemContent();
 

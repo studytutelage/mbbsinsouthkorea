@@ -4,8 +4,9 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { GraduationCap, Loader2, RefreshCw } from "lucide-react";
+import { Suspense } from "react";
 
-export default function OtpVerificationPage() {
+function OtpVerificationPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const email = searchParams.get("email") || "";
@@ -177,5 +178,21 @@ export default function OtpVerificationPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function OtpVerificationPage() {
+  return (
+    <Suspense
+      fallback={
+        <div
+          className="min-h-screen bg-white"
+          role="status"
+          aria-label="Loading verification page"
+        />
+      }
+    >
+      <OtpVerificationPageContent />
+    </Suspense>
   );
 }
