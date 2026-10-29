@@ -25,20 +25,7 @@ interface Props {
   params: Promise<{ categorySlug: string; blogSlug: string }>;
 }
 
-export const revalidate = 1800;
-
-export async function generateStaticParams() {
-  const blogs = await prisma.blog
-    .findMany({
-      where: { status: true },
-      select: { slug: true, category: { select: { slug: true } } },
-    })
-    .catch(() => []);
-  return blogs.map((b) => ({
-    categorySlug: b.category.slug,
-    blogSlug: b.slug,
-  }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { categorySlug, blogSlug } = await params;
@@ -53,8 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         metaDescription: true,
         metaKeyword: true,
       },
-    })
-    .catch(() => null);
+    });
 
   if (!blog) return { title: "Blog Post Not Found" };
   return buildMetadata({
@@ -81,8 +67,7 @@ export default async function BlogDetailPage({ params }: Props) {
         contents: { orderBy: [{ position: "asc" }, { id: "asc" }] },
         faqs: { orderBy: { id: "asc" } },
       },
-    })
-    .catch(() => null);
+    });
 
   if (!blog) notFound();
 
@@ -102,8 +87,7 @@ export default async function BlogDetailPage({ params }: Props) {
       },
       take: 3,
       orderBy: { createdAt: "desc" },
-    })
-    .catch(() => []);
+    });
 
   // Use database value or estimate reading time if not set
   const wordCount = (blog.description ?? "")

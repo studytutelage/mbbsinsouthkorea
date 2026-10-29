@@ -28,7 +28,7 @@ export const metadata: Promise<Metadata> = buildMetadata({
   pageKey: "scholarships",
 });
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 function formatAmount(min: number | null, max: number | null): string {
   if (!min && !max) return "Contact for details";
@@ -84,14 +84,12 @@ export default async function ScholarshipsPage() {
           },
         },
         orderBy: [{ deadline: "asc" }, { id: "asc" }],
-      })
-      .catch(() => []),
+      }),
     prisma.websiteSetting
       .findUnique({
         where: { key: "stats_annual_aid" },
         select: { value: true },
-      })
-      .catch(() => null),
+      }),
   ]);
 
   const totalAidCalculated = scholarships.reduce((sum, s) => {

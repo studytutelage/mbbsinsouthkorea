@@ -13,31 +13,26 @@ import { homepageFaqs } from "./homepage-faqs";
  * Fallbacks to the static 'homepage-faqs.ts' data if the DB provides no records.
  */
 export async function getHomepageFaqs() {
-  try {
-    const faqs = await prisma.faq.findMany({
-      where: {
-        status: true,
-        category: {
-          slug: "homepage",
-        },
+  const faqs = await prisma.faq.findMany({
+    where: {
+      status: true,
+      category: {
+        slug: "homepage",
       },
-      orderBy: {
-        position: "asc",
-      },
-      select: {
-        question: true,
-        answer: true,
-      },
-    });
+    },
+    orderBy: {
+      position: "asc",
+    },
+    select: {
+      question: true,
+      answer: true,
+    },
+  });
 
-    if (faqs.length > 0) {
-      return faqs;
-    }
-  } catch (error) {
-    console.error("Error fetching dynamic homepage FAQs:", error);
+  if (faqs.length > 0) {
+    return faqs;
   }
 
-  // Final fallback to static data
   return homepageFaqs;
 }
 
@@ -58,91 +53,76 @@ export interface HomePageStats {
  * with optional setting-based overrides.
  */
 export async function getHomepageStats(): Promise<HomePageStats> {
-  try {
-    const [uniCount, scholarshipCount] = await Promise.all([
-      prisma.university.count({ where: { status: true } }),
-      prisma.scholarship.count({ where: { isActive: true } }),
-    ]);
+  const [uniCount, scholarshipCount] = await Promise.all([
+    prisma.university.count({ where: { status: true } }),
+    prisma.scholarship.count({ where: { isActive: true } }),
+  ]);
 
-    // Key-value settings to allow manual overrides for marketing numbers
-    const settings = await prisma.websiteSetting.findMany({
-      where: {
-        key: {
-          in: [
-            "stats_total_students",
-            "stats_total_universities",
-            "stats_total_scholarships",
-            "stats_annual_aid",
-            "stats_admission_support",
-            "stats_merit_label",
-            "stats_verified_label",
-            "stats_experience_years",
-            "stats_visa_success",
-          ],
-        },
+  // Key-value settings to allow manual overrides for marketing numbers
+  const settings = await prisma.websiteSetting.findMany({
+    where: {
+      key: {
+        in: [
+          "stats_total_students",
+          "stats_total_universities",
+          "stats_total_scholarships",
+          "stats_annual_aid",
+          "stats_admission_support",
+          "stats_merit_label",
+          "stats_verified_label",
+          "stats_experience_years",
+          "stats_visa_success",
+        ],
       },
+    },
+  });
+
+  const getVal = (key: string, fallback: string) =>
+    settings.find((s) => s.key === key)?.value ?? fallback;
+
+  // Dynamic calculation for annual aid when the setting is missing
+  const calcAnnualAid = async () => {
+    const scholarships = await prisma.scholarship.findMany({
+      where: {
+        isActive: true,
+      },
+      select: { amountMin: true, amountMax: true, availableSeats: true },
     });
 
-    const getVal = (key: string, fallback: string) =>
-      settings.find((s) => s.key === key)?.value ?? fallback;
+    const total = scholarships.reduce((sum, s) => {
+      const amount = s.amountMax
+        ? Number(s.amountMax)
+        : s.amountMin
+          ? Number(s.amountMin)
+          : 0;
+      const seats = s.availableSeats || 1;
+      return sum + amount * seats;
+    }, 0);
 
-    // Dynamic calculation for annual aid when setting is missing
-    const calcAnnualAid = async () => {
-      const scholarships = await prisma.scholarship
-        .findMany({
-          where: { isActive: true },
-          select: { amountMin: true, amountMax: true, availableSeats: true },
-        })
-        .catch(() => []);
+    if (total >= 1000000) return `$${(total / 1000000).toFixed(1)}M+`;
+    if (total > 0) return `$${(total / 1000).toFixed(0)}k+`;
+    return "$500k+";
+  };
 
-      const total = scholarships.reduce((sum, s) => {
-        const amount = s.amountMax
-          ? Number(s.amountMax)
-          : s.amountMin
-            ? Number(s.amountMin)
-            : 0;
-        const seats = s.availableSeats || 1;
-        return sum + amount * seats;
-      }, 0);
+  const annualAidFallback = await calcAnnualAid();
 
-      if (total >= 1000000) return `$${(total / 1000000).toFixed(1)}M+`;
-      if (total > 0) return `$${(total / 1000).toFixed(0)}k+`;
-      return "$500k+";
-    };
-
-    const annualAidFallback = await calcAnnualAid();
-
-    return {
-      universities:
-        uniCount > 0
-          ? `${uniCount}+`
-          : getVal("stats_total_universities", "2+"),
-      scholarships: getVal(
-        "stats_total_scholarships",
-        scholarshipCount > 0 ? `${scholarshipCount}+` : "2+",
-      ),
-      students: getVal("stats_total_students", "100+"),
-      annualAid: getVal("stats_annual_aid", annualAidFallback),
-      admissionSupport: getVal("stats_admission_support", "100%"),
-      meritAwards: getVal("stats_merit_label", "Active"),
-      verifiedPrograms: getVal("stats_verified_label", "NMC"),
-      experienceYears: getVal("stats_experience_years", "11+"),
-      visaSuccess: getVal("stats_visa_success", "100%"),
-    };
-  } catch (error) {
-    console.error("Error fetching homepage stats:", error);
-    return {
-      universities: "2+",
-      scholarships: "2+",
-      students: "100+",
-      annualAid: "$500k+",
-      admissionSupport: "100%",
-      meritAwards: "Active",
-      verifiedPrograms: "NMC",
-      experienceYears: "11+",
-      visaSuccess: "100%",
-    };
-  }
+  return {
+    universities:
+      uniCount > 0
+        ? `${uniCount}+`
+        : getVal("stats_total_universities", "2+"),
+    scholarships: getVal(
+      "stats_total_scholarships",
+      scholarshipCount > 0 ? `${scholarshipCount}+` : "2+",
+    ),
+    students: getVal("stats_total_students", "100+"),
+    annualAid: getVal("stats_annual_aid", annualAidFallback),
+    admissionSupport: getVal("stats_admission_support", "100%"),
+    meritAwards: getVal("stats_merit_label", "Active"),
+    verifiedPrograms: getVal("stats_verified_label", "NMC"),
+    experienceYears: getVal("stats_experience_years", "11+"),
+    visaSuccess: getVal("stats_visa_success", "100%"),
+  };
 }
 
 type Theme = "red" | "blue" | "green" | "amber" | "purple";
@@ -273,13 +253,6 @@ export const getAboutCountryContent = cache(
             orderBy: [{ ordering: "asc" }, { id: "asc" }],
           },
         },
-      })
-      .catch((error: Error) => {
-        console.error(
-          "Failed to fetch about country content, using fallback content.",
-          error,
-        );
-        return null;
       });
 
     const countryName = page?.name || "South Korea";
@@ -488,38 +461,6 @@ export const getAboutCountryContent = cache(
           (item) => !used.has(item.city.toLowerCase()),
         );
         return [...fromDb, ...filled].slice(0, 3);
-      })
-      .catch((error: Error) => {
-        console.error(
-          "Failed to fetch university city details, using fallback city cards.",
-          error,
-        );
-        return [
-          {
-            city: "Seoul",
-            description:
-              "Capital city and primary healthcare innovation hub with world-ranked university teaching hospitals.",
-            universityCount: 3,
-            universityNames: ["Seoul National University", "Yonsei University", "Korea University"],
-            avgTuition: "$6,000-12,000",
-          },
-          {
-            city: "Busan",
-            description:
-              "Dynamic coastal metropolis with premier national medical faculties and student-friendly living.",
-            universityCount: 2,
-            universityNames: ["Pusan National University College of Medicine"],
-            avgTuition: "$5,500-10,000",
-          },
-          {
-            city: "Daegu",
-            description:
-              "Korea's specialized medical city featuring advanced healthcare complexes and medical schools.",
-            universityCount: 2,
-            universityNames: ["Kyungpook National University", "Keimyung University"],
-            avgTuition: "$5,000-9,500",
-          },
-        ] satisfies UniversityCityCard[];
       });
 
     const attractions = page?.touristAttractions.length
@@ -619,13 +560,6 @@ export const getEducationSystemContent = cache(
           popularFields: { orderBy: { id: "asc" } },
           schoolLevels: { orderBy: { id: "asc" } },
         },
-      })
-      .catch((error: Error) => {
-        console.error(
-          "Failed to fetch education system content, using fallback content.",
-          error,
-        );
-        return null;
       });
 
     const title = system?.title || "Education System in South Korea";

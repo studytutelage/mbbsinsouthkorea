@@ -17,21 +17,7 @@ interface Props {
   params: Promise<{ categorySlug: string; slug: string }>;
 }
 
-export const revalidate = 1800;
-
-export async function generateStaticParams() {
-  try {
-    const items = await prisma.article.findMany({
-      where: { status: true },
-      select: { slug: true, category: { select: { slug: true } } },
-    });
-    return items
-      .filter((a: any) => a.slug && a.category?.slug)
-      .map((a: any) => ({ categorySlug: a.category!.slug!, slug: a.slug! }));
-  } catch {
-    return [];
-  }
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { categorySlug, slug } = await params;
@@ -46,8 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         metaDescription: true,
         metaKeyword: true,
       },
-    })
-    .catch(() => null);
+    });
   if (!item) return { title: "Article Not Found" };
   return buildMetadata({
     title: item.metaTitle || item.title || undefined,
@@ -70,8 +55,7 @@ export default async function ArticleDetailPage({ params }: Props) {
         contents: { orderBy: [{ position: "asc" }, { id: "asc" }] },
         faqs: { orderBy: { id: "asc" } },
       },
-    })
-    .catch(() => null);
+    });
 
   if (!item) notFound();
 
@@ -93,11 +77,9 @@ export default async function ArticleDetailPage({ params }: Props) {
         },
         take: 3,
         orderBy: { createdAt: "desc" },
-      })
-      .catch(() => []),
+      }),
     prisma.articleCategory
-      .findMany({ where: { status: true }, select: { name: true, slug: true } })
-      .catch(() => []),
+      .findMany({ where: { status: true }, select: { name: true, slug: true } }),
   ]);
 
   const topLevel = item.contents.filter((c) => !c.parentId);

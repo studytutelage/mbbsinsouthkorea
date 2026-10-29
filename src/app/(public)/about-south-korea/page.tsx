@@ -240,6 +240,8 @@ const healthcareCards = [
     accent: "border-violet-200",
   },
 ];
+export const dynamic = "force-dynamic";
+
 export default async function AboutSouthKoreaPage() {
   const content = await getAboutCountryContent();
   const stats = content.summaryStats.map((item, index) => {

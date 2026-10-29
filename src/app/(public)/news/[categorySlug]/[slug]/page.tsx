@@ -17,19 +17,7 @@ interface Props {
   params: Promise<{ categorySlug: string; slug: string }>;
 }
 
-export const revalidate = 1800;
-
-export async function generateStaticParams() {
-  const items = await prisma.news
-    .findMany({
-      where: { status: true },
-      select: { slug: true, category: { select: { slug: true } } },
-    })
-    .catch(() => []);
-  return items
-    .filter((n) => n.slug && n.category?.slug)
-    .map((n) => ({ categorySlug: n.category.slug, slug: n.slug! }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { categorySlug, slug } = await params;
@@ -44,8 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         metaDescription: true,
         metaKeyword: true,
       },
-    })
-    .catch(() => null);
+    });
   if (!item) return { title: "News Not Found" };
   return buildMetadata({
     title: item.metaTitle || item.title || undefined,
@@ -68,8 +55,7 @@ export default async function NewsDetailPage({ params }: Props) {
         contents: { orderBy: [{ position: "asc" }, { id: "asc" }] },
         faqs: { orderBy: { id: "asc" } },
       },
-    })
-    .catch(() => null);
+    });
 
   if (!item) notFound();
 
@@ -91,11 +77,9 @@ export default async function NewsDetailPage({ params }: Props) {
         },
         take: 3,
         orderBy: { createdAt: "desc" },
-      })
-      .catch(() => []),
+      }),
     prisma.newsCategory
-      .findMany({ where: { status: true }, select: { name: true, slug: true } })
-      .catch(() => []),
+      .findMany({ where: { status: true }, select: { name: true, slug: true } }),
   ]);
 
   // Nest content: only top-level contents (parentId == null), children fetched separately

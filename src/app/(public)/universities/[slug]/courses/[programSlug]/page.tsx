@@ -35,23 +35,10 @@ import DownloadFormPopup from "@/components/modals/DownloadFormPopup";
 import ExpandableText from "@/components/ui/ExpandableText";
 import ProgramPageClient from "./ProgramPageClient";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ slug: string; programSlug: string }>;
-}
-
-export async function generateStaticParams() {
-  const programs = await prisma.universityProgram
-    .findMany({
-      where: { isActive: true },
-      select: { programSlug: true, university: { select: { slug: true } } },
-    })
-    .catch(() => []);
-  return programs.map((p) => ({
-    slug: p.university.slug,
-    programSlug: p.programSlug,
-  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -66,8 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         metaKeyword: true,
         university: { select: { name: true } },
       },
-    })
-    .catch(() => null);
+    });
   if (!program) return { title: "Program Not Found" };
   return buildMetadata({
     title:
@@ -126,8 +112,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
         },
         level: true,
       },
-    })
-    .catch(() => null);
+    });
 
   if (!program || !program.isActive) notFound();
 

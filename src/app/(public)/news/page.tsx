@@ -18,7 +18,7 @@ export const metadata: Promise<Metadata> = buildMetadata({
   pageKey: "news",
 });
 
-export const revalidate = 1800;
+export const dynamic = "force-dynamic";
 
 export default async function NewsPage() {
   const [categories, recentNews] = await Promise.all([
@@ -27,8 +27,7 @@ export default async function NewsPage() {
         where: { status: true },
         include: { _count: { select: { news: { where: { status: true } } } } },
         orderBy: { id: "asc" },
-      })
-      .catch(() => []),
+      }),
     prisma.news
       .findMany({
         where: { status: true },
@@ -38,8 +37,7 @@ export default async function NewsPage() {
         },
         orderBy: { createdAt: "desc" },
         take: 12,
-      })
-      .catch(() => []),
+      }),
   ]);
 
   return (

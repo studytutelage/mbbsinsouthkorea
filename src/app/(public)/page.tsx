@@ -21,6 +21,8 @@ import {
 } from "@/lib/seo";
 import { getHomepageStats, getHomepageFaqs } from "@/lib/public-page-content";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Promise<Metadata> = buildMetadata({
   title: `MBBS in South Korea ${APP_YEAR} | NMC Recognised Universities | Fees & Admission for Indian Students`,
   description: `Explore top NMC-recognised medical universities in South Korea. Compare fees, FMGE rates, and apply for MBBS ${APP_YEAR} admission. Free counselling for Indian students.`,
@@ -218,8 +220,7 @@ export default async function HomePage() {
     getHomepageStats(),
     getHomepageFaqs(),
     prisma.websiteSetting
-      .findUnique({ where: { key: "scholarship_visibility" } })
-      .catch(() => null),
+      .findUnique({ where: { key: "scholarship_visibility" } }),
   ]);
 
   const showScholarship = visibility?.value !== "false";

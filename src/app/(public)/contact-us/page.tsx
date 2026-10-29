@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
@@ -21,7 +22,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export default function ContactPage() {
+function ContactPageContent() {
   const searchParams = useSearchParams();
 
   // Core Form State
@@ -865,5 +866,21 @@ export default function ContactPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense
+      fallback={
+        <div
+          className="min-h-screen bg-white"
+          role="status"
+          aria-label="Loading contact page"
+        />
+      }
+    >
+      <ContactPageContent />
+    </Suspense>
   );
 }

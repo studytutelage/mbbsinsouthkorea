@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   path: "/compare",
 });
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 type ComparePageSearchParams = {
   ids?: string | string[];
@@ -43,8 +43,7 @@ export default async function ComparePage({
         province: { select: { name: true } },
       },
       orderBy: { name: "asc" },
-    })
-    .catch(() => []);
+    });
 
   // Parse selected IDs (up to 3)
   const rawIds =
@@ -107,7 +106,6 @@ export default async function ComparePage({
               },
             },
           })
-          .catch(() => [])
       : [];
 
   type SelectedUni = (typeof selected)[number];
@@ -185,8 +183,7 @@ export default async function ComparePage({
         university: { select: { name: true, slug: true } },
       },
       orderBy: { year: "desc" },
-    })
-    .catch(() => []);
+    });
 
   const fmgeData = fmgeRows.map((r) => ({
     universityName: r.university.name,

@@ -18,7 +18,7 @@ export const metadata: Promise<Metadata> = buildMetadata({
   },
 });
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export default async function UniversitiesPage() {
   const universities = await prisma.university
@@ -55,8 +55,7 @@ export default async function UniversitiesPage() {
         },
       },
       orderBy: [{ id: "asc" }],
-    })
-    .catch(() => []);
+    });
 
   const jsonLd = breadcrumbSchema([
     { name: "Home", url: "/" },

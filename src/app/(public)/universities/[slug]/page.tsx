@@ -47,20 +47,10 @@ import UniversityFMGE from "@/components/university/UniversityFMGE";
 import UniversityTestimonials from "@/components/university/UniversityTestimonials";
 import UniversityFAQs from "@/components/university/UniversityFAQs";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  const universities = await prisma.university
-    .findMany({
-      where: { status: true },
-      select: { slug: true },
-    })
-    .catch(() => []);
-  return universities.map((u) => ({ slug: u.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -79,8 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         city: true,
         province: { select: { name: true } },
       },
-    })
-    .catch(() => null);
+    });
   if (!u) return { title: "University Not Found" };
   return buildMetadata({
     title:
@@ -143,17 +132,12 @@ export default async function UniversityDetailPage({ params }: Props) {
         studentRecords: { where: { status: true }, take: 8 },
         documents: true,
       },
-    })
-    .catch((e) => {
-      console.error("[UniversityPage]", e?.message);
-      return null;
     });
 
   if (!university) notFound();
 
   const countryDocs = await prisma.countryDocument
-    .findMany({ where: { isActive: true, country: "South Korea" } })
-    .catch(() => []);
+    .findMany({ where: { isActive: true, country: "South Korea" } });
 
   const universityMapped = {
     ...university,

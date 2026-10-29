@@ -7,20 +7,10 @@ import { prisma } from "@/lib/prisma";
 import { cdn } from "@/lib/cdn";
 import { buildMetadata, breadcrumbSchema } from "@/lib/seo";
 
-export const revalidate = 1800;
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ categorySlug: string }>;
-}
-
-export async function generateStaticParams() {
-  const cats = await prisma.blogCategory
-    .findMany({
-      where: { status: true },
-      select: { slug: true },
-    })
-    .catch(() => []);
-  return cats.map((c) => ({ categorySlug: c.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -34,8 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         metaTitle: true,
         metaDescription: true,
       },
-    })
-    .catch(() => null);
+    });
   if (!cat) return { title: "Blog Category Not Found" };
   return buildMetadata({
     title: cat.metaTitle || `${cat.name} — MBBS South Korea Blog`,
@@ -70,8 +59,7 @@ export default async function BlogCategoryPage({ params }: Props) {
             },
           },
         },
-      })
-      .catch(() => null),
+      }),
     prisma.blogCategory
       .findMany({
         where: { status: true },
@@ -80,8 +68,7 @@ export default async function BlogCategoryPage({ params }: Props) {
           slug: true,
           _count: { select: { blogs: { where: { status: true } } } },
         },
-      })
-      .catch(() => []),
+      }),
   ]);
 
   if (!category) notFound();

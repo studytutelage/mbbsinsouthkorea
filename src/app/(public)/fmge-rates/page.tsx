@@ -16,7 +16,7 @@ export const metadata: Promise<Metadata> = buildMetadata({
   pageKey: "fmge-rates",
 });
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export default async function FmgeRatesPage() {
   const [rates, universities] = await Promise.all([
@@ -27,15 +27,13 @@ export default async function FmgeRatesPage() {
           university: { select: { id: true, name: true, slug: true } },
         },
         orderBy: [{ year: "desc" }, { passPercentage: "desc" }],
-      })
-      .catch(() => []),
+      }),
     prisma.university
       .findMany({
         where: { status: true },
         select: { id: true, name: true, slug: true },
         orderBy: { name: "asc" },
-      })
-      .catch(() => []),
+      }),
   ]);
 
   // Group by university for the summary cards
